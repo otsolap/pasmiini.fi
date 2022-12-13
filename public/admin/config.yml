@@ -40,8 +40,18 @@ collections:
                   widget: "string",
                   required: false,
                 }
-
-
+              - label: "Align"
+                name: "align"
+                widget: "select"
+                options:
+                  - { label: "Vasen", value: "left" }
+                  - { label: "Oikea", value: "right" }
+              - label: "Media"
+                name: "media"
+                widget: "select"
+                options:
+                  - { label: "Kuva", value: "image" }
+                  - { label: "Video", value: "video" }
               - {
                   label: "Kuva",
                   name: "image",
