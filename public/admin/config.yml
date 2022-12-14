@@ -1,7 +1,7 @@
 backend:
   name: test-repo
   branch: main
-media_folder: static/imgages
+media_folder: /imgages
 site_url: https://luxury-crisp-4c6313.netlify.app
 public_folder: /images
 slug:
@@ -45,6 +45,7 @@ collections:
                 widget: "select"
                 options:
                   - { label: "Vasen", value: "left" }
+                  - { label: "Keskellä", value: "center" }
                   - { label: "Oikea", value: "right" }
               - label: "Media"
                 name: "media"
@@ -58,6 +59,13 @@ collections:
                   widget: "image",
                   required: false,
                   hint: "Muista valita mediakentästä kuva.",
+                }
+              - {
+                  label: "Täyttääkö kuva koko ruudun?",
+                  name: "image_width",
+                  widget: "boolean",
+                  required: false,
+                  hint: "Kuva kokoruudun levyiseksi?",
                 }
               - {
                   label: "Video",
