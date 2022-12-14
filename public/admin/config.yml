@@ -86,7 +86,7 @@ collections:
             name: "mediaMix"
             widget: object
             fields:
-              - label: "MediaMixin taustaväri"
+              - label: "Taustaväri"
                 name: "backgroundcolor"
                 widget: "select"
                 options:
@@ -210,6 +210,15 @@ collections:
                 fields:
                   - { label: "Otsikko", name: "title", widget: "string", required: false}
                   - { label: "Linkki", name: "url", widget: "string", required: false}
+              - label: "Taustaväri"
+                name: "backgroundcolor"
+                widget: "select"
+                options:
+                  - { label: "Tummanvihreä", value: "green" }
+                  - { label: "Turkoosi", value: "blue" }
+                  - { label: "Kermanvalkoinen", value: "creamyWhite" }
+                  - { label: "Pinkki", value: "pink" }
+                  - { label: "Keltainen", value: "yellow" }
       - label: "About"
         name: "about"
         file: "content/about.md"

@@ -47,5 +47,17 @@
       }
     ],
     "backgroundColor": "green"
+  },
+  "blog": {
+    "title": "hello",
+    "description": "world",
+    "filter": "custom",
+    "link": [
+      {
+        "title": "Haluan elamantapamuutoksen",
+        "url": "/Myynti"
+      }
+    ],
+    "backgroundColor": "green"
   }
 }
