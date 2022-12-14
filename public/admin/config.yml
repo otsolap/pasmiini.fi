@@ -62,7 +62,7 @@ collections:
                 }
               - {
                   label: "Täyttääkö kuva koko ruudun?",
-                  name: "image_width",
+                  name: "imageWidth",
                   widget: "boolean",
                   required: false,
                   hint: "Kuva kokoruudun levyiseksi?",

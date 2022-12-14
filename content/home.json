@@ -5,7 +5,17 @@
       "align": "left",
       "media": "image",
       "image": "adawwa",
-      "image-width": false,
+      "imageWidth": false,
       "video": "wadwadwawdadw"
+  },
+  "MediaMix": {
+    "columnOneType": "",
+    "columnOneImage": "",
+    "columnOneText": "",
+    "columnOneVideo": "",
+    "columnTwoType": "",
+    "columnTwoImage": "",
+    "columnTwoText": "",
+    "columnTwoVideo": ""
   }
 }
