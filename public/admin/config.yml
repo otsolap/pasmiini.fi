@@ -80,7 +80,7 @@ collections:
                 max: 2
                 fields:
                   - { label: "Otsikko", name: "title", widget: "string", required: false}
-                  - { label: "Yhteystieto", name: "url", widget: "string", required: false}
+                  - { label: "Linkki", name: "url", widget: "string", required: false}
           - label: "MediaMix"
             hint: "Saat kaksi vierekkäistä saraketta, joihin saat päättää sisältötyypin: Teksti-, kuva tai videosisältöä. Kuvat esitetään aina palloon kehystettynä. Tekstikenttään pystyy kirjoittamaan rikasta tekstisisältöä, kuten mm. Otsikoita, lihavoitua tekstiä, kursivoitua tekstiä, listoja, numerollisia listoja, linkkejä, yms. Tekstikentän päätyyn voit lisätä maksimissaan 2 toimintakehotetta. Lista-elementit näytetään yleisillä * palloikoneilla. Linkin väri on normaalisti sinivihreä ja muuttuu keltaiseksi sekä saa alareunan, kun hiiren laittaa linkin ylle. Tekstikentän alle voit lisätä korostetun listan, jossa sovelletaan tšekkimerkkejä ja tekstin koko on normaalitekstiä suurempi sekä lihavoitu. MediaMixin saa valita brändimukaiset taustavärit: tummanvihreä, sininen, keltainen, kermanvalkoinen ja pinkki. Riippuen taustaväristä teksti on joko kermanvalkoinen tai tummanvihreä."
             name: "mediaMix"
@@ -114,13 +114,13 @@ collections:
                 widget: list
                 fields:
                   - { label: "Otsikko", name: "title", widget: "string", required: false}
-                  - { label: "Yhteystieto", name: "url", widget: "string", required: false}
+                  - { label: "Linkki", name: "url", widget: "string", required: false}
               - label: "Vasemman sarakkeen toimintakehoitteet"
                 name: "columnOneButtons"
                 widget: list
                 fields:
                   - { label: "Otsikko", name: "title", widget: "string", required: false}
-                  - { label: "Yhteystieto", name: "url", widget: "string", required: false}
+                  - { label: "Linkki", name: "url", widget: "string", required: false}
               - {
                   label: "Vasemman sarakkeen kuva",
                   name: "columnOneImage",
@@ -151,16 +151,18 @@ collections:
                 }
               - label: "Oikean sarakkeen nostolinkit"
                 name: "columnTwoLinks"
+                required: false
                 widget: list
                 fields:
                   - { label: "Otsikko", name: "title", widget: "string", required: false}
-                  - { label: "Yhteystieto", name: "url", widget: "string", required: false}
+                  - { label: "Linkki", name: "url", widget: "string", required: false}
               - label: "Oikean sarakkeen toimintakehoitteet"
                 name: "columnTwoButtons"
+                required: false
                 widget: list
                 fields:
                   - { label: "Otsikko", name: "title", widget: "string", required: false}
-                  - { label: "Yhteystieto", name: "url", widget: "string", required: false}
+                  - { label: "Linkki", name: "url", widget: "string", required: false}
               - {
                   label: "Oikean sarakkeen kuva",
                   name: "columnTwoImage",
@@ -175,6 +177,39 @@ collections:
                   required: false,
                   hint: "Muista valita mediakentästä video",
                 }
+
+          - label: "Nosto"
+            hint: "Nostolohko, johon voit kirjoittaa ytimekkään otsikon sekä mahdollisuuden lisätä rikasta tekstisisältöä, sekä toimintakehotteen. Nostolohkon saa taustaväriltään joko sinisenä tai tummanvihreänä. Teksti on normaalisti kermanvalkoinen, mutta lihavoinnilla saat siihen keltaisen korostuksen. Voit myös laittaa pienen kuvan tekstin yläpuolelle, kuten esimerkiksi logosi."
+            name: "highlight"
+            widget: object
+            fields:
+              - {
+                  label: "Otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Kuvaus",
+                  name: "description",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Kuva",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                  hint: "Näytetään tekstin yläpuolella"
+                }
+              - label: "Toimintakehoite"
+                name: "button"
+                max: 1
+                required: false
+                widget: list
+                fields:
+                  - { label: "Otsikko", name: "title", widget: "string", required: false}
+                  - { label: "Linkki", name: "url", widget: "string", required: false}
       - label: "About"
         name: "about"
         file: "content/about.md"

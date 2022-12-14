@@ -9,8 +9,8 @@
     "video": "wadwadwawdadw",
     "buttons": [
       {
-        "title": "Uudet nettisivut",
-        "url": "Upouudet nettisivut ovat julkaistu! Uudet sivut toimivat tehokkaammin kaikissa laitteissa. Jos olet nostalginen johonkin vanhempaan. Tule liikkeeseemme kokemaan vanhanajan Fillariliikkeen fiilis!"
+        "title": "Otsikko",
+        "url": "/linkki"
       }
     ]
   },
@@ -22,13 +22,13 @@
     "columnOneLinks": [
       {
         "title": "Uudet nettisivut",
-        "url": "Upouudet nettisivut ovat julkaistu! Uudet sivut toimivat tehokkaammin kaikissa laitteissa. Jos olet nostalginen johonkin vanhempaan. Tule liikkeeseemme kokemaan vanhanajan Fillariliikkeen fiilis!"
+        "url": "/linkki"
       }
     ],
     "columnOneButtons": [
       {
-        "title": "Uudet nettisivut",
-        "url": "Upouudet nettisivut ovat julkaistu! Uudet sivut toimivat tehokkaammin kaikissa laitteissa. Jos olet nostalginen johonkin vanhempaan. Tule liikkeeseemme kokemaan vanhanajan Fillariliikkeen fiilis!"
+        "title": "Uudet nettisivut 2",
+        "url": "/linkki"
       }
     ],
     "columnOneVideo": "",
@@ -38,8 +38,14 @@
     "columnTwoVideo": ""
   },
   "highlight": {
-        "title": "hello",
-        "description": "world"
-
+    "title": "hello",
+    "description": "world",
+    "button": [
+      {
+        "title": "Haluan elamantapamuutoksen",
+        "url": "/Myynti"
+      }
+    ],
+    "backgroundColor": "green"
   }
 }
