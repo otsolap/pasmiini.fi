@@ -24,7 +24,7 @@ collections:
         fields:
           - label: "Hero"
             hint: "Heroon voi laittaa yhden suuren otsikon, jonka maksimimitta on 50-kirjainta. Pääotsikon alle voidaan liittää vapaamuotoinen alaotsikko. Yleisesti Kuva täyttää puolet lohkon koon, mutta halutessasi voit leventää kuvan ottamaan 100% lohkosta. Heron saa asettaa joko vasemmalle tai oikealle puolelle. Voit myös kuvan sijaan liittää .gif liikkuvan-kuvan tai YouTube-videon. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta."
-            name: "Hero"
+            name: "hero"
             widget: object
             fields:
               - {
@@ -70,6 +70,104 @@ collections:
               - {
                   label: "Video",
                   name: "video",
+                  widget: "string",
+                  required: false,
+                  hint: "Muista valita mediakentästä video",
+                }
+          - label: "MediaMix"
+            hint: "Saat kaksi vierekkäistä saraketta, joihin saat päättää sisältötyypin: Teksti-, kuva tai videosisältöä. Kuvat esitetään aina palloon kehystettynä. Tekstikenttään pystyy kirjoittamaan rikasta tekstisisältöä, kuten mm. Otsikoita, lihavoitua tekstiä, kursivoitua tekstiä, listoja, numerollisia listoja, linkkejä, yms. Tekstikentän päätyyn voit lisätä maksimissaan 2 toimintakehotetta. Lista-elementit näytetään yleisillä * palloikoneilla. Linkin väri on normaalisti sinivihreä ja muuttuu keltaiseksi sekä saa alareunan, kun hiiren laittaa linkin ylle. Tekstikentän alle voit lisätä korostetun listan, jossa sovelletaan tšekkimerkkejä ja tekstin koko on normaalitekstiä suurempi sekä lihavoitu. MediaMixin saa valita brändimukaiset taustavärit: tummanvihreä, sininen, keltainen, kermanvalkoinen ja pinkki. Riippuen taustaväristä teksti on joko kermanvalkoinen tai tummanvihreä."
+            name: "mediaMix"
+            widget: object
+            fields:
+              - label: "MediaMixin taustaväri"
+                name: "backgroundcolor"
+                widget: "select"
+                options:
+                  - { label: "Tummanvihreä", value: "green" }
+                  - { label: "Turkoosi", value: "blue" }
+                  - { label: "Kermanvalkoinen", value: "creamyWhite" }
+                  - { label: "Pinkki", value: "pink" }
+                  - { label: "Keltainen", value: "yellow" }
+              - label: "Vasemman sarakkeen tyyppi"
+                name: "columnOneType"
+                widget: "select"
+                options:
+                  - { label: "Teksti", value: "markdown" }
+                  - { label: "Kuva", value: "image" }
+                  - { label: "Video", value: "video" }
+              - {
+                  label: "Teksti",
+                  name: "columnOneText",
+                  widget: "markdown",
+                  required: false,
+                  hint: "Muista valita mediakentästä teksti.",
+                }
+              - label: "Vasemman sarakkeen nostolinkit"
+                name: "columnOneLinks"
+                hint: "Muista valita mediakentästä teksti.",
+                widget: list
+                fields:
+                  - { label: "Otsikko", name: "title", widget: "string", required: false}
+                  - { label: "Linkki", name: "url", widget: "string", required: false}
+              - label: "Vasemman sarakkeen toimintakehoitteet"
+                hint: "Muista valita mediakentästä teksti.",
+                name: "columnOneButtons"
+                widget: list
+                fields:
+                  - { label: "Otsikko", name: "title", widget: "string", required: false}
+                  - { label: "Linkki", name: "url", widget: "string", required: false}
+              - {
+                  label: "Kuva",
+                  name: "columnOneImage",
+                  widget: "image",
+                  required: false,
+                  hint: "Muista valita mediakentästä kuva.",
+                }
+              - {
+                  label: "Video",
+                  name: "columnOneVideo",
+                  widget: "string",
+                  required: false,
+                  hint: "Muista valita mediakentästä video",
+                }
+              - label: "Oikean sarakkeen tyyppi"
+                name: "columnTwoType"
+                widget: "select"
+                options:
+                  - { label: "Teksti", value: "markdown" }
+                  - { label: "Kuva", value: "image" }
+                  - { label: "Video", value: "video" }
+              - {
+                  label: "Oikean sarakkeen teksti",
+                  name: "columnTwoText",
+                  widget: "markdown",
+                  required: false,
+                  hint: "Muista valita mediakentästä kuva.",
+                }
+              - label: "Oikean sarakkeen nostolinkit"
+                name: "columnOneLinks"
+                hint: "Muista valita mediakentästä teksti.",
+                widget: list
+                fields:
+                  - { label: "Otsikko", name: "title", widget: "string", required: false}
+                  - { label: "Linkki", name: "url", widget: "string", required: false}
+              - label: "Oikeansarakkeen toimintakehoitteet"
+                hint: "Muista valita mediakentästä teksti.",
+                name: "columnOneButtons"
+                widget: list
+                fields:
+                  - { label: "Otsikko", name: "title", widget: "string", required: false}
+                  - { label: "Linkki", name: "url", widget: "string", required: false}
+              - {
+                  label: "Oikean sarakkeen kuva",
+                  name: "columnTwoImage",
+                  widget: "image",
+                  required: false,
+                  hint: "Muista valita mediakentästä kuva.",
+                }
+              - {
+                  label: "Oikean sarakkeen video",
+                  name: "columnTwoVideo",
                   widget: "string",
                   required: false,
                   hint: "Muista valita mediakentästä video",

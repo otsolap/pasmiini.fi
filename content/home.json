@@ -1,21 +1,35 @@
 {
-    "Hero": {
-      "title": "Pasmiini",
-      "subtitle": "Tekstiä",
-      "align": "left",
-      "media": "image",
-      "image": "adawwa",
-      "imageWidth": false,
-      "video": "wadwadwawdadw"
+  "hero": {
+    "title": "Pasmiini",
+    "subtitle": "Tekstiä",
+    "align": "left",
+    "media": "image",
+    "image": "adawwa",
+    "imageWidth": false,
+    "video": "wadwadwawdadw"
   },
-  "MediaMix": {
-    "columnOneType": "",
-    "columnOneImage": "",
-    "columnOneText": "",
+  "mediaMix": {
+    "backgroundColor": "blue",
+    "columnOneType": "image",
+    "columnOneImage": "adawdaaww",
+    "columnOneText": "awdawdawa",
+    "columnOneLinks": [
+      {
+        "title": "Uudet nettisivut",
+        "url": "Upouudet nettisivut ovat julkaistu! Uudet sivut toimivat tehokkaammin kaikissa laitteissa. Jos olet nostalginen johonkin vanhempaan. Tule liikkeeseemme kokemaan vanhanajan Fillariliikkeen fiilis!"
+      }
+    ],
+    "columnOneButtons": [
+      {
+        "title": "Uudet nettisivut",
+        "url": "Upouudet nettisivut ovat julkaistu! Uudet sivut toimivat tehokkaammin kaikissa laitteissa. Jos olet nostalginen johonkin vanhempaan. Tule liikkeeseemme kokemaan vanhanajan Fillariliikkeen fiilis!"
+      }
+    ],
     "columnOneVideo": "",
-    "columnTwoType": "",
+    "columnTwoType": "text",
     "columnTwoImage": "",
     "columnTwoText": "",
     "columnTwoVideo": ""
+
   }
 }
