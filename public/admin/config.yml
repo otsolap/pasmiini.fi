@@ -24,7 +24,7 @@ collections:
         fields:
           - label: "Hero"
             hint: "Heroon voi laittaa yhden suuren otsikon, jonka maksimimitta on 50-kirjainta. Pääotsikon alle voidaan liittää vapaamuotoinen alaotsikko. Yleisesti Kuva täyttää puolet lohkon koon, mutta halutessasi voit leventää kuvan ottamaan 100% lohkosta. Heron saa asettaa joko vasemmalle tai oikealle puolelle. Voit myös kuvan sijaan liittää .gif liikkuvan-kuvan tai YouTube-videon. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta."
-            name: "hero"
+            name: "Hero"
             widget: object
             fields:
               - {
@@ -57,12 +57,14 @@ collections:
                   name: "image",
                   widget: "image",
                   required: false,
+                  hint: "Muista valita mediakentästä kuva.",
                 }
               - {
                   label: "Video",
                   name: "video",
                   widget: "string",
                   required: false,
+                  hint: "Muista valita mediakentästä video",
                 }
       - label: "About"
         name: "about"
