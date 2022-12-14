@@ -96,7 +96,7 @@ collections:
                   - { label: "Kuva", value: "image" }
                   - { label: "Video", value: "video" }
               - {
-                  label: "Teksti",
+                  label: "Vasemman sarakkeen teksti",
                   name: "columnOneText",
                   widget: "markdown",
                   required: false,
@@ -104,27 +104,25 @@ collections:
                 }
               - label: "Vasemman sarakkeen nostolinkit"
                 name: "columnOneLinks"
-                hint: "Muista valita mediakentästä teksti.",
                 widget: list
                 fields:
                   - { label: "Otsikko", name: "title", widget: "string", required: false}
-                  - { label: "Linkki", name: "url", widget: "string", required: false}
+                  - { label: "Yhteystieto", name: "url", widget: "string", required: false}
               - label: "Vasemman sarakkeen toimintakehoitteet"
-                hint: "Muista valita mediakentästä teksti.",
                 name: "columnOneButtons"
                 widget: list
                 fields:
                   - { label: "Otsikko", name: "title", widget: "string", required: false}
-                  - { label: "Linkki", name: "url", widget: "string", required: false}
+                  - { label: "Yhteystieto", name: "url", widget: "string", required: false}
               - {
-                  label: "Kuva",
+                  label: "Vasemman sarakkeen kuva",
                   name: "columnOneImage",
                   widget: "image",
                   required: false,
                   hint: "Muista valita mediakentästä kuva.",
                 }
               - {
-                  label: "Video",
+                  label: "Vasemman sarakkeen video",
                   name: "columnOneVideo",
                   widget: "string",
                   required: false,
@@ -142,22 +140,20 @@ collections:
                   name: "columnTwoText",
                   widget: "markdown",
                   required: false,
-                  hint: "Muista valita mediakentästä kuva.",
+                  hint: "Muista valita mediakentästä teksti.",
                 }
               - label: "Oikean sarakkeen nostolinkit"
-                name: "columnOneLinks"
-                hint: "Muista valita mediakentästä teksti.",
+                name: "columnTwoLinks"
                 widget: list
                 fields:
                   - { label: "Otsikko", name: "title", widget: "string", required: false}
-                  - { label: "Linkki", name: "url", widget: "string", required: false}
-              - label: "Oikeansarakkeen toimintakehoitteet"
-                hint: "Muista valita mediakentästä teksti.",
-                name: "columnOneButtons"
+                  - { label: "Yhteystieto", name: "url", widget: "string", required: false}
+              - label: "Oikean sarakkeen toimintakehoitteet"
+                name: "columnTwoButtons"
                 widget: list
                 fields:
                   - { label: "Otsikko", name: "title", widget: "string", required: false}
-                  - { label: "Linkki", name: "url", widget: "string", required: false}
+                  - { label: "Yhteystieto", name: "url", widget: "string", required: false}
               - {
                   label: "Oikean sarakkeen kuva",
                   name: "columnTwoImage",
