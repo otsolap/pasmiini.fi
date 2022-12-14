@@ -6,7 +6,13 @@
     "media": "image",
     "image": "adawwa",
     "imageWidth": false,
-    "video": "wadwadwawdadw"
+    "video": "wadwadwawdadw",
+    "buttons": [
+      {
+        "title": "Uudet nettisivut",
+        "url": "Upouudet nettisivut ovat julkaistu! Uudet sivut toimivat tehokkaammin kaikissa laitteissa. Jos olet nostalginen johonkin vanhempaan. Tule liikkeeseemme kokemaan vanhanajan Fillariliikkeen fiilis!"
+      }
+    ]
   },
   "mediaMix": {
     "backgroundColor": "blue",
@@ -30,6 +36,10 @@
     "columnTwoImage": "",
     "columnTwoText": "",
     "columnTwoVideo": ""
+  },
+  "highlight": {
+        "title": "hello",
+        "description": "world"
 
   }
 }
