@@ -44,6 +44,7 @@ collections:
               - label: "Align"
                 name: "align"
                 widget: "select"
+                required: false
                 options:
                   - { label: "Vasen", value: "left" }
                   - { label: "Keskellä", value: "center" }
@@ -51,6 +52,7 @@ collections:
               - label: "Media"
                 name: "media"
                 widget: "select"
+                required: false
                 options:
                   - { label: "Kuva", value: "image" }
                   - { label: "Video", value: "video" }
@@ -90,6 +92,7 @@ collections:
             fields:
               - label: "Taustaväri"
                 name: "backgroundcolor"
+                required: false
                 widget: "select"
                 options:
                   - { label: "Tummanvihreä", value: "green" }
@@ -215,6 +218,7 @@ collections:
                   - { label: "Linkki", name: "url", widget: "string", required: false}
               - label: "Taustaväri"
                 name: "backgroundcolor"
+                required: false
                 widget: "select"
                 options:
                   - { label: "Tummanvihreä", value: "green" }
@@ -265,9 +269,11 @@ collections:
             fields:
               - label: "Tekstikenttä"
                 name: "text"
+                required: false
                 widget: "markdown"
               - label: "Taustaväri"
                 name: "backgroundcolor"
+                required: false
                 widget: "select"
                 options:
                   - { label: "Tummanvihreä", value: "green" }
@@ -285,8 +291,15 @@ collections:
     name: "services"
     folder: "content/services"
     create: true
-    slug: "/palvelut/{{slug}}"
+    slug: "{{slug}}"
     fields:
+      - {
+          label: "Palvelun nimi",
+          name: "title",
+          widget: "string",
+          max: 50,
+          required: true,
+        }
       - label: "Hero"
         hint: "Heroon voi laittaa yhden suuren otsikon, jonka maksimimitta on 50-kirjainta. Pääotsikon alle voidaan liittää vapaamuotoinen alaotsikko. Yleisesti Kuva täyttää puolet lohkon koon, mutta halutessasi voit leventää kuvan ottamaan 100% lohkosta. Heron saa asettaa joko vasemmalle tai oikealle puolelle. Voit myös kuvan sijaan liittää .gif liikkuvan-kuvan tai YouTube-videon. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta."
         name: "hero"
@@ -355,9 +368,11 @@ collections:
         fields:
         - label: "Tekstikenttä"
           name: "text"
+          required: false
           widget: "markdown"
         - label: "Taustaväri"
           name: "backgroundcolor"
+          required: false
           widget: "select"
           options:
             - { label: "Tummanvihreä", value: "green" }
@@ -370,6 +385,7 @@ collections:
         fields:
           - label: "Taustaväri"
             name: "backgroundcolor"
+            required: false
             widget: "select"
             options:
               - { label: "Tummanvihreä", value: "green" }
@@ -380,6 +396,7 @@ collections:
           - label: "Vasemman sarakkeen tyyppi"
             name: "columnOneType"
             widget: "select"
+            required: false
             options:
               - { label: "Teksti", value: "markdown" }
               - { label: "Kuva", value: "image" }
@@ -420,6 +437,7 @@ collections:
           - label: "Oikean sarakkeen tyyppi"
             name: "columnTwoType"
             widget: "select"
+            required: false
             options:
               - { label: "Teksti", value: "markdown" }
               - { label: "Kuva", value: "image" }
@@ -517,13 +535,15 @@ collections:
         - label: "Tekstikenttä"
           name: "text"
           widget: "markdown"
+          required: false
         - label: "Taustaväri"
           name: "backgroundcolor"
+          required: false
           widget: "select"
           options:
             - { label: "Tummanvihreä", value: "green" }
             - { label: "Kermanvalkoinen", value: "creamyWhite" }
-            
+
       - label: "Nosto"
         hint: "Nostolohko, johon voit kirjoittaa ytimekkään otsikon sekä mahdollisuuden lisätä rikasta tekstisisältöä, sekä toimintakehotteen. Nostolohkon saa taustaväriltään joko sinisenä tai tummanvihreänä. Teksti on normaalisti kermanvalkoinen, mutta lihavoinnilla saat siihen keltaisen korostuksen. Voit myös laittaa pienen kuvan tekstin yläpuolelle, kuten esimerkiksi logosi."
         name: "highlight"
@@ -560,6 +580,7 @@ collections:
           - label: "Taustaväri"
             name: "backgroundcolor"
             widget: "select"
+            required: false
             options:
               - { label: "Tummanvihreä", value: "green" }
               - { label: "Turkoosi", value: "blue" }
