@@ -25,6 +25,7 @@ collections:
           - label: "Hero"
             hint: "Heroon voi laittaa yhden suuren otsikon, jonka maksimimitta on 50-kirjainta. Pääotsikon alle voidaan liittää vapaamuotoinen alaotsikko. Yleisesti Kuva täyttää puolet lohkon koon, mutta halutessasi voit leventää kuvan ottamaan 100% lohkosta. Heron saa asettaa joko vasemmalle tai oikealle puolelle. Voit myös kuvan sijaan liittää .gif liikkuvan-kuvan tai YouTube-videon. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta."
             name: "hero"
+            collapsed: true
             widget: object
             fields:
               - {
@@ -84,6 +85,7 @@ collections:
           - label: "MediaMix"
             hint: "Saat kaksi vierekkäistä saraketta, joihin saat päättää sisältötyypin: Teksti-, kuva tai videosisältöä. Kuvat esitetään aina palloon kehystettynä. Tekstikenttään pystyy kirjoittamaan rikasta tekstisisältöä, kuten mm. Otsikoita, lihavoitua tekstiä, kursivoitua tekstiä, listoja, numerollisia listoja, linkkejä, yms. Tekstikentän päätyyn voit lisätä maksimissaan 2 toimintakehotetta. Lista-elementit näytetään yleisillä * palloikoneilla. Linkin väri on normaalisti sinivihreä ja muuttuu keltaiseksi sekä saa alareunan, kun hiiren laittaa linkin ylle. Tekstikentän alle voit lisätä korostetun listan, jossa sovelletaan tšekkimerkkejä ja tekstin koko on normaalitekstiä suurempi sekä lihavoitu. MediaMixin saa valita brändimukaiset taustavärit: tummanvihreä, sininen, keltainen, kermanvalkoinen ja pinkki. Riippuen taustaväristä teksti on joko kermanvalkoinen tai tummanvihreä."
             name: "mediaMix"
+            collapsed: true
             widget: object
             fields:
               - label: "Taustaväri"
@@ -182,6 +184,7 @@ collections:
             hint: "Nostolohko, johon voit kirjoittaa ytimekkään otsikon sekä mahdollisuuden lisätä rikasta tekstisisältöä, sekä toimintakehotteen. Nostolohkon saa taustaväriltään joko sinisenä tai tummanvihreänä. Teksti on normaalisti kermanvalkoinen, mutta lihavoinnilla saat siihen keltaisen korostuksen. Voit myös laittaa pienen kuvan tekstin yläpuolelle, kuten esimerkiksi logosi."
             name: "highlight"
             widget: object
+            collapsed: true
             fields:
               - {
                   label: "Otsikko",
@@ -219,6 +222,50 @@ collections:
                   - { label: "Kermanvalkoinen", value: "creamyWhite" }
                   - { label: "Pinkki", value: "pink" }
                   - { label: "Keltainen", value: "yellow" }
+          - label: "Blogilohko"
+            hint: "Blogi-lohkossa esitetään blogin kuva, otsikko sekä toimintakehote lukemaan kyseinen artikkeli. Jos sattumoisin sinulle ei ole kuvaa blogia varten. Ladataan sen tilalle logosi. Tätä en kuitenkaan missään tapauksessa suosittele. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen, joka näkyy blogien yläpuolella. Ideana on, että on hyvä ohjeistaa lukijaa mitä korteilla tarkalleen haluat kertoa. Toisinaan se ei kuitenkaan ole tarpeellista. Lohkossa esitetään joko 3 tuoreinta tai 3 sinun valitsemaasi blogia."
+            name: "blogSection"
+            widget: object
+            collapsed: true
+            fields:
+              - {
+                  label: "Osion otsikko",
+                  name: "title",
+                  widget: "string",
+                  max: 50,
+                  required: false,
+                }
+              - {
+                  label: "Osion kuvaus",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
+              - label: "Suodatin"
+                name: "filter"
+                widget: "select"
+                options:
+                  - { label: "Tuoreimmat", value: "latest" }
+                  - { label: "Omavalinta", value: "custom" }
+              - label: "Nostoblogit"
+                name: "blog"
+                widget: "relation"
+                hint: "Muista valita Omavalinta suodattimesta."
+                multiple: true
+                max: 3
+                collection: "blog"
+                search_fields: ["title", "date"]
+                value_field: "{{slug}}"
+                display_fields: ["title", "date"]
+          - label: "Tekstikenttä"
+            name: "textarea"
+            widget: "markdown"
+            collapsed: true
+            hint: "Someseiniä varten asennettu"
+              
+
+
+
       - label: "About"
         name: "about"
         file: "content/about.md"
