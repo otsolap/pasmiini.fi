@@ -263,11 +263,15 @@ collections:
             widget: object
             collapsed: true
             fields:
-            - label: "Tekstikenttä"
-              name: "text"
-              widget: "markdown"
-              collapsed: true
-              hint: "Someseiniä varten asennettu"
+              - label: "Tekstikenttä"
+                name: "text"
+                widget: "markdown"
+              - label: "Taustaväri"
+                name: "backgroundcolor"
+                widget: "select"
+                options:
+                  - { label: "Tummanvihreä", value: "green" }
+                  - { label: "Kermanvalkoinen", value: "creamyWhite" }
               
       - label: "About"
         name: "about"
@@ -352,7 +356,12 @@ collections:
         - label: "Tekstikenttä"
           name: "text"
           widget: "markdown"
-          collapsed: true
+        - label: "Taustaväri"
+          name: "backgroundcolor"
+          widget: "select"
+          options:
+            - { label: "Tummanvihreä", value: "green" }
+            - { label: "Kermanvalkoinen", value: "creamyWhite" }
       - label: "MediaMix"
         hint: "Saat kaksi vierekkäistä saraketta, joihin saat päättää sisältötyypin: Teksti-, kuva tai videosisältöä. Kuvat esitetään aina palloon kehystettynä. Tekstikenttään pystyy kirjoittamaan rikasta tekstisisältöä, kuten mm. Otsikoita, lihavoitua tekstiä, kursivoitua tekstiä, listoja, numerollisia listoja, linkkejä, yms. Tekstikentän päätyyn voit lisätä maksimissaan 2 toimintakehotetta. Lista-elementit näytetään yleisillä * palloikoneilla. Linkin väri on normaalisti sinivihreä ja muuttuu keltaiseksi sekä saa alareunan, kun hiiren laittaa linkin ylle. Tekstikentän alle voit lisätä korostetun listan, jossa sovelletaan tšekkimerkkejä ja tekstin koko on normaalitekstiä suurempi sekä lihavoitu. MediaMixin saa valita brändimukaiset taustavärit: tummanvihreä, sininen, keltainen, kermanvalkoinen ja pinkki. Riippuen taustaväristä teksti on joko kermanvalkoinen tai tummanvihreä."
         name: "mediaMix"
@@ -499,8 +508,64 @@ collections:
             search_fields: ["title"]
             value_field: "title"
             display_fields: ["title"]
-
-
+      - label: "Tekstikenttä"
+        hint: "Tekstikentän otsikon lihavointi antaa tekstille brändimukaisen värinsä. Tekstikenttään voit vapaasti kirjoittaa rikasta tekstisisältöä, jossa tekstiä voi lihavoida tai kursivoida. Pystyt lisäämään tekstiin linkkejä, kuin listoja. Lista-elementtien edessä on aina “Tsekki”-ikoni, eikä yleistä palleroa. Vaihtoehtoisesti voit kirjoittaa numeraalisen listan. Tekstiin voit laittaa 5 eri kokoista otsikkoa. Tekstikentän saa taustaväriltään joko kermanvalkoisena tai tummanvihreänä. Tekstinä toimii sitten valinnan vastapuoli. Voit myös lihavoida tekstiä ja antaa sille keltaisen/sinisen korostuksen. (Keltainen tummanvihreällä, sininen kermanvalkoiselle)."
+        name: "textarea_2"
+        widget: object
+        collapsed: true
+        fields:
+        - label: "Tekstikenttä"
+          name: "text"
+          widget: "markdown"
+        - label: "Taustaväri"
+          name: "backgroundcolor"
+          widget: "select"
+          options:
+            - { label: "Tummanvihreä", value: "green" }
+            - { label: "Kermanvalkoinen", value: "creamyWhite" }
+            
+      - label: "Nosto"
+        hint: "Nostolohko, johon voit kirjoittaa ytimekkään otsikon sekä mahdollisuuden lisätä rikasta tekstisisältöä, sekä toimintakehotteen. Nostolohkon saa taustaväriltään joko sinisenä tai tummanvihreänä. Teksti on normaalisti kermanvalkoinen, mutta lihavoinnilla saat siihen keltaisen korostuksen. Voit myös laittaa pienen kuvan tekstin yläpuolelle, kuten esimerkiksi logosi."
+        name: "highlight"
+        widget: object
+        collapsed: true
+        fields:
+          - {
+              label: "Otsikko",
+              name: "title",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Kuvaus",
+              name: "description",
+              widget: "markdown",
+              required: false,
+            }
+          - {
+              label: "Kuva",
+              name: "image",
+              widget: "image",
+              required: false,
+              hint: "Näytetään tekstin yläpuolella"
+            }
+          - label: "Toimintakehoite"
+            name: "button"
+            max: 1
+            required: false
+            widget: list
+            fields:
+              - { label: "Otsikko", name: "title", widget: "string", required: false}
+              - { label: "Linkki", name: "url", widget: "string", required: false}
+          - label: "Taustaväri"
+            name: "backgroundcolor"
+            widget: "select"
+            options:
+              - { label: "Tummanvihreä", value: "green" }
+              - { label: "Turkoosi", value: "blue" }
+              - { label: "Kermanvalkoinen", value: "creamyWhite" }
+              - { label: "Pinkki", value: "pink" }
+              - { label: "Keltainen", value: "yellow" }
 
   - label: "Blog"
     name: "blog"
