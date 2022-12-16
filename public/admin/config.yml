@@ -450,13 +450,63 @@ collections:
               required: false,
               hint: "Muista valita mediakentästä video",
             }
+      - label: "Kortit"
+        name: "cards"
+        hint: "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen, joka näkyy korttien yläpuolella. Ideana on, että on hyvä ohjeistaa lukijaa mitä korteilla tarkalleen haluat kertoa. Toisinaan se ei kuitenkaan ole tarpeellista."
+        collapsed: true
+        widget: object
+        fields:
+          - {
+              label: "Otsikko",
+              name: "title",
+              widget: "string",
+              max: 50,
+              required: false,
+            }
+          - {
+              label: "Kuvaus",
+              name: "description",
+              widget: "text",
+              required: false,
+            }
+
+          - label: "Kortit"
+            name: "card"
+            widget: list
+            max: 6
+            fields:
+              - { label: "Kuva", name: "image", widget: "image", required: false} 
+              - { label: "Otsikko", name: "title", widget: "string", required: false}
+              - { label: "Kuvaus", name: "description", widget: "text", required: false}
+
+      - label: "Usein Kysytyt Kysymykset"
+        hint: "Pystyt laittamaan kysymyksen ja vastauksen. Pöytäkoneversiossa sinulla on myös mahdollisuus asettaa kuva osion kaveriksi. Kuva kehystetään palloon. Mobiilissa kuvaa ei näytetä laisinkaan, koska se vie turhaa tilaa pois eikä se ole oleellinen."
+        name: "faqSection"
+        widget: object
+        collapsed: true
+        fields:
+          - {
+              label: "Pöytäkoneella näkyvä kuva",
+              name: "image",
+              widget: "image",
+              required: false,
+            }
+          - label: "Kysymys"
+            name: "blog"
+            widget: "relation"
+            multiple: true
+            collection: "faq"
+            search_fields: ["title"]
+            value_field: "title"
+            display_fields: ["title"]
+
 
 
   - label: "Blog"
     name: "blog"
     folder: "content/blogPosts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - {
@@ -472,3 +522,12 @@ collections:
           required: true,
         }
       - { label: "Body", name: "body", widget: "markdown", required: true }
+
+  - label: "UKK"
+    name: "faq"
+    folder: "content/faqs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Kysymys", name: "title", widget: "string", required: true }
+      - { label: "Vastaus", name: "body", widget: "text", required: true }
