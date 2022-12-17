@@ -41,8 +41,8 @@ main {
 }
 
 .btn {
-	background-color: $primary;
-	color: $white;
+	background-color: $yellow;
+	color: $green;
 	font-weight: 700;
 	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -60,7 +60,8 @@ main {
 
 .btn:hover,
 .btn:focus {
-	background-color: $aquamarine;
+	background-color: $blue;
+	color: $yellow;
 }
 
 .buttonWrapper {

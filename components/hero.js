@@ -1,4 +1,4 @@
-import styles from "../styles/Hero.module.scss";
+import styles from "../styles/components/hero.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 

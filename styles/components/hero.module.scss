@@ -1,6 +1,6 @@
-@import "partials/mixins";
-@import "partials/variables";
-@import "partials/breakpoints";
+@import "../partials/mixins";
+@import "../partials/variables";
+@import "../partials/breakpoints";
 
 $hero-max-width: 2000px;
 $hero-max-height-ratio: 35; // Min-width related to viewport width
@@ -69,7 +69,7 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 }
 
 .content {
-	background-color: $primary;
+	background-color: $creamy-white;
 }
 
 .contentAlt {

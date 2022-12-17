@@ -1,17 +1,55 @@
-import Layout from '../components/layout'
-import { attributes, html } from '../content/home.md'
+import React, { useEffect } from 'react'
+import { useRouter } from "next/router"
+import Meta from '@components/Meta'
+import Hero from '@components/Hero'
+import Script from 'next/script'
 
-const Home = () => (
-  <Layout>
-    <h1>{attributes.title}</h1>
-    <div dangerouslySetInnerHTML={{ __html: html }} />
-    <style jsx>{`
-      h1,
-      div {
-        text-align: center;
-      }
-    `}</style>
-  </Layout>
-)
+const Index = ({ meta, hero }) => {
+  const router = useRouter()
 
-export default Home
+
+  useEffect(() => {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', (user) => {
+        if (!user) {
+          window.netlifyIdentity.on('login', () => {
+            router.push(/admin/)
+          })
+        }
+      })
+    }
+  }, [])
+
+  return (
+    <>
+      <Meta meta={meta} />
+      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
+      <section id="home">
+        <Hero hero={hero} />
+      </section>
+    </>
+  )
+}
+
+export default Index
+
+export async function getStaticProps() {
+  const home = await import(`../content/home.json`)
+
+  return {
+    props: {
+      meta: {
+        title: home.meta.title,
+        description: home.meta.description,
+        url: home.meta.url,
+        image: home.meta.image,
+      },
+      hero: {
+        DesktopHeroImage: home.Hero.DesktopHeroImage,
+        MobileHeroImage: home.Hero.MobileHeroImage,
+        ImageAltText: home.Hero.ImageAltText,
+        HeroTitle: home.Hero.HeroTitle,
+      },
+    },
+  }
+}
