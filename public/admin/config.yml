@@ -23,7 +23,7 @@ collections:
         preview_path: index
         fields:
           - label: "Hero"
-            hint: "Heroon voi laittaa yhden suuren otsikon, jonka maksimimitta on 50-kirjainta. Pääotsikon alle voidaan liittää vapaamuotoinen alaotsikko. Yleisesti Kuva täyttää puolet lohkon koon, mutta halutessasi voit leventää kuvan ottamaan 100% lohkosta. Heron saa asettaa joko vasemmalle tai oikealle puolelle. Voit myös kuvan sijaan liittää .gif liikkuvan-kuvan tai YouTube-videon. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta."
+            hint: "Heroon voi laittaa yhden suuren otsikon, jonka maksimimitta on 50-kirjainta. Pääotsikon alle voidaan liittää vapaamuotoinen kuvaus. Yleisesti Kuva täyttää puolet lohkon koon, mutta halutessasi voit leventää kuvan ottamaan 100% lohkosta. Heron saa asettaa joko vasemmalle tai oikealle puolelle. Voit myös kuvan sijaan liittää .gif liikkuvan-kuvan tai YouTube-videon. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta."
             name: "hero"
             collapsed: true
             widget: object
@@ -36,8 +36,8 @@ collections:
                   required: false,
                 }
               - {
-                  label: "Alaotsikko",
-                  name: "subtitle",
+                  label: "Kuvaus",
+                  name: "desciption",
                   widget: "string",
                   required: false,
                 }
@@ -301,7 +301,7 @@ collections:
           required: true,
         }
       - label: "Hero"
-        hint: "Heroon voi laittaa yhden suuren otsikon, jonka maksimimitta on 50-kirjainta. Pääotsikon alle voidaan liittää vapaamuotoinen alaotsikko. Yleisesti Kuva täyttää puolet lohkon koon, mutta halutessasi voit leventää kuvan ottamaan 100% lohkosta. Heron saa asettaa joko vasemmalle tai oikealle puolelle. Voit myös kuvan sijaan liittää .gif liikkuvan-kuvan tai YouTube-videon. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta."
+        hint: "Heroon voi laittaa yhden suuren otsikon, jonka maksimimitta on 50-kirjainta. Pääotsikon alle voidaan liittää vapaamuotoinen kuvaus. Yleisesti Kuva täyttää puolet lohkon koon, mutta halutessasi voit leventää kuvan ottamaan 100% lohkosta. Heron saa asettaa joko vasemmalle tai oikealle puolelle. Voit myös kuvan sijaan liittää .gif liikkuvan-kuvan tai YouTube-videon. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta."
         name: "hero"
         collapsed: true
         widget: object
@@ -314,8 +314,8 @@ collections:
               required: false,
             }
           - {
-              label: "Alaotsikko",
-              name: "subtitle",
+              label: "Kuvaus",
+              name: "desciption",
               widget: "string",
               required: false,
             }
