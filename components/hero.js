@@ -6,7 +6,7 @@ const Hero = ({ hero }) => {
   return (
     <section id={styles.hero}>
       {hero.media == "image" &&
-        hero.image(
+        hero.image && (
           <div className={styles.imageContainer}>
             <Image
               src={hero.image}
@@ -23,7 +23,7 @@ const Hero = ({ hero }) => {
           {hero.description && <h3>{hero.description}</h3>}
           {hero.buttons && (
             <div className="buttonWrapper">
-              {hero.buttons.forEach((button) => {
+              {hero.buttons.map((button) => {
                 <Link href={button.link}>
                   <a className={`btn btn--hero`}>{button.title}</a>
                 </Link>;
