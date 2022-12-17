@@ -59,5 +59,11 @@
       }
     ],
     "backgroundColor": "green"
+  },
+  "meta": {
+    "title": "Pasmiini",
+    "description": "Work for yourself on yourself",
+    "url": "pasmiini.fi",
+    "image": "/images/Vuosaaren_liike.jpeg"
   }
 }

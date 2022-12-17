@@ -45,10 +45,14 @@ export async function getStaticProps() {
         image: home.meta.image,
       },
       hero: {
-        DesktopHeroImage: home.Hero.DesktopHeroImage,
-        MobileHeroImage: home.Hero.MobileHeroImage,
-        ImageAltText: home.Hero.ImageAltText,
-        HeroTitle: home.Hero.HeroTitle,
+        title: home.hero.title,
+        description: home.hero.description,
+        align: home.hero.align,
+        media: home.hero.media,
+        image: home.hero.image,
+        imageWidth: home.hero.imageWidth,
+        video: home.hero.video,
+        buttons: home.hero.buttons,
       },
     },
   }
