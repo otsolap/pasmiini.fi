@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Pasmiini",
-    "subtitle": "Tekstiä",
+    "description": "Tekstiä",
     "align": "left",
     "media": "image",
     "image": "adawwa",
