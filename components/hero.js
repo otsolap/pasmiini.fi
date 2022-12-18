@@ -12,7 +12,7 @@ const Hero = ({ hero }) => {
             ${hero.align == "left" ? styles.imageLast : styles.imageFirst} 
             `}
         >
-          (hero.imageWidth && (
+          {hero.imageWidth ? (
           <Image
             className={styles.heroImage}
             src={hero.image}
@@ -29,7 +29,7 @@ const Hero = ({ hero }) => {
             width={720}
             height={625}
           />
-          ))
+          )}
         </div>
       )}
       <div

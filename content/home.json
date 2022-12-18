@@ -2,7 +2,7 @@
   "hero": {
     "title": "Hero-Otsikko max 50 kirjainta pitkä.",
     "description": "Tämä on Heron alaotsikko. Herolohko antaa sinulle vaihtoehdon täyttää koko lohkon kuvalla, tai jakaa kuvan 50% tekstikentän kanssa. Kuvan sijainninkin voit muuttaa. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta. Kuvan sijaan myös mahdollista liittää video youtube-linkin muodossa.",
-    "align": "left",
+    "align": "right",
     "media": "image",
     "image": "/images/puppy-and-adult-dog.jpg",
     "imageWidth": false,
