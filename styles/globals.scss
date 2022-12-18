@@ -70,9 +70,28 @@ a {
 	text-decoration-line: none;
 }
 
+.mobile-only {
+	display: block;
+}
+
+.desktop-only {
+	display: none;
+}
+
+
 /* DESKTOP STYLES */
 @media (width >=  $container-desktop) {
+
 	.btn {
 		width: fit-content;
 	}
+
+	.mobile-only {
+		display: none;
+	}
+	
+	.desktop-only {
+		display: block;
+	}
+
 }

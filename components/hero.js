@@ -14,21 +14,30 @@ const Hero = ({ hero }) => {
         >
           {hero.imageWidth ? (
           <Image
-            className={styles.heroImage}
             src={hero.image}
             alt={hero.title}
             quality={100}
             fill
           />
           ) : (
+            <>
+            <Image
+            className="mobile-only"
+            src={hero.image}
+            alt={hero.title}
+            quality={100}
+            width={428}
+            height={270}
+          />
           <Image
-            className={styles.heroImage}
+            className="desktop-only"
             src={hero.image}
             alt={hero.title}
             quality={100}
             width={720}
             height={625}
           />
+            </>
           )}
         </div>
       )}
