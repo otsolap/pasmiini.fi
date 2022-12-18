@@ -9,10 +9,10 @@ const Hero = ({ hero }) => {
         hero.image && (
           <div className={styles.imageContainer}>
             <Image
+              className={styles.heroImage}
               src={hero.image}
               alt={hero.title}
               fill
-              class={styles.heroImage}
               quality={100}
             />
           </div>
@@ -23,13 +23,14 @@ const Hero = ({ hero }) => {
           {hero.description && <h3>{hero.description}</h3>}
           {hero.buttons && (
             <div className="buttonWrapper">
-              {hero.buttons.map((button) => {
-                <Link href={button.link}>
+              {hero.buttons.map((button, i) => (
+                <Link key={i} href={button.url}>
                   <a className={`btn btn--hero`}>{button.title}</a>
-                </Link>;
-              })}
+                </Link>
+              ))}
             </div>
           )}
+          {(hero.buttons.map((button) => console.log(button)))}
         </div>
       </div>
     </section>
