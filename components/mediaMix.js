@@ -30,7 +30,7 @@ const MediaMix = ({ mediaMix }) => {
           />
         )}
         {mediaMix.columnTwoType == "text" && mediaMix.columnTwoText && (
-          <MarkdownBlock markdown={columnOneText} />
+          <MarkdownBlock markdown={columnTwoText} />
         )}
       </div>
     </section>
