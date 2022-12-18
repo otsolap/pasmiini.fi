@@ -1,5 +1,6 @@
 import styles from "../styles/components/mediaMix.module.scss";
 import Image from "next/image";
+import MarkdownBlock from "@partials/markdownBlock";
 
 const MediaMix = ({ mediaMix }) => {
   return (
@@ -14,6 +15,9 @@ const MediaMix = ({ mediaMix }) => {
             quality={100}
           />
         )}
+        {mediaMix.columnOneType == "text" && mediaMix.columnOneText && (
+          <MarkdownBlock markdown={columnOneText} />
+        )}
       </div>
       <div className={styles.mediaMixColumn}>
         {mediaMix.columnTwoType == "image" && mediaMix.columnTwoImage && (
@@ -24,6 +28,9 @@ const MediaMix = ({ mediaMix }) => {
             fill
             quality={100}
           />
+        )}
+        {mediaMix.columnTwoType == "text" && mediaMix.columnTwoText && (
+          <MarkdownBlock markdown={columnOneText} />
         )}
       </div>
     </section>
