@@ -7,17 +7,13 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 
 #hero {
 	position: relative;
-	max-width: $hero-max-width;
 	margin: auto;
-	min-height: $hero-max-height-ratio * 1vw;
-
-	@media (min-width: $hero-max-width) {
-		min-height: calc(($hero-max-width / 100) * $hero-max-height-ratio);
-	}
+	display: flex;
+	flex-direction: column;
 }
 
+
 .imageContainer {
-	position: relative;
 	width: 100%;
 	height: 270px;
 	overflow: hidden;
@@ -50,9 +46,17 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 	position: relative;
 }
 
+.bgDefault {
+	background-color: $creamy-white;
+}
+
+.bgTransparent {
+	background-color: transparent;
+}
+
+
 .content {
 	padding: $single;
-	color: $white;
 
 	h1 {
 		font-size: $triple;
@@ -60,60 +64,44 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 
 	h3 {
 		font-size: $single;
-		line-height: 1.5rem;
-		margin-top: 0.5rem;
-		margin-bottom: 0.5rem;
 		font-weight: 500;
 	}
 	
 }
 
-.content {
-	background-color: $creamy-white;
-}
-
-.contentAlt {
-	background-color: transparent;
-
-	h1 {
-		font-size: 2.5rem;
-	}
-}
-
-.heroBTN {
-	@include border(1px solid);
-	border-color: $white;
-	width: 80%;
-}
 
 /* DESKTOP STYLES */
 @media (width >=  $container-desktop) {
 
+	#hero {
+		max-width: $hero-max-width;
+		min-height: $hero-max-height-ratio * 1vw;
+		flex-direction: row;
+	
+		@media (min-width: $hero-max-width) {
+			min-height: calc(($hero-max-width / 100) * $hero-max-height-ratio);
+		}
+	}
+
 	.imageContainer {
 		height: 100%;
-		position: absolute;
-		inset: 0;
+		max-height: 625px;
 	}
 
 	.contentContainer {
-		margin: 0 auto;
-		max-width: $container-desktop;
-		padding-top: $triple;
-		padding-bottom: $triple;
+		max-width: 720px;
 	}
 
 	.content {
-		max-width: 28rem;
 
 		h1 {
 			padding-bottom: $double;
 			font-size: 3.5rem;
-			line-height: 2.5rem;
 		}
 	
 		h3 {
 			font-size: 1.5rem;
-			line-height: 2rem;
+			padding-bottom: $double;
 		}
 	}
 }

@@ -41,7 +41,7 @@ collections:
                   widget: "string",
                   required: false,
                 }
-              - label: "Align"
+              - label: "Tekstikentän asetus"
                 name: "align"
                 widget: "select"
                 required: false

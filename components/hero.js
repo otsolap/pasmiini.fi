@@ -12,25 +12,26 @@ const Hero = ({ hero }) => {
               className={styles.heroImage}
               src={hero.image}
               alt={hero.title}
-              fill
               quality={100}
+              fill={hero.imageWidth ? true : false}
+              {...hero.imageWidth ? '' : width=720}
+              {...hero.imageWidth ? false : height=625}
             />
           </div>
         )}
-      <div className={styles.contentContainer}>
+      <div className={`${styles.contentContainer} ${hero.imageWidth ? styles.bgTransparent : styles.bgDefault} `}>
         <div className={styles.content}>
           {hero.title && <h1>{hero.title}</h1>}
           {hero.description && <h3>{hero.description}</h3>}
           {hero.buttons && (
             <div className="buttonWrapper">
               {hero.buttons.map((button, i) => (
-                <Link key={i} href={button.url} className={`btn btn--hero`}>
+                <Link key={i} href={button.url} className={`btn`}>
                   {button.title}
                 </Link>
               ))}
             </div>
           )}
-          {(hero.buttons.map((button) => console.log(button)))}
         </div>
       </div>
     </section>
