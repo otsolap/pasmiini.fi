@@ -5,7 +5,7 @@
     "align": "left",
     "media": "image",
     "image": "/images/puppy-and-adult-dog.jpg",
-    "imageWidth": true,
+    "imageWidth": false,
     "video": "wadwadwawdadw",
     "buttons": [
       {

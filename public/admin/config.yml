@@ -47,7 +47,7 @@ collections:
                 required: false
                 options:
                   - { label: "Vasen", value: "left" }
-                  - { label: "Keskellä", value: "center" }
+
                   - { label: "Oikea", value: "right" }
               - label: "Media"
                 name: "media"
@@ -324,7 +324,6 @@ collections:
             widget: "select"
             options:
               - { label: "Vasen", value: "left" }
-              - { label: "Keskellä", value: "center" }
               - { label: "Oikea", value: "right" }
           - label: "Media"
             name: "media"

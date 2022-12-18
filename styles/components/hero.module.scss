@@ -92,6 +92,17 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 		max-width: 720px;
 	}
 
+	.imageFirst,
+	.contentFirst {
+		order: 1;
+	}
+
+	.imageLast,
+	.contentLast {
+		order: 2;
+	}
+
+
 	.content {
 
 		h1 {

@@ -6,31 +6,38 @@ const Hero = ({ hero }) => {
   return (
     <section id={styles.hero}>
       {hero.media == "image" && hero.image && (
-        <div className={styles.imageContainer}>
+        <div
+          className={`
+            ${styles.imageContainer} 
+            ${hero.align == "left" ? styles.imageLast : styles.imageFirst} 
+            `}
+        >
           (hero.imageWidth && (
-            <Image
-              className={styles.heroImage}
-              src={hero.image}
-              alt={hero.title}
-              quality={100}
-              fill
-            />
+          <Image
+            className={styles.heroImage}
+            src={hero.image}
+            alt={hero.title}
+            quality={100}
+            fill
+          />
           ) : (
-            <Image
-              className={styles.heroImage}
-              src={hero.image}
-              alt={hero.title}
-              quality={100}
-              width={720}
-              height={625}
-            />
+          <Image
+            className={styles.heroImage}
+            src={hero.image}
+            alt={hero.title}
+            quality={100}
+            width={720}
+            height={625}
+          />
           ))
         </div>
       )}
       <div
-        className={`${styles.contentContainer} ${
-          hero.imageWidth ? styles.bgTransparent : styles.bgDefault
-        } `}
+        className={`
+          ${styles.contentContainer} 
+          ${hero.imageWidth ? styles.bgTransparent : styles.bgDefault}
+          ${hero.align == "left" ? styles.contentFirst : styles.contentLast} 
+        `}
       >
         <div className={styles.content}>
           {hero.title && <h1>{hero.title}</h1>}
