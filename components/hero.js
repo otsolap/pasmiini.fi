@@ -24,8 +24,8 @@ const Hero = ({ hero }) => {
           {hero.buttons && (
             <div className="buttonWrapper">
               {hero.buttons.map((button, i) => (
-                <Link key={i} href={button.url}>
-                  <a className={`btn btn--hero`}>{button.title}</a>
+                <Link key={i} href={button.url} className={`btn btn--hero`}>
+                  {button.title}
                 </Link>
               ))}
             </div>
