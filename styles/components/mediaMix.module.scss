@@ -1,0 +1,21 @@
+.mediaMix,
+.mediaMixColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.mediaMixColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+/* DESKTOP STYLES */
+@media (width >= $container-desktop) {
+  .mediaMix {
+    flex-direction: row;
+  }
+
+  .mediaMixColumn {
+    max-width: 720px;
+  }
+}

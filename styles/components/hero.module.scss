@@ -5,7 +5,7 @@
 $hero-max-width: 2000px;
 $hero-max-height-ratio: 35; // Min-width related to viewport width
 
-#hero {
+.hero {
 	position: relative;
 	margin: auto;
 	display: flex;
@@ -74,7 +74,7 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 /* DESKTOP STYLES */
 @media (width >=  $container-desktop) {
 
-	#hero {
+	.hero {
 		max-width: $hero-max-width;
 		flex-direction: row;
 		min-height: $hero-max-height-ratio * 1vw;

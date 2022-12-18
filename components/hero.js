@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Hero = ({ hero }) => {
   return (
-    <section id={styles.hero}>
+    <section className={styles.hero}>
       {hero.media == "image" && hero.image && (
         <div
           className={`

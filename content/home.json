@@ -17,7 +17,8 @@
   "mediaMix": {
     "backgroundColor": "blue",
     "columnOneType": "image",
-    "columnOneImage": "adawdaaww",
+    "columnOneImage": "/images/puppy-and-adult-dog.jpg",
+    "columnOneVideo": "",
     "columnOneText": "awdawdawa",
     "columnOneLinks": [
       {
@@ -31,11 +32,22 @@
         "url": "/linkki"
       }
     ],
-    "columnOneVideo": "",
     "columnTwoType": "text",
-    "columnTwoImage": "",
+    "columnTwoImage": "/images/puppy-and-adult-dog.jpg",
+    "columnTwoVideo": "",
     "columnTwoText": "",
-    "columnTwoVideo": ""
+    "columnTwoLinks": [
+      {
+        "title": "Uudet nettisivut",
+        "url": "/linkki"
+      }
+    ],
+    "columnTwoButtons": [
+      {
+        "title": "Uudet nettisivut 2",
+        "url": "/linkki"
+      }
+    ]
   },
   "highlight": {
     "title": "hello",
@@ -43,7 +55,7 @@
     "button": [
       {
         "title": "Haluan elamantapamuutoksen",
-        "url": "/Myynti"
+        "url": "/palvelut"
       }
     ],
     "backgroundColor": "green"
@@ -55,7 +67,7 @@
     "link": [
       {
         "title": "Haluan elamantapamuutoksen",
-        "url": "/Myynti"
+        "url": "/palvelut"
       }
     ],
     "backgroundColor": "green"
