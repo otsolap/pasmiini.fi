@@ -12,9 +12,13 @@
   flex-direction: column;
 }
 
-.mediaMixColumn {
-  display: flex;
-  flex-direction: column;
+.mediaMixImageContainer {
+  height: 325px;
+  width: 325px;
+}
+
+.mediaMixImage {
+  @include border-radius(100%);
 }
 
 /* DESKTOP STYLES */
@@ -25,5 +29,10 @@
 
   .mediaMixColumn {
     max-width: 720px;
+  }
+
+  .mediaMixImageContainer {
+    height: 650px;
+    width: 650px;
   }
 }
