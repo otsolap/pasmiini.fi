@@ -5,7 +5,7 @@ import YoutubeEmbed from "./youtubeEmbed";
 
 const MediaMixItem = ({ type, image, video, text }) => {
   return (
-    <>
+    <div className={styles.mediaMixColumn}>
       {type == "image" && image && (
         <div className={styles.mediaMixImageContainer}>
           <Image
@@ -19,7 +19,7 @@ const MediaMixItem = ({ type, image, video, text }) => {
       )}
       {type == "text" && text && <MarkdownBlock markdown={text} />}
       {type == "video" && video && <YoutubeEmbed link={video} />}
-    </>
+    </div>
   );
 };
 

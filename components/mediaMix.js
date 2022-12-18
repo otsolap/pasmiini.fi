@@ -1,38 +1,25 @@
 import styles from "../styles/components/mediaMix.module.scss";
-import Image from "next/image";
-import MarkdownBlock from "@partials/markdownBlock";
+import MediaMixItem from "@partials/mediaMixItem";
 
 const MediaMix = ({ mediaMix }) => {
   return (
     <section className={`${styles.mediaMix} `}>
-      <div className={styles.mediaMixColumn}>
-        {mediaMix.columnOneType == "image" && mediaMix.columnOneImage && (
-          <Image
-            className={styles.mediaMixImage}
-            src={mediaMix.columnOneImage}
-            alt=""
-            fill
-            quality={100}
-          />
-        )}
-        {mediaMix.columnOneType == "text" && mediaMix.columnOneText && (
-          <MarkdownBlock markdown={columnOneText} />
-        )}
-      </div>
-      <div className={styles.mediaMixColumn}>
-        {mediaMix.columnTwoType == "image" && mediaMix.columnTwoImage && (
-          <Image
-            className={styles.mediaMixImage}
-            src={mediaMix.columnTwoImage}
-            alt=""
-            fill
-            quality={100}
-          />
-        )}
-        {mediaMix.columnTwoType == "text" && mediaMix.columnTwoText && (
-          <MarkdownBlock markdown={columnTwoText} />
-        )}
-      </div>
+      <MediaMixItem
+        type={mediaMix.columnOneType}
+        image={mediaMix.columnOneImage}
+        video={mediaMix.columnOneVideo}
+        text={mediaMix.columnOneText}
+        links={mediaMix.columnOneLinks}
+        buttons={mediaMix.columnOneLinks}
+      />
+      <MediaMixItem
+        type={mediaMix.columnTwoType}
+        image={mediaMix.columnTwoImage}
+        video={mediaMix.columnTwoVideo}
+        text={mediaMix.columnTwoText}
+        links={mediaMix.columnTwoLinks}
+        buttons={mediaMix.columnTwoLinks}
+      />
     </section>
   );
 };
