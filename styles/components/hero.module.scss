@@ -89,6 +89,12 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 		max-width: 720px;
 	}
 
+	.fullVideo {
+		position: absolute;
+		max-width: 1440px;
+		inset: 0;
+	}
+
 	.mediaFirst,
 	.contentFirst {
 		order: 1;

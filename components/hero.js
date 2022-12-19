@@ -10,6 +10,7 @@ const Hero = ({ hero }) => {
         className={`
           ${styles.mediaContainer} 
           ${hero.align == "left" ? styles.mediaLast : styles.mediaFirst} 
+          ${hero.media == "video" && hero.mediaWidth ? styles.fullVideo : ""} 
           `}
       >
         {hero.media == "image" && hero.image && (
