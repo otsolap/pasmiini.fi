@@ -5,7 +5,7 @@
     "align": "left",
     "media": "video",
     "image": "/images/puppy-and-adult-dog.jpg",
-    "mediaWidth": true,
+    "mediaWidth": false,
     "video": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
     "buttons": [
       {
@@ -15,26 +15,6 @@
     ]
   },
   "mediaMix": {
-    "backgroundColor": "blue",
-    "columnOneType": "image",
-    "columnOneImage": "/images/puppy-and-adult-dog.jpg",
-    "columnOneVideo": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
-    "columnOneText": "awdawdawa",
-    "columnOneLinks": [
-      {
-        "title": "Uudet nettisivut",
-        "url": "/linkki"
-      }
-    ],
-    "columnOneButtons": [
-      {
-        "title": "Uudet nettisivut 2",
-        "url": "/linkki"
-      }
-    ],
-    "columnTwoType": "video",
-    "columnTwoImage": "/images/puppy-and-adult-dog.jpg",
-    "columnTwoVideo": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
     "columnTwoText": "",
     "columnTwoLinks": [
       {
@@ -42,12 +22,32 @@
         "url": "/linkki"
       }
     ],
+    "columnTwoVideo": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
+    "columnTwoImage": "/images/puppy-and-adult-dog.jpg",
+    "columnOneLinks": [
+      {
+        "title": "Uudet nettisivut",
+        "url": "/linkki"
+      }
+    ],
+    "columnOneType": "markdown",
+    "columnOneImage": "/images/puppy-and-adult-dog.jpg",
+    "columnOneVideo": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
     "columnTwoButtons": [
       {
         "title": "Uudet nettisivut 2",
         "url": "/linkki"
       }
-    ]
+    ],
+    "columnTwoType": "video",
+    "columnOneButtons": [
+      {
+        "title": "Uudet nettisivut 2",
+        "url": "/linkki"
+      }
+    ],
+    "backgroundColor": "blue",
+    "columnOneText": "## MediaMix\n\nLohkon kuvan saa asetettua joko vasempaan tai oikeaan puoleen. Kuva esitetään kokoruudunkokoisena tai sen voi kehystää. \\\nTekstikenttään saa vapaasti kirjoittaa rikasta tekstisisältöä sekä halutessasi lisätä määrittelemätön määrä linkkejä. Pystyt halutessasi muuttamaan taustaväriä brädi-ilmeen mukaiseksi.\\\n\\\nLista elementit näytetään “tsekki”-merkkeille.\\\n\\\nLinkkin väri on normaalisti sinivihreä ja muuttuu keltaiseksi sekä saa alareunan, kun hiiren laittaa linkin ylle. Tekstikenttien päätyyn saat lisätä maksimissaan kaksi toimintakehote nappia.\n\n[Syy ostaa ohjelma](/myynti)"
   },
   "highlight": {
     "title": "hello",
@@ -77,5 +77,12 @@
     "description": "Work for yourself on yourself",
     "url": "pasmiini.fi",
     "image": "/images/Vuosaaren_liike.jpeg"
+  },
+  "blogSection": {
+    "filter": "custom",
+    "blog": [
+      "2019-09-06_its_not_the_problem_you_want_to_solve_boiiiiii",
+      "2019-09-06_why_did_the_chicken_cross_the_road"
+    ]
   }
 }

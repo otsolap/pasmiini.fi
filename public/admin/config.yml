@@ -1,7 +1,7 @@
 backend:
   name: test-repo
   branch: main
-media_folder: /imgages
+media_folder: /images
 site_url: https://luxury-crisp-4c6313.netlify.app
 public_folder: /images
 slug:
@@ -9,7 +9,8 @@ slug:
   clean_accents: true
   sanitize_replacement: "_"
 # Uncomment local_backend when you need to develop in your local
-local_backend: true # run npx netlify-cms-proxy-server for local testing
+# npx netlify-cms-proxy-server
+local_backend: true 
 collections:
   - name: "pages"
     description: "Sivujen asetukset."
@@ -248,6 +249,7 @@ collections:
               - label: "Suodatin"
                 name: "filter"
                 widget: "select"
+                required: false
                 options:
                   - { label: "Tuoreimmat", value: "latest" }
                   - { label: "Omavalinta", value: "custom" }
@@ -256,6 +258,7 @@ collections:
                 widget: "relation"
                 hint: "Muista valita Omavalinta suodattimesta."
                 multiple: true
+                required: false
                 max: 3
                 collection: "blog"
                 search_fields: ["title", "date"]
