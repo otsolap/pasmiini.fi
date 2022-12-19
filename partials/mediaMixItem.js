@@ -6,7 +6,11 @@ import YoutubeEmbed from "./youtubeEmbed";
 const MediaMixItem = ({ type, image, video, text }) => {
   return (
     <div className={styles.mediaMixColumn}>
-      {type == "video" && video && <YoutubeEmbed link={video} />}
+      {type == "video" && video && (
+        <div className={styles.mediaMixVideoContainer}>
+          <YoutubeEmbed link={video} />
+        </div>
+      )}
       {type == "image" && image && (
         <div className={styles.mediaMixImageContainer}>
           <Image

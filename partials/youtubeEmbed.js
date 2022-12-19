@@ -8,17 +8,18 @@ const YoutubeEmbed = ({ link }) => {
   };
 
   return (
-    <div className="video">
       <iframe
-        width="700"
-        height="500"
+        className="youtube"
         src={`https://www.youtube.com/embed/${YouTubeGetID(link)}`}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
+        playsInline
+        controls="0"
+        fs="0"
+        rel="0"
+        enablejsapi="1"
+        hl="fi"
+        modestbranding="1"
         title="Pasmiini Video"
       />
-    </div>
   );
 };
 
