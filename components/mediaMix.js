@@ -8,7 +8,7 @@ const MediaMix = ({ mediaMix }) => {
         type={mediaMix.columnOneType}
         image={mediaMix.columnOneImage}
         video={mediaMix.columnOneVideo}
-        text={mediaMix.columnOneText}
+        markdown={mediaMix.columnOneText}
         links={mediaMix.columnOneLinks}
         buttons={mediaMix.columnOneLinks}
       />
@@ -16,7 +16,7 @@ const MediaMix = ({ mediaMix }) => {
         type={mediaMix.columnTwoType}
         image={mediaMix.columnTwoImage}
         video={mediaMix.columnTwoVideo}
-        text={mediaMix.columnTwoText}
+        markdown={mediaMix.columnTwoText}
         links={mediaMix.columnTwoLinks}
         buttons={mediaMix.columnTwoLinks}
       />

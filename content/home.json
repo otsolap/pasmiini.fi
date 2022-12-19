@@ -15,7 +15,25 @@
     ]
   },
   "mediaMix": {
-    "columnTwoText": "",
+    "columnOneType": "markdown",
+    "columnOneImage": "/images/puppy-and-adult-dog.jpg",
+    "columnOneVideo": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
+    "columnOneText": "## MediaMix\n\nLohkon kuvan saa asetettua joko vasempaan tai oikeaan puoleen. Kuva esitetään kokoruudunkokoisena tai sen voi kehystää.\\\nTekstikenttään saa vapaasti kirjoittaa rikasta tekstisisältöä sekä halutessasi lisätä määrittelemätön määrä linkkejä. Pystyt halutessasi muuttamaan taustaväriä brädi-ilmeen mukaiseksi.\\\n\\\nLista elementit näytetään “tsekki”-merkkeille.\\\n\\\nLinkkin väri on normaalisti sinivihreä ja muuttuu keltaiseksi sekä saa alareunan, kun hiiren laittaa linkin ylle. Tekstikenttien päätyyn saat lisätä maksimissaan kaksi toimintakehote nappia.\n\n[Syy ostaa ohjelma](/myynti)",
+
+    "columnOneLinks": [
+      {
+        "title": "Uudet nettisivut",
+        "url": "/linkki"
+      }
+    ],
+    "columnOneButtons": [
+      {
+        "title": "Uudet nettisivut 2",
+        "url": "/linkki"
+      }
+    ],
+    "columnTwoType": "markdown",
+    "columnTwoText": "## MediaMix\n\nLohkon kuvan saa asetettua joko vasempaan tai oikeaan puoleen. Kuva esitetään kokoruudunkokoisena tai sen voi kehystää.\\\nTekstikenttään saa vapaasti kirjoittaa rikasta tekstisisältöä sekä halutessasi lisätä määrittelemätön määrä linkkejä. Pystyt halutessasi muuttamaan taustaväriä brädi-ilmeen mukaiseksi.\\\n\\\nLista elementit näytetään “tsekki”-merkkeille.\\\n\\\nLinkkin väri on normaalisti sinivihreä ja muuttuu keltaiseksi sekä saa alareunan, kun hiiren laittaa linkin ylle. Tekstikenttien päätyyn saat lisätä maksimissaan kaksi toimintakehote nappia.\n\n[Syy ostaa ohjelma](/myynti)",
     "columnTwoLinks": [
       {
         "title": "Uudet nettisivut",
@@ -24,30 +42,14 @@
     ],
     "columnTwoVideo": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
     "columnTwoImage": "/images/puppy-and-adult-dog.jpg",
-    "columnOneLinks": [
-      {
-        "title": "Uudet nettisivut",
-        "url": "/linkki"
-      }
-    ],
-    "columnOneType": "markdown",
-    "columnOneImage": "/images/puppy-and-adult-dog.jpg",
-    "columnOneVideo": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
+
     "columnTwoButtons": [
       {
         "title": "Uudet nettisivut 2",
         "url": "/linkki"
       }
     ],
-    "columnTwoType": "video",
-    "columnOneButtons": [
-      {
-        "title": "Uudet nettisivut 2",
-        "url": "/linkki"
-      }
-    ],
-    "backgroundColor": "blue",
-    "columnOneText": "## MediaMix\n\nLohkon kuvan saa asetettua joko vasempaan tai oikeaan puoleen. Kuva esitetään kokoruudunkokoisena tai sen voi kehystää. \\\nTekstikenttään saa vapaasti kirjoittaa rikasta tekstisisältöä sekä halutessasi lisätä määrittelemätön määrä linkkejä. Pystyt halutessasi muuttamaan taustaväriä brädi-ilmeen mukaiseksi.\\\n\\\nLista elementit näytetään “tsekki”-merkkeille.\\\n\\\nLinkkin väri on normaalisti sinivihreä ja muuttuu keltaiseksi sekä saa alareunan, kun hiiren laittaa linkin ylle. Tekstikenttien päätyyn saat lisätä maksimissaan kaksi toimintakehote nappia.\n\n[Syy ostaa ohjelma](/myynti)"
+    "backgroundColor": "blue"
   },
   "highlight": {
     "title": "hello",
