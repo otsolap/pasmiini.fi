@@ -1,6 +1,7 @@
 import styles from "../styles/components/hero.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import YoutubeEmbed from "@partials/youtubeEmbed";
 
 const Hero = ({ hero }) => {
   return (
@@ -41,6 +42,11 @@ const Hero = ({ hero }) => {
           )}
         </div>
       )}
+     {hero.media == "video" && hero.video && (
+      <div className={styles.videoContainer}>
+        <YoutubeEmbed src={hero.video} />
+      </div>
+     )}
       <div
         className={`
           ${styles.contentContainer} 
