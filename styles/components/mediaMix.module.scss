@@ -13,14 +13,14 @@
   flex-direction: column;
 }
 
-.mediaMixImageContainer,
-.mediaMixVideoContainer {
+.imageContainer,
+.videoContainer {
   position: relative;
   height: 325px;
   width: 325px;
 }
 
-.mediaMixImage {
+.image {
   @include border-radius(100%);
 }
 
@@ -34,8 +34,8 @@
     max-width: 720px;
   }
 
-  .mediaMixImageContainer,
-  .mediaMixVideoContainer {
+  .imageContainer,
+  .videoContainer {
     height: 650px;
     width: 650px;
   }

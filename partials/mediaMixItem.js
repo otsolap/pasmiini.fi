@@ -7,14 +7,14 @@ const MediaMixItem = ({ type, image, video, text }) => {
   return (
     <div className={styles.mediaMixColumn}>
       {type == "video" && video && (
-        <div className={styles.mediaMixVideoContainer}>
+        <div className={styles.videoContainer}>
           <YoutubeEmbed link={video} />
         </div>
       )}
       {type == "image" && image && (
-        <div className={styles.mediaMixImageContainer}>
+        <div className={styles.imageContainer}>
           <Image
-            className={styles.mediaMixImage}
+            className={styles.image}
             src={image}
             alt=""
             fill
