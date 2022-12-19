@@ -12,10 +12,9 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 	flex-direction: column;
 }
 
-
-.imageContainer {
+.mediaContainer {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	max-height: 270px;
 	overflow: hidden;
 }
@@ -84,18 +83,18 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 		}
 	}
 
-	.imageContainer,
+	.mediaContainer,
 	.contentContainer {
 		max-height: 625px;
 		max-width: 720px;
 	}
 
-	.imageFirst,
+	.mediaFirst,
 	.contentFirst {
 		order: 1;
 	}
 
-	.imageLast,
+	.mediaeLast,
 	.contentLast {
 		order: 2;
 	}

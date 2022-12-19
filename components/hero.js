@@ -6,51 +6,48 @@ import YoutubeEmbed from "@partials/youtubeEmbed";
 const Hero = ({ hero }) => {
   return (
     <section className={styles.hero}>
-      {hero.media == "image" && hero.image && (
-        <div
-          className={`
-            ${styles.imageContainer} 
-            ${hero.align == "left" ? styles.imageLast : styles.imageFirst} 
-            `}
-        >
-          {hero.imageWidth ? (
-          <Image
-            src={hero.image}
-            alt={hero.title}
-            quality={100}
-            fill
-          />
-          ) : (
-            <>
-            <Image
-            className="mobile-only"
-            src={hero.image}
-            alt={hero.title}
-            quality={100}
-            width={428}
-            height={270}
-          />
-          <Image
-            className="desktop-only"
-            src={hero.image}
-            alt={hero.title}
-            quality={100}
-            width={720}
-            height={625}
-          />
-            </>
-          )}
-        </div>
-      )}
-     {hero.media == "video" && hero.video && (
-      <div className={styles.videoContainer}>
-        <YoutubeEmbed src={hero.video} />
+      <div
+        className={`
+          ${styles.mediaContainer} 
+          ${hero.align == "left" ? styles.mediaLast : styles.mediaFirst} 
+          `}
+      >
+        {hero.media == "image" && hero.image && (
+          <>
+            {hero.mediaWidth ? (
+              <Image src={hero.image} alt={hero.title} quality={100} fill />
+            ) : (
+              <>
+                <Image
+                  className="mobile-only"
+                  src={hero.image}
+                  alt={hero.title}
+                  quality={100}
+                  width={428}
+                  height={270}
+                />
+                <Image
+                  className="desktop-only"
+                  src={hero.image}
+                  alt={hero.title}
+                  quality={100}
+                  width={720}
+                  height={625}
+                />
+              </>
+            )}
+          </>
+        )}
+        {hero.media == "video" && hero.video && (
+          <>
+            <YoutubeEmbed src={hero.video} />
+          </>
+        )}
       </div>
-     )}
       <div
         className={`
           ${styles.contentContainer} 
-          ${hero.imageWidth ? styles.bgTransparent : styles.bgDefault}
+          ${hero.mediaWidth ? styles.bgTransparent : styles.bgDefault}
           ${hero.align == "left" ? styles.contentFirst : styles.contentLast} 
         `}
       >

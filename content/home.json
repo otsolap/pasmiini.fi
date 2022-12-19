@@ -5,8 +5,8 @@
     "align": "right",
     "media": "image",
     "image": "/images/puppy-and-adult-dog.jpg",
-    "imageWidth": false,
-    "video": "https://www.youtube.com/watch?v=v467fp8aVoU",
+    "mediaWidth": false,
+    "video": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
     "buttons": [
       {
         "title": "Tutustu ohjelmiin",
@@ -18,7 +18,7 @@
     "backgroundColor": "blue",
     "columnOneType": "image",
     "columnOneImage": "/images/puppy-and-adult-dog.jpg",
-    "columnOneVideo": "https://www.youtube.com/watch?v=v467fp8aVoU",
+    "columnOneVideo": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
     "columnOneText": "awdawdawa",
     "columnOneLinks": [
       {
@@ -34,7 +34,7 @@
     ],
     "columnTwoType": "video",
     "columnTwoImage": "/images/puppy-and-adult-dog.jpg",
-    "columnTwoVideo": "https://www.youtube.com/watch?v=v467fp8aVoU",
+    "columnTwoVideo": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
     "columnTwoText": "",
     "columnTwoLinks": [
       {

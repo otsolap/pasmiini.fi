@@ -52,7 +52,7 @@ export async function getStaticProps() {
         align: home.hero.align,
         media: home.hero.media,
         image: home.hero.image,
-        imageWidth: home.hero.imageWidth,
+        mediaWidth: home.hero.mediaWidth,
         video: home.hero.video,
         buttons: home.hero.buttons,
       },
