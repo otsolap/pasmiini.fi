@@ -3,7 +3,7 @@ import Markdown from 'markdown-to-jsx'
 
 const MarkdownBlock = ({ markdown }) => {
     return (
-        <div className="markdownBody">
+        <div className="markdown">
             <Markdown options={{ forceBlock: true, wrapper: 'article' }}>
                 {markdown}
             </Markdown>

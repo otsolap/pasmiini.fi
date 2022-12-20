@@ -13,6 +13,10 @@
   flex-direction: column;
 }
 
+.mediaMixColumn {
+  padding: $single;
+}
+
 .imageContainer,
 .videoContainer {
   position: relative;

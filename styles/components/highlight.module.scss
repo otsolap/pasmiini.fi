@@ -12,15 +12,33 @@
     padding-bottom: $single;
 }
 
+.imageContainer,
+.buttonWrapper {
+    margin: 0 auto;
+}
+
 .content {
     text-align: center;
+}
+
+.content,
+.buttonWrapper {
+    padding-bottom: $single;
 }
 
 .image {
     @include border-radius(100%);
   }
   
-.imageContainer,
-.buttonWrapper {
-    margin: 0 auto;
+
+@media (width >= $container-desktop) {
+
+    .imageContainer {
+        padding-top: $double;
+    }
+
+    .buttonWrapper {
+        padding-bottom: $double;
+    }
+    
 }
