@@ -4,22 +4,21 @@ import MediaMixItem from "@partials/mediaMixItem";
 const MediaMix = ({ mediaMix }) => {
   return (
     <section className={`${styles.mediaMix} `}>
-      <MediaMixItem
-        type={mediaMix.columnOneType}
-        image={mediaMix.columnOneImage}
-        video={mediaMix.columnOneVideo}
-        markdown={mediaMix.columnOneText}
-        links={mediaMix.columnOneLinks}
-        buttons={mediaMix.columnOneLinks}
-      />
-      <MediaMixItem
-        type={mediaMix.columnTwoType}
-        image={mediaMix.columnTwoImage}
-        video={mediaMix.columnTwoVideo}
-        markdown={mediaMix.columnTwoText}
-        links={mediaMix.columnTwoLinks}
-        buttons={mediaMix.columnTwoLinks}
-      />
+      <>
+      {mediaMix.medias.map((media, i) => {
+        return (
+          <MediaMixItem
+            key={i}
+            type={media.type}
+            image={media.image}
+            video={media.video}
+            markdown={media.body}
+            links={media.links}
+            buttons={media.buttons}
+          />
+        )
+      })}
+      </>
     </section>
   );
 };

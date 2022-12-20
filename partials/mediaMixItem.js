@@ -4,7 +4,7 @@ import Link from "next/link";
 import MarkdownBlock from "@partials/markdownBlock";
 import YoutubeEmbed from "./youtubeEmbed";
 
-const MediaMixItem = ({ type, image, video, markdown, links, buttons }) => {
+const MediaMixItem = ({ type, image, video, body, links, buttons }) => {
   return (
     <div className={styles.mediaMixColumn}>
       {type == "video" && video && (
@@ -23,8 +23,8 @@ const MediaMixItem = ({ type, image, video, markdown, links, buttons }) => {
           />
         </div>
       )}
-      {type == "markdown" && markdown && <MarkdownBlock markdown={markdown} />}
-      {type == "markdown" && links && (
+      {type == "body" && body && <MarkdownBlock markdown={body} />}
+      {type == "body" && links && (
         <ul className="linkWrapper">
           {links.map((link, i) => (
             <li key={i}>
@@ -33,7 +33,7 @@ const MediaMixItem = ({ type, image, video, markdown, links, buttons }) => {
           ))}
         </ul>
       )}
-      {type == "markdown" && buttons && (
+      {type == "body" && buttons && (
         <div className="buttonWrapper">
           {buttons.map((button, i) => (
             <Link key={i} href={button.url} className={`btn`}>

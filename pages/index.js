@@ -58,18 +58,7 @@ export async function getStaticProps() {
       },
       mediaMix: {
         backgroundColor: home.mediaMix.backgroundColor,
-        columnOneType: home.mediaMix.columnOneType,
-        columnOneImage: home.mediaMix.columnOneImage,
-        columnOneVideo: home.mediaMix.columnOneVideo,
-        columnOneText: home.mediaMix.columnOneText,
-        columnOneLinks: home.mediaMix.columnOneLinks,
-        columnOneButtons: home.mediaMix.columnOneButtons,
-        columnTwoType: home.mediaMix.columnTwoType,
-        columnTwoImage: home.mediaMix.columnTwoImage,
-        columnTwoVideo: home.mediaMix.columnTwoVideo,
-        columnTwoText: home.mediaMix.columnTwoText,
-        columnTwoLinks: home.mediaMix.columnTwoLinks,
-        columnTwoButtons: home.mediaMix.columnTwoButtons
+        medias: home.mediaMix.medias,
       }
     },
   }
