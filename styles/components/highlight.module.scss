@@ -21,8 +21,7 @@
     text-align: center;
 }
 
-.content,
-.buttonWrapper {
+.content {
     padding-bottom: $single;
 }
 
@@ -37,8 +36,4 @@
         padding-top: $double;
     }
 
-    .buttonWrapper {
-        padding-bottom: $double;
-    }
-    
 }
