@@ -5,7 +5,7 @@ const MarkdownBlock = ({ markdown }) => {
     return (
         <div className="markdownBody">
             <Markdown options={{ forceBlock: true, wrapper: 'article' }}>
-                {markdown.body}
+                {markdown}
             </Markdown>
         </div>
     )

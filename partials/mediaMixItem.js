@@ -23,8 +23,8 @@ const MediaMixItem = ({ type, image, video, body, links, buttons }) => {
           />
         </div>
       )}
-      {type == "body" && body && <MarkdownBlock markdown={body} />}
-      {type == "body" && links && (
+      {type == "markdown" && body && <MarkdownBlock markdown={body} />}
+      {type == "markdown" && links && (
         <ul className="linkWrapper">
           {links.map((link, i) => (
             <li key={i}>

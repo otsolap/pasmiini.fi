@@ -12,7 +12,7 @@ const MediaMix = ({ mediaMix }) => {
             type={media.type}
             image={media.image}
             video={media.video}
-            markdown={media.body}
+            body={media.body}
             links={media.links}
             buttons={media.buttons}
           />
