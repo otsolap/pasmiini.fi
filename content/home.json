@@ -15,41 +15,44 @@
     ]
   },
   "mediaMix": {
-    "columnOneType": "image",
-    "columnOneImage": "/images/puppy-and-adult-dog.jpg",
-    "columnOneVideo": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
-    "columnOneText": "Mikäli sinulla ei ole talven varalle sopivaa tai luotettavaa tilaa säilyttää polkupyörää, tarjoamme oheispalveluna talvisäilytystä kuivassa ja lämpimässä tilassa. \n\nPolkupyörän talvisäilytys ja perushuolto 100 €. Nouto myymälöidemme lähialueilta 10 €",
-
-    "columnOneLinks": [
+    "columns": [
       {
-        "title": "Uudet nettisivut",
-        "url": "/linkki"
-      }
-    ],
-    "columnOneButtons": [
+        "type": "image",
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "video": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
+        "text": "Mikäli sinulla ei ole talven varalle sopivaa tai luotettavaa tilaa säilyttää polkupyörää, tarjoamme oheispalveluna talvisäilytystä kuivassa ja lämpimässä tilassa. \n\nPolkupyörän talvisäilytys ja perushuolto 100 €. Nouto myymälöidemme lähialueilta 10 €",
+        "links": [
+          {
+            "title": "Uudet nettisivut",
+            "url": "/linkki"
+          }
+        ],
+        "buttons": [
+          {
+            "title": "Uudet nettisivut 2",
+            "url": "/linkki"
+          }
+        ]
+      },
       {
-        "title": "Uudet nettisivut 2",
-        "url": "/linkki"
+        "type": "image",
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "video": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
+        "text": "Mikäli sinulla ei ole talven varalle sopivaa tai luotettavaa tilaa säilyttää polkupyörää, tarjoamme oheispalveluna talvisäilytystä kuivassa ja lämpimässä tilassa. \n\nPolkupyörän talvisäilytys ja perushuolto 100 €. Nouto myymälöidemme lähialueilta 10 €",
+        "links": [
+          {
+            "title": "Uudet nettisivut",
+            "url": "/linkki"
+          }
+        ],
+        "buttons": [
+          {
+            "title": "Uudet nettisivut 2",
+            "url": "/linkki"
+          }
+        ]
       }
-    ],
-    "columnTwoType": "video",
-    "columnTwoText": "## Pikahuolto\n\nPolkupyörän pikahuoltomme käsittää pyörän renkaiden vaihto pyörän jarrupalojen vaihto polkupyörän muut pienet korjaukset\n\nNopea toimitus!\n\n### Täyshuolto 110 €\n\n### (osat laskutetaan erikseen).\n\n#### Ensihuolto, 150-200 km ajettu pyörä 35 €\n\nPyörä pestään ja putsataan, etu ja takanavat putsataan, myös ohjaus rasvataan. Keskiövanteet rihlataan, vaihteet ja jarrut säädetään, mutterit ja ruuvit kiristetään, renkaat ja ilmanpaineet tarkistetaan.\n\nTeemme kaikki pyörään liittyvät korjaukset vankalla ammattitaidolla.\n\nRenkaiden vaihdot\n\nVaijereiden vaihdot\n\nVaihteiden säädöt\n\nJarrujen säädöt\n\nNapojen huollot\n\nYm.\n\nTuo pyöräsi kauden huoltoon\n\nNiin vältyt kevään ruuhkilta!",
-    "columnTwoLinks": [
-      {
-        "title": "Uudet nettisivut",
-        "url": "/linkki"
-      }
-    ],
-    "columnTwoVideo": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
-    "columnTwoImage": "/images/puppy-and-adult-dog.jpg",
-
-    "columnTwoButtons": [
-      {
-        "title": "Uudet nettisivut 2",
-        "url": "/linkki"
-      }
-    ],
-    "backgroundColor": "blue"
+    ]
   },
   "highlight": {
     "title": "hello",
