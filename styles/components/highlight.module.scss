@@ -8,12 +8,19 @@
 }
 
 .imageContainer {
-    margin: 0 auto;
     padding-top: $single;
     padding-bottom: $single;
+}
+
+.content {
+    text-align: center;
 }
 
 .image {
     @include border-radius(100%);
   }
   
+.imageContainer,
+.buttonWrapper {
+    margin: 0 auto;
+}
