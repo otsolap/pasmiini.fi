@@ -1,0 +1,19 @@
+@import "../partials/mixins";
+@import "../partials/variables";
+@import "../partials/breakpoints";
+
+.highlight {
+    display: flex;
+    flex-direction: column
+}
+
+.imageContainer {
+    margin: 0 auto;
+    padding-top: $single;
+    padding-bottom: $single;
+}
+
+.image {
+    @include border-radius(100%);
+  }
+  

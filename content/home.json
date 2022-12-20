@@ -18,7 +18,7 @@
     "backgroundColor": "green",
     "medias": [
       {
-        "type": "image",
+        "type": "markdown",
         "image": "/images/puppy-and-adult-dog.jpg",
         "video": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
         "body": "Mikäli sinulla ei ole talven varalle sopivaa tai luotettavaa tilaa säilyttää polkupyörää, tarjoamme oheispalveluna talvisäilytystä kuivassa ja lämpimässä tilassa. \n\nPolkupyörän talvisäilytys ja perushuolto 100 €. Nouto myymälöidemme lähialueilta 10 €",
@@ -36,7 +36,7 @@
         ]
       },
       {
-        "type": "image",
+        "type": "markdown",
         "image": "/images/puppy-and-adult-dog.jpg",
         "video": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
         "body": "Mikäli sinulla ei ole talven varalle sopivaa tai luotettavaa tilaa säilyttää polkupyörää, tarjoamme oheispalveluna talvisäilytystä kuivassa ja lämpimässä tilassa. \n\nPolkupyörän talvisäilytys ja perushuolto 100 €. Nouto myymälöidemme lähialueilta 10 €",
@@ -57,39 +57,22 @@
     "backgroundcolor": "blue"
   },
   "highlight": {
+    "image": "/images/puppy-and-adult-dog.jpg",
     "title": "hello",
-    "description": "world",
+    "body": "world",
     "button": [
       {
         "title": "Haluan elamantapamuutoksen",
         "url": "/palvelut"
       }
     ],
-    "backgroundColor": "green"
+    "backgroundColor": "blue"
   },
-  "blog": {
-    "title": "hello",
-    "description": "world",
-    "filter": "custom",
-    "link": [
-      {
-        "title": "Haluan elamantapamuutoksen",
-        "url": "/palvelut"
-      }
-    ],
-    "backgroundColor": "green"
-  },
+
   "meta": {
     "title": "Pasmiini",
     "description": "Work for yourself on yourself",
     "url": "pasmiini.fi",
     "image": "/images/Vuosaaren_liike.jpeg"
-  },
-  "blogSection": {
-    "filter": "custom",
-    "blog": [
-      "2019-09-06_its_not_the_problem_you_want_to_solve_boiiiiii",
-      "2019-09-06_why_did_the_chicken_cross_the_road"
-    ]
   }
 }

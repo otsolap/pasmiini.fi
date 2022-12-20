@@ -3,7 +3,7 @@ import MediaMixItem from "@partials/mediaMixItem";
 
 const MediaMix = ({ mediaMix }) => {
   return (
-    <section className={`${styles.mediaMix} `}>
+    <section className={`${styles.mediaMix} bg-${mediaMix.backgroundColor} `}>
       <>
       {mediaMix.medias.map((media, i) => {
         return (

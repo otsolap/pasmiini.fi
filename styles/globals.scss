@@ -96,6 +96,34 @@ a {
   display: none;
 }
 
+.bg-green {
+background-color: $green;
+color: $creamy-white;
+}
+
+.bg-creamyWhite {
+  background-color: $creamy-white;
+}
+
+.bg-blue {
+  background-color: $blue;
+  color: $creamy-white;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.bg-pink {
+  background-color: $pink;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+
+
 /* DESKTOP STYLES */
 @media (width >= $container-desktop) {
   .btn {
