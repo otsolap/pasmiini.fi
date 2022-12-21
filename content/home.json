@@ -15,17 +15,16 @@
     ]
   },
   "mediaMix": {
-    "backgroundColor": "green",
+    "backgroundColor": "creamyWhite",
     "medias": [
       {
         "type": "markdown",
         "image": "/images/puppy-and-adult-dog.jpg",
         "video": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
         "body": "Mikäli sinulla ei ole talven varalle sopivaa tai luotettavaa tilaa säilyttää polkupyörää, tarjoamme oheispalveluna talvisäilytystä kuivassa ja lämpimässä tilassa. \n\nPolkupyörän talvisäilytys ja perushuolto 100 €. Nouto myymälöidemme lähialueilta 10 €",
-        "links": [
+        "highlightList": [
           {
-            "title": "Uudet nettisivut",
-            "url": "/linkki"
+            "title": "Uudet nettisivut"
           }
         ],
         "buttons": [
@@ -40,10 +39,9 @@
         "image": "/images/puppy-and-adult-dog.jpg",
         "video": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
         "body": "Mikäli sinulla ei ole talven varalle sopivaa tai luotettavaa tilaa säilyttää polkupyörää, tarjoamme oheispalveluna talvisäilytystä kuivassa ja lämpimässä tilassa. \n\nPolkupyörän talvisäilytys ja perushuolto 100 €. Nouto myymälöidemme lähialueilta 10 €",
-        "links": [
+        "highlightList": [
           {
-            "title": "Uudet nettisivut",
-            "url": "/linkki"
+            "title": "Uudet nettisivut"
           }
         ],
         "buttons": [

@@ -123,12 +123,11 @@ collections:
                       required: false,
                       hint: "Muista valita mediakentästä teksti.",
                     }
-                  - label: "Nostolinkit"
-                    name: "links"
+                  - label: "Nostolistat"
+                    name: "highlightList"
                     widget: list
                     fields:
                       - { label: "Otsikko", name: "title", widget: "string", required: false}
-                      - { label: "Linkki", name: "url", widget: "string", required: false}
                   - label: "Toimintakehoitteet"
                     name: "buttons"
                     widget: list
@@ -386,12 +385,11 @@ collections:
                     required: false,
                     hint: "Muista valita mediakentästä teksti.",
                   }
-                - label: "Nostolinkit"
-                  name: "links"
+                - label: "Nostolista"
+                  name: "highlightList"
                   widget: list
                   fields:
                     - { label: "Otsikko", name: "title", widget: "string", required: false}
-                    - { label: "Linkki", name: "url", widget: "string", required: false}
                 - label: "Toimintakehoitteet"
                   name: "buttons"
                   widget: list

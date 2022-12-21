@@ -28,6 +28,19 @@
   @include border-radius(100%);
 }
 
+.highlightList {
+  padding-top: $single;
+
+  li {
+    font-size:  1.125rem;
+    margin-left: $single;
+    font-family: "Bitter", serif;
+    list-style-image: url('/icons/checkmark-green.svg');
+    padding-bottom: $single;
+  }
+} 
+
+
 /* DESKTOP STYLES */
 @media (width >= $container-desktop) {
   .mediaMix {

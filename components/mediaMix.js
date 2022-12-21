@@ -13,7 +13,7 @@ const MediaMix = ({ mediaMix }) => {
             image={media.image}
             video={media.video}
             body={media.body}
-            links={media.links}
+            highlightList={media.highlightList}
             buttons={media.buttons}
           />
         )
