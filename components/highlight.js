@@ -4,7 +4,6 @@ import Link from "next/link";
 import MarkdownBlock from "@partials/markdownBlock";
 
 const Highlight = ({ highlight }) => {
-
   return (
     <section className={`${styles.highlight} bg-${highlight.backgroundColor} `}>
       {highlight.image && (
@@ -20,14 +19,16 @@ const Highlight = ({ highlight }) => {
         </div>
       )}
       <div className={styles.content}>
-      {highlight.title && <h2>{highlight.title}</h2>}
-      {highlight.body && <MarkdownBlock markdown={highlight.body} />}
+        {highlight.title && <h2>{highlight.title}</h2>}
+        {highlight.body && <MarkdownBlock markdown={highlight.body} />}
       </div>
       {highlight.button && (
         <div className={`buttonWrapper ${styles.buttonWrapper}`}>
-          <Link href={highlight.button.url} className={`btn`}>
-            {highlight.button.title}
-          </Link>
+          {highlight.button.map((btn, i) => (
+            <Link key={i} href={btn.url} className={`btn`}>
+              {btn.title}
+            </Link>
+          ))}
         </div>
       )}
     </section>

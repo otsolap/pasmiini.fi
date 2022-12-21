@@ -58,11 +58,12 @@
     "image": "/images/puppy-and-adult-dog.jpg",
     "title": "hello",
     "body": "world",
-    "button": 
+    "button":  [
       {
         "title": "Haluan elamantapamuutoksen",
         "url": "/palvelut"
       }
+    ]
     ,
     "backgroundColor": "blue"
   },
