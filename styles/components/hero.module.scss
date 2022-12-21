@@ -86,7 +86,7 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 	.mediaContainer,
 	.contentContainer {
 		max-height: 625px;
-		max-width: 720px;
+		max-width: calc($container-desktop / 2);
 	}
 
 	.fullVideo {

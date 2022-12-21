@@ -48,7 +48,7 @@
   }
 
   .mediaMixColumn {
-    max-width: 720px;
+    max-width: calc($container-desktop / 2);
   }
 
   .imageContainer,

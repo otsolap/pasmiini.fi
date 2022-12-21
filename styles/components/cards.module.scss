@@ -7,11 +7,21 @@
   background-color: $green;
 }
 
-.header, 
+.header,
 .wrapper {
   @include display-flex();
   @include flex-direction(column);
+}
+
+.header {
   gap: $single;
+  color: $creamyWhite;
+  padding-bottom: $double;
+}
+
+.wrapper {
+  gap: $single;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -43,6 +53,10 @@
 /* DESKTOP STYLES */
 @media (width >= $container-desktop) {
 
+  .header {
+    max-width: calc($container-desktop / 2);
+  }
+
   .cards {
     padding-top: $double;
     padding-bottom: $double;
@@ -54,7 +68,6 @@
   }
 
   .card {
-    max-width: calc(100% / 3);
+    max-width: calc(100% / 3.5);
   }
-
 }
