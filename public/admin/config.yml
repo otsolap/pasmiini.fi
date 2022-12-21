@@ -1,7 +1,7 @@
 backend:
   name: test-repo
   branch: main
-media_folder: /images
+media_folder: "public/images"
 site_url: https://luxury-crisp-4c6313.netlify.app
 public_folder: /images
 slug:
