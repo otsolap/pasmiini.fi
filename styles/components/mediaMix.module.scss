@@ -9,8 +9,8 @@
 
 .mediaMix,
 .mediaMixColumn {
-  display: flex;
-  flex-direction: column;
+  @include display-flex();
+  @include flex-direction(column);
 }
 
 .mediaMixColumn {
@@ -44,7 +44,7 @@
 /* DESKTOP STYLES */
 @media (width >= $container-desktop) {
   .mediaMix {
-    flex-direction: row;
+		@include flex-direction(row);
   }
 
   .mediaMixColumn {

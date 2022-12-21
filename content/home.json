@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Hero-Otsikko max 50 kirjainta pitkä.",
-    "description": "Tämä on Heron alaotsikko. Herolohko antaa sinulle vaihtoehdon täyttää koko lohkon kuvalla, tai jakaa kuvan 50% tekstikentän kanssa. Kuvan sijainninkin voit muuttaa. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta. Kuvan sijaan myös mahdollista liittää video youtube-linkin muodossa.",
+    "summary": "Tämä on Heron alaotsikko. Herolohko antaa sinulle vaihtoehdon täyttää koko lohkon kuvalla, tai jakaa kuvan 50% tekstikentän kanssa. Kuvan sijainninkin voit muuttaa. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta. Kuvan sijaan myös mahdollista liittää video youtube-linkin muodossa.",
     "align": "left",
     "media": "video",
     "image": "/images/puppy-and-adult-dog.jpg",
@@ -16,7 +16,7 @@
   },
   "mediaMix": {
     "backgroundColor": "creamyWhite",
-    "medias": [
+    "items": [
       {
         "type": "markdown",
         "image": "/images/puppy-and-adult-dog.jpg",
@@ -66,7 +66,28 @@
     ,
     "backgroundColor": "blue"
   },
-
+  "cards": {
+    "title": "hello",
+    "summary": "world",
+    "backgroundColor": "creamyWhite",
+    "items": [
+      {
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "title": "Card-title",
+        "summary": "summary"
+      },
+      {
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "title": "Card-title",
+        "summary": "summary"
+      },
+      {
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "title": "Card-title",
+        "summary": "summary"
+      }
+    ]
+  },
   "meta": {
     "title": "Pasmiini",
     "description": "Work for yourself on yourself",

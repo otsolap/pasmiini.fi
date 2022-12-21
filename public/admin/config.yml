@@ -101,7 +101,7 @@ collections:
                   - { label: "Pinkki", value: "pink" }
                   - { label: "Keltainen", value: "yellow" }
               - label: "Mediat"
-                name: "medias"
+                name: "items"
                 minimize_collapsed: true
                 allow_add: false
                 min: 2
@@ -207,7 +207,7 @@ collections:
                 }
               - {
                   label: "Osion kuvaus",
-                  name: "description",
+                  name: "summary",
                   widget: "text",
                   required: false,
                 }
@@ -363,7 +363,7 @@ collections:
                 - { label: "Pinkki", value: "pink" }
                 - { label: "Keltainen", value: "yellow" }
             - label: "Mediat"
-              name: "medias"
+              name: "items"
               minimize_collapsed: true
               allow_add: false
               min: 2
@@ -425,10 +425,17 @@ collections:
             }
           - {
               label: "Kuvaus",
-              name: "description",
+              name: "summary",
               widget: "text",
               required: false,
             }
+          - label: "Taustaväri"
+            name: "backgroundcolor"
+            required: false
+            widget: "select"
+            options:
+              - { label: "Tummanvihreä", value: "green" }
+              - { label: "Kermanvalkoinen", value: "creamyWhite" }
 
           - label: "Kortit"
             name: "card"
@@ -437,7 +444,7 @@ collections:
             fields:
               - { label: "Kuva", name: "image", widget: "image", required: false} 
               - { label: "Otsikko", name: "title", widget: "string", required: false}
-              - { label: "Kuvaus", name: "description", widget: "text", required: false}
+              - { label: "Kuvaus", name: "summary", widget: "text", required: false}
 
       - label: "Usein Kysytyt Kysymykset"
         hint: "Pystyt laittamaan kysymyksen ja vastauksen. Pöytäkoneversiossa sinulla on myös mahdollisuus asettaa kuva osion kaveriksi. Kuva kehystetään palloon. Mobiilissa kuvaa ei näytetä laisinkaan, koska se vie turhaa tilaa pois eikä se ole oleellinen."

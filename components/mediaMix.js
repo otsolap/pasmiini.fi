@@ -4,21 +4,19 @@ import MediaMixItem from "@partials/mediaMixItem";
 const MediaMix = ({ mediaMix }) => {
   return (
     <section className={`${styles.mediaMix} bg-${mediaMix.backgroundColor} `}>
-      <>
-      {mediaMix.medias.map((media, i) => {
+      {mediaMix.items.map((item, i) => {
         return (
           <MediaMixItem
             key={i}
-            type={media.type}
-            image={media.image}
-            video={media.video}
-            body={media.body}
-            highlightList={media.highlightList}
-            buttons={media.buttons}
+            type={item.type}
+            image={item.image}
+            video={item.video}
+            body={item.body}
+            highlightList={item.highlightList}
+            buttons={item.buttons}
           />
         )
       })}
-      </>
     </section>
   );
 };

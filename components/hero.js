@@ -54,7 +54,7 @@ const Hero = ({ hero }) => {
       >
         <div className={styles.content}>
           {hero.title && <h1>{hero.title}</h1>}
-          {hero.description && <h3>{hero.description}</h3>}
+          {hero.summary && <h3>{hero.summary}</h3>}
           {hero.buttons && (
             <div className="buttonWrapper">
               {hero.buttons.map((button, i) => (

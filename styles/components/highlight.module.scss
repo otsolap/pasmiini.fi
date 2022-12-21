@@ -3,8 +3,8 @@
 @import "../partials/breakpoints";
 
 .highlight {
-    display: flex;
-    flex-direction: column
+    @include display-flex();
+    @include flex-direction(column);
 }
 
 .imageContainer {

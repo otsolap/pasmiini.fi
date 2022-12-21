@@ -4,9 +4,10 @@ import Meta from '@components/Meta'
 import Hero from '@components/Hero'
 import MediaMix from '@components/mediaMix'
 import Highlight from '@components/highlight'
+import Cards from '@components/cards'
 import Script from 'next/script'
 
-const Index = ({ meta, hero, mediaMix, highlight }) => {
+const Index = ({ meta, hero, mediaMix, highlight, cards }) => {
   const router = useRouter()
 
 
@@ -30,6 +31,7 @@ const Index = ({ meta, hero, mediaMix, highlight }) => {
         <Hero hero={hero} />
         <MediaMix mediaMix={mediaMix} />
         <Highlight highlight={highlight} />
+        <Cards cards={cards} />
       </section>
     </>
   )
@@ -50,7 +52,7 @@ export async function getStaticProps() {
       },
       hero: {
         title: home.hero.title,
-        description: home.hero.description,
+        summary: home.hero.summary,
         align: home.hero.align,
         media: home.hero.media,
         image: home.hero.image,
@@ -60,7 +62,7 @@ export async function getStaticProps() {
       },
       mediaMix: {
         backgroundColor: home.mediaMix.backgroundColor,
-        medias: home.mediaMix.medias,
+        items: home.mediaMix.items,
       },
       highlight: {
         image: home.highlight.image,
@@ -68,6 +70,12 @@ export async function getStaticProps() {
         body: home.highlight.body,
         button: home.highlight.button,
         backgroundColor: home.highlight.backgroundColor
+      },
+      cards: {
+        title: home.cards.title,
+        summary: home.cards.summary,
+        backgroundColor: home.cards.backgroundColor,
+        items: home.cards.items,
       }
     },
   }
