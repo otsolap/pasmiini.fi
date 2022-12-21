@@ -15,7 +15,7 @@ const MediaMixItem = ({ image, title, summary }) => {
           />
         </div>
       )}
-      {title && <h3>{title}</h3>}
+      {title && <h3 className={styles.title}>{title}</h3>}
       {summary && <p>{summary}</p>}
     </article>
   );

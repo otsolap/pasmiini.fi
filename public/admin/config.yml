@@ -429,14 +429,6 @@ collections:
               widget: "text",
               required: false,
             }
-          - label: "Taustaväri"
-            name: "backgroundcolor"
-            required: false
-            widget: "select"
-            options:
-              - { label: "Tummanvihreä", value: "green" }
-              - { label: "Kermanvalkoinen", value: "creamyWhite" }
-
           - label: "Kortit"
             name: "card"
             widget: list

@@ -3,8 +3,8 @@
 @import "../partials/breakpoints";
 
 .cards {
-  padding-top: $single;
-  padding-bottom: $single;
+  padding: $single;
+  background-color: $green;
 }
 
 .header, 
@@ -15,17 +15,29 @@
 }
 
 .card {
+  @include display-flex();
+  @include flex-direction(column);
   @include border-radius($single);
+  padding: $single;
+  background-color: $creamyWhite;
+  width: 100%;
+  align-items: center;
 }
 
 .imageContainer {
   position: relative;
   height: 75px;
   width: 75px;
+  margin-top: $single;
+  margin-bottom: $double;
 }
 
 .image {
   @include border-radius(100%);
+}
+
+.title {
+  padding-bottom: $single;
 }
 
 /* DESKTOP STYLES */
@@ -40,4 +52,9 @@
     @include flex-direction(row);
     gap: $double;
   }
+
+  .card {
+    max-width: calc(100% / 3);
+  }
+
 }

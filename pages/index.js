@@ -74,7 +74,6 @@ export async function getStaticProps() {
       cards: {
         title: home.cards.title,
         summary: home.cards.summary,
-        backgroundColor: home.cards.backgroundColor,
         items: home.cards.items,
       }
     },
