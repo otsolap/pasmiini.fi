@@ -227,9 +227,9 @@ collections:
                 required: false
                 max: 3
                 collection: "blog"
-                search_fields: ["title", "date"]
+                search_fields: ["title"]
                 value_field: "{{slug}}"
-                display_fields: ["title", "date"]
+                display_fields: ["title"]
           - label: "Tekstikenttä"
             hint: "Tekstikentän otsikon lihavointi antaa tekstille brändimukaisen värinsä. Tekstikenttään voit vapaasti kirjoittaa rikasta tekstisisältöä, jossa tekstiä voi lihavoida tai kursivoida. Pystyt lisäämään tekstiin linkkejä, kuin listoja. Lista-elementtien edessä on aina “Tsekki”-ikoni, eikä yleistä palleroa. Vaihtoehtoisesti voit kirjoittaa numeraalisen listan. Tekstiin voit laittaa 5 eri kokoista otsikkoa. Tekstikentän saa taustaväriltään joko kermanvalkoisena tai tummanvihreänä. Tekstinä toimii sitten valinnan vastapuoli. Voit myös lihavoida tekstiä ja antaa sille keltaisen/sinisen korostuksen. (Keltainen tummanvihreällä, sininen kermanvalkoiselle)."
             name: "textarea"
@@ -258,7 +258,9 @@ collections:
 
   - label: "Palvelut"
     name: "services"
-    folder: "content/services"
+    folder: "content/serviceItems"
+    extension: "json"
+    format: "json"
     create: true
     slug: "{{slug}}"
     fields:
@@ -266,8 +268,7 @@ collections:
           label: "Palvelun nimi",
           name: "title",
           widget: "string",
-          max: 50,
-          required: true,
+          required: false,
         }
       - label: "Hero"
         hint: "Heroon voi laittaa yhden suuren otsikon, jonka maksimimitta on 50-kirjainta. Pääotsikon alle voidaan liittää vapaamuotoinen kuvaus. Yleisesti Kuva täyttää puolet lohkon koon, mutta halutessasi voit leventää kuvan ottamaan 100% lohkosta. Heron saa asettaa joko vasemmalle tai oikealle puolelle. Voit myös kuvan sijaan liittää .gif liikkuvan-kuvan tai YouTube-videon. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta."
@@ -291,12 +292,14 @@ collections:
           - label: "Align"
             name: "align"
             widget: "select"
+            required: false
             options:
               - { label: "Vasen", value: "left" }
               - { label: "Oikea", value: "right" }
           - label: "Media"
             name: "media"
             widget: "select"
+            required: false
             options:
               - { label: "Kuva", value: "image" }
               - { label: "Video", value: "video" }
@@ -431,7 +434,7 @@ collections:
               required: false,
             }
           - label: "Kortit"
-            name: "card"
+            name: "items"
             widget: list
             max: 6
             fields:
@@ -441,7 +444,7 @@ collections:
 
       - label: "Usein Kysytyt Kysymykset"
         hint: "Pystyt laittamaan kysymyksen ja vastauksen. Pöytäkoneversiossa sinulla on myös mahdollisuus asettaa kuva osion kaveriksi. Kuva kehystetään palloon. Mobiilissa kuvaa ei näytetä laisinkaan, koska se vie turhaa tilaa pois eikä se ole oleellinen."
-        name: "faqSection"
+        name: "accordionSection"
         widget: object
         collapsed: true
         fields:
@@ -451,13 +454,14 @@ collections:
               widget: "image",
               required: false,
             }
-          - label: "Kysymys"
-            name: "blog"
+          - label: "Kysymykset"
+            name: "items"
             widget: "relation"
             multiple: true
-            collection: "faq"
+            required: false
+            collection: "accordion"
             search_fields: ["type", "title"]
-            value_field: "title"
+            value_field: "{{slug}}"
             display_fields: ["type", "title"]
 
       - label: "Tekstikenttä"
@@ -545,9 +549,11 @@ collections:
       - { label: "Body", name: "body", widget: "markdown", required: true }
 
   - label: "UKK"
-    name: "faq"
-    folder: "content/faqs"
+    name: "accordion"
+    folder: "content/accordionItems"
     create: true
+    extension: "json"
+    format: "json"
     slug: "{{slug}}"
     fields:
       - { label: 'Kysymyksentyyppi', name: "type", widget: "string", required: false}

@@ -1,8 +1,8 @@
 import "../styles/globals.scss";
 import Layout from "@components/Layout";
-import Header from "@components/navigation/header";
-import Footer from "@components/navigation/footer";
-import MobileFooter from "@components/navigation/mobileFooter";
+import Header from "@components/navigation/Header";
+import Footer from "@components/navigation/Footer";
+import MobileFooter from "@components/navigation/MobileFooter";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;

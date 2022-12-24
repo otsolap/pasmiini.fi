@@ -8,7 +8,7 @@ import Cards from '@components/Cards'
 import Script from 'next/script'
 import Accordion from '@components/Accordion'
 
-const Index = ({ meta, hero, mediaMix, highlight, cards }) => {
+const Index = ({ meta, hero, mediaMix, highlight, cards, accordion }) => {
   const router = useRouter()
 
 
@@ -33,6 +33,7 @@ const Index = ({ meta, hero, mediaMix, highlight, cards }) => {
         <MediaMix mediaMix={mediaMix} />
         <Highlight highlight={highlight} />
         <Cards cards={cards} />
+        <Accordion accordion={accordion} />
       </section>
     </>
   )
@@ -72,11 +73,6 @@ export async function getStaticProps() {
         button: home.highlight.button,
         backgroundColor: home.highlight.backgroundColor
       },
-      cards: {
-        title: home.cards.title,
-        summary: home.cards.summary,
-        items: home.cards.items,
-      }
     },
   }
 }
