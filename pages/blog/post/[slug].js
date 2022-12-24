@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import Layout from '../../../components/layout'
+import Layout from '../../../components/Layout'
 
 const Post = ({ blogpost }) => {
   if (!blogpost) return <div>not found</div>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 
 const importBlogPosts = async () => {
   // https://webpack.js.org/guides/dependency-management/#requirecontext

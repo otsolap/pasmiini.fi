@@ -1,7 +1,7 @@
 import styles from "../styles/components/hero.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import YoutubeEmbed from "@partials/youtubeEmbed";
+import YoutubeEmbed from "@partials/YoutubeEmbed";
 
 const Hero = ({ hero }) => {
   return (

@@ -1,5 +1,5 @@
 import styles from "../styles/components/mediaMix.module.scss";
-import MediaMixItem from "@partials/mediaMixItem";
+import MediaMixItem from "@partials/MediaMixItem";
 
 const MediaMix = ({ mediaMix }) => {
   return (

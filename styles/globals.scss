@@ -46,16 +46,45 @@ main {
   position: relative;
 }
 
-.markdown {
-  p {
-    padding-bottom: $half;
-  }
-}
-
 .container {
   margin: 0 auto;
   width: 100%;
 }
+
+
+// Markdown is wrapped in Article. 
+// These styles are for Markdown content.
+.markdown {
+  article {
+      padding: $single;
+  
+      h1, h2, h3, h4, h5, h6, p {
+          margin-bottom: $single;
+      }
+
+      p {
+        padding-bottom: $half;
+      }
+
+      ul {
+          padding-left: $single;
+      }
+  
+      ul li {
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+      }
+
+      img {
+          height: fit-content;
+          width: fit-content;
+          max-width: 350px;
+          max-height: 350px;
+      }
+  
+  }
+}
+
 
 .btn {
   background-color: $yellow;
@@ -135,6 +164,11 @@ color: $creamyWhite;
 
 /* DESKTOP STYLES */
 @media (width >= $container-desktop) {
+
+	.container {
+		max-width: $container-desktop;
+	}
+
   .btn {
     width: fit-content;
   }

@@ -1,8 +1,8 @@
 import styles from "../styles/components/mediaMix.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import MarkdownBlock from "@partials/markdownBlock";
-import YoutubeEmbed from "./youtubeEmbed";
+import MarkdownBlock from "@partials/MarkdownBlock";
+import YoutubeEmbed from "./YoutubeEmbed";
 
 const MediaMixItem = ({ type, image, video, body, highlightList, buttons }) => {
   return (

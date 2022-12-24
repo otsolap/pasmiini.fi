@@ -2,10 +2,11 @@ import React, { useEffect } from 'react'
 import { useRouter } from "next/router"
 import Meta from '@components/Meta'
 import Hero from '@components/Hero'
-import MediaMix from '@components/mediaMix'
-import Highlight from '@components/highlight'
-import Cards from '@components/cards'
+import MediaMix from '@components/MediaMix'
+import Highlight from '@components/Highlight'
+import Cards from '@components/Cards'
 import Script from 'next/script'
+import Accordion from '@components/Accordion'
 
 const Index = ({ meta, hero, mediaMix, highlight, cards }) => {
   const router = useRouter()

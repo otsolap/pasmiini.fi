@@ -1,7 +1,7 @@
 import styles from "../styles/components/highlight.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import MarkdownBlock from "@partials/markdownBlock";
+import MarkdownBlock from "@partials/MarkdownBlock";
 
 const Highlight = ({ highlight }) => {
   return (
