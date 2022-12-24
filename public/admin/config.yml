@@ -247,6 +247,16 @@ collections:
                 options:
                   - { label: "Tummanvihreä", value: "green" }
                   - { label: "Kermanvalkoinen", value: "creamyWhite" }
+          - label: "Sivuston metatiedot"
+            name: "meta"
+            collapsed: false
+            hint: "Metatiedot antavat lisää tietoa kyseisestä sivusta. Esimerkiksi Googlen hakutuloksissa tai SoMe jaoissa. Huom! Kuvaus saa olla maksimissaan 150-160 kirjainta pitkä!"
+            widget: object
+            fields:
+            - { label: "Sivun otsikko", name: "title", widget: "string", required: false}
+            - { label: "Sivun kuvaus", name: "description", widget: "string", required: false}
+            - { label: "Sivun linkki", name: "url", widget: "string", required: false}
+            - { label: "Sivun kuva", name: "image", widget: "image", required: false}
               
       - label: "About"
         name: "about"
@@ -526,6 +536,16 @@ collections:
               - { label: "Kermanvalkoinen", value: "creamyWhite" }
               - { label: "Pinkki", value: "pink" }
               - { label: "Keltainen", value: "yellow" }
+      - label: "Sivuston metatiedot"
+        name: "meta"
+        collapsed: false
+        hint: "Metatiedot antavat lisää tietoa kyseisestä sivusta. Esimerkiksi Googlen hakutuloksissa tai SoMe jaoissa. Huom! Kuvaus saa olla maksimissaan 150-160 kirjainta pitkä!"
+        widget: object
+        fields:
+        - { label: "Sivun otsikko", name: "title", widget: "string", required: false}
+        - { label: "Sivun kuvaus", name: "description", widget: "string", required: false}
+        - { label: "Sivun linkki", name: "url", widget: "string", required: false}
+        - { label: "Sivun kuva", name: "image", widget: "image", required: false}
 
   - label: "Blog"
     name: "blog"
