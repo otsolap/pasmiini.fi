@@ -1,36 +1,29 @@
 import React, { useEffect } from 'react'
 import fs from 'fs'
 import path from 'path'
-import { useRouter } from "next/router"
 import Meta from '@components/Meta'
 import Hero from '@components/Hero'
 import MediaMix from '@components/MediaMix'
 import Highlight from '@components/Highlight'
 import Cards from '@components/Cards'
-import Script from 'next/script'
 import Accordion from '@components/Accordion'
 
 const Service = ({ meta, hero, mediamix,  textarea, cards, accordion, highlight}) => {
   if (!blogpost) return <div>not found</div>
 
-  const { html, attributes } = blogpost
 
   return (
-    <Layout>
-      <article>
-        <h1>{attributes.title}</h1>
-        <img src={attributes.thumbnail} />
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </article>
-      <style jsx>{`
-        article {
-          margin: 0 auto;
-        }
-        h1 {
-          text-align: center;
-        }
-      `}</style>
-    </Layout>
+    <>
+      <Meta meta={meta} />
+      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
+      <section id="home">
+        <Hero hero={hero} />
+        <MediaMix mediaMix={mediaMix} />
+        <Highlight highlight={highlight} />
+        <Cards cards={cards} />
+        <Accordion accordion={accordion} />
+      </section>
+    </>
   )
 }
 
@@ -59,7 +52,50 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      blogpost: blogpost.default,
+      meta: {
+        title: service.meta.title,
+        description: service.meta.description,
+        url: service.meta.url,
+        image: service.meta.image,
+      },
+      hero: {
+        title: service.hero.title,
+        summary: service.hero.summary,
+        align: service.hero.align,
+        media: service.hero.media,
+        image: service.hero.image,
+        mediaWidth: service.hero.mediaWidth,
+        video: service.hero.video,
+        buttons: service.hero.buttons,
+      },
+      textarea: {
+        title: service.textarea.title,
+        backgroundColor: service.textarea.backgroundColor,
+      },
+      mediaMix: {
+        backgroundColor: service.mediaMix.backgroundColor,
+        items: service.mediaMix.items,
+      },
+      cards: {
+        title: service.cards.backgroundColor,
+        summary: service.cards.summary,
+        items: service.cards.items,
+      },
+      accordionSection: {
+        image: service.accordionSection.image,
+        items: service.accordionSection.items
+      },
+      textarea_2: {
+        title: service.textarea_2.title,
+        backgroundColor: service.textarea_2.backgroundColor,
+      },
+      highlight: {
+        image: service.highlight.image,
+        title: service.highlight.title,
+        body: service.highlight.body,
+        button: service.highlight.button,
+        backgroundColor: service.highlight.backgroundColor
+      },
     },
   }
 }
