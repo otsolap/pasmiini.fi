@@ -21,23 +21,20 @@ const Slug = (props) => {
     </div>;
 };
 
+
 export async function getStaticPaths() {
   const BLOG_PATH = './content/blogPosts/'
 
-  const paths = fs
-    .readdirSync(path.join(process.cwd(), BLOG_PATH))
-    .map((name) => {
-      const trimmedName = name.substring(0, name.length - 5)
-      return {
-        params: { slug: trimmedName },
-      }
-    })
-
+  let paths = await fs.promises.readdir(BLOG_PATH)
+  paths = paths.map((item) => {
+      return { params: { slug: item.split(".")[0] } }
+  })
   return {
-    paths,
-    fallback: false, // constrols whether not predefined paths should be processed on demand, check for more info: https://nextjs.org/docs/basic-features/data-fetching#the-fallback-key-required
-  }
+      paths: paths,
+      fallback: true // false or 'blocking'
+  };
 }
+
 
 export async function getStaticProps(context) {
     const { slug } = context.params;
