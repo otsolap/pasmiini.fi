@@ -1,42 +1,85 @@
-import React, { useEffect, useState } from 'react';
-import styles from '../../styles/blog.module.scss'
-import Link from 'next/link';
-import fs from 'fs'
-// Step 1: Collect all the files from blogdata directory
-// Step 2: Iterate through the and Display them
+import React, { useState } from "react";
+import styles from "../../styles/blog.module.scss";
+import Link from "next/link";
+import fs from "fs";
+import Meta from "@components/Meta";
+import Hero from "@components/Hero";
+import Highlight from "@components/Highlight";
 
-const Blog = (props) => {
-    const [blogs, setBlogs] = useState(props.allFiles);
-    // useEffect(() => {
+const Blog = ({ meta, hero, blogs, highlight }) => {
+    console.log(blogs)
 
-    // }, [])
-    return <div className={styles.container}>
-        <main className={styles.main}>
-            {blogs.map((blogitem) => {
-                return <div key={blogitem.slug}>
-                    <Link href={`/blogi/${blogitem.slug}`}>
-                        <h3 className={styles.blogItemh3}>{blogitem.title}</h3></Link>
-                    <p className={styles.blogItemp}>{blogitem.body.substr(0, 140)}...</p>
-                </div>
-            })}
-        </main>
-    </div>
+    return (
+    <>
+    <Meta meta={meta} />
+    <section id="blog-archive">
+      <Hero hero={hero} />
+      <section className={styles.archive}>
+        {blogs.data.map((item) => {
+          return (
+            <div key={item.slug}>
+              <Link href={`/blogi/${item.slug}`}>
+                <h3 className={styles.itemh3}>{item.title}</h3>
+              </Link>
+              <p className={styles.itemp}>
+                {item.body.substr(0, 140)}...
+              </p>
+            </div>
+          );
+        })}
+      </section>
+      <Highlight highlight={highlight} />
+    </section>
+  </>
+  )
+
 };
 
-
 export async function getStaticProps(context) {
-    let data = await fs.promises.readdir(process.env.BLOG_DIR_PATH);
-    let file;
-    let allFiles = [];
-    for (let index = 0; index < data.length; index++) {
-        const item = data[index];
-        file = await fs.promises.readFile((process.env.BLOG_DIR_PATH  + item), 'utf-8')
-        allFiles.push(JSON.parse(file))
-    }
+  const blog = await import(`../../content/pages/blog.json`)
+  const siteSettings = await import(`../../content/pages/siteSettings.json`)
+  /* Getting the Blog data */
+  let files= await fs.promises.readdir(process.env.BLOG_DIR_PATH);
+  let file;
+  let data = [];
+  for (let index = 0; index < files.length; index++) {
+    const item = files[index];
+    file = await fs.promises.readFile(
+      process.env.BLOG_DIR_PATH + item,
+      "utf-8"
+    );
+    data.push(JSON.parse(file));
+  }
 
-    return {
-        props: { allFiles }, // will be passed to the page component as props
-    }
+
+  return {
+    props: { 
+        meta: {
+            title: blog.meta.title,
+            description: blog.meta.description,
+            url: blog.meta.url,
+            image: blog.meta.image,
+          },
+          hero: {
+            title: blog.hero.title,
+            summary: blog.hero.summary,
+            align: blog.hero.align,
+            media: blog.hero.media,
+            image: blog.hero.image,
+            mediaWidth: blog.hero.mediaWidth,
+            video: blog.hero.video,
+            buttons: blog.hero.buttons,
+          },
+        blogs: { data },
+        highlight: {
+            image: siteSettings.highlight.image,
+            title: siteSettings.highlight.title,
+            body: siteSettings.highlight.body,
+            button: siteSettings.highlight.button,
+            backgroundColor: siteSettings.highlight.backgroundColor
+          },
+     },
+  };
 }
 
 export default Blog;

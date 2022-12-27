@@ -6,17 +6,19 @@ import fs from 'fs'
 // Step 2: Iterate through the and Display them
 
 const Services = (props) => {
-    const [blogs, setBlogs] = useState(props.allFiles);
+    const [blogs, setBlogs] = useState(props.files);
     // useEffect(() => {
 
     // }, [])
     return <div className={styles.container}>
         <main className={styles.main}>
             {blogs.map((blogitem) => {
-                return <div key={blogitem.slug}>
-                    <Link href={`/palvelut/${blogitem.slug}`}>
-                        <h3 className={styles.blogItemh3}>{blogitem.title}</h3></Link>
-                </div>
+                return (
+                    <div key={blogitem.slug}>
+                        <Link href={`/palvelut/${blogitem.slug}`}>
+                            <h3 className={styles.blogItemh3}>{blogitem.title}</h3></Link>
+                    </div>
+                )
             })}
         </main>
     </div>
@@ -24,18 +26,20 @@ const Services = (props) => {
 
 
 export async function getStaticProps(context) {
-    let data = await fs.promises.readdir(process.env.SERVICE_DIR_PATH);
+    let files= await fs.promises.readdir(process.env.SERVICE_DIR_PATH);
     let file;
-    let allFiles = [];
-    for (let index = 0; index < data.length; index++) {
-        const item = data[index];
-        file = await fs.promises.readFile((process.env.SERVICE_DIR_PATH  + item), 'utf-8')
-        allFiles.push(JSON.parse(file))
+    let data = [];
+    for (let index = 0; index < files.length; index++) {
+      const item = files[index];
+      file = await fs.promises.readFile(
+        process.env.BLOG_DIR_PATH + item,
+        "utf-8"
+      );
+      data.push(JSON.parse(file));
     }
-
+  
     return {
-        props: { allFiles }, // will be passed to the page component as props
-    }
-}
-
+      props: { files }, // will be passed to the page component as props
+    };
+  }
 export default Services;
