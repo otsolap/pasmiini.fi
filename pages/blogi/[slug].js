@@ -20,7 +20,7 @@ const Slug = ({ blog }) => {
 };
 
 export async function getStaticPaths() {
-  const BLOG_PATH = "./content/blogPosts/";
+  const BLOG_PATH = "./content/posts/";
 
   let paths = await fs.promises.readdir(BLOG_PATH);
   paths = paths.map((item) => {

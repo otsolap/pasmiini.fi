@@ -54,19 +54,7 @@
     ],
     "backgroundcolor": "blue"
   },
-  "highlight": {
-    "image": "/images/puppy-and-adult-dog.jpg",
-    "title": "hello",
-    "body": "world",
-    "button":  [
-      {
-        "title": "Haluan elämäntapamuutoksen",
-        "url": "/palvelut"
-      }
-    ]
-    ,
-    "backgroundColor": "blue"
-  },
+
   "cards": {
     "title": "Kortit-osion tekstisisältö",
     "summary": "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen.",

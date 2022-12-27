@@ -9,7 +9,6 @@ import Highlight from '@components/Highlight'
 const Index = ({ meta, hero, mediaMix, highlight}) => {
   const router = useRouter()
 
-
   useEffect(() => {
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on('init', (user) => {
@@ -39,6 +38,7 @@ export default Index
 
 export async function getStaticProps() {
   const home = await import(`../content/pages/home.json`)
+  const siteSettings = await import(`../content/pages/siteSettings.json`)
 
   return {
     props: {
@@ -63,11 +63,11 @@ export async function getStaticProps() {
         items: home.mediaMix.items,
       },
       highlight: {
-        image: home.highlight.image,
-        title: home.highlight.title,
-        body: home.highlight.body,
-        button: home.highlight.button,
-        backgroundColor: home.highlight.backgroundColor
+        image: siteSettings.highlight.image,
+        title: siteSettings.highlight.title,
+        body: siteSettings.highlight.body,
+        button: siteSettings.highlight.button,
+        backgroundColor: siteSettings.highlight.backgroundColor
       },
     },
   }

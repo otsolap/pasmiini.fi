@@ -10,7 +10,7 @@ slug:
   sanitize_replacement: "_"
 # Uncomment local_backend when you need to develop in your local
 # npx netlify-cms-proxy-server
-local_backend: true 
+local_backend: true
 collections:
   - name: "pages"
     description: "Sivujen asetukset."
@@ -82,8 +82,18 @@ collections:
                 widget: list
                 max: 2
                 fields:
-                  - { label: "Otsikko", name: "title", widget: "string", required: false}
-                  - { label: "Linkki", name: "url", widget: "string", required: false}
+                  - {
+                      label: "Otsikko",
+                      name: "title",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Linkki",
+                      name: "url",
+                      widget: "string",
+                      required: false,
+                    }
           - label: "MediaMix"
             hint: "Saat kaksi vierekkäistä saraketta, joihin saat päättää sisältötyypin: Teksti-, kuva tai videosisältöä. Kuvat esitetään aina palloon kehystettynä. Tekstikenttään pystyy kirjoittamaan rikasta tekstisisältöä, kuten mm. Otsikoita, lihavoitua tekstiä, kursivoitua tekstiä, listoja, numerollisia listoja, linkkejä, yms. Tekstikentän päätyyn voit lisätä maksimissaan 2 toimintakehotetta. Lista-elementit näytetään yleisillä * palloikoneilla. Linkin väri on normaalisti sinivihreä ja muuttuu keltaiseksi sekä saa alareunan, kun hiiren laittaa linkin ylle. Tekstikentän alle voit lisätä korostetun listan, jossa sovelletaan tšekkimerkkejä ja tekstin koko on normaalitekstiä suurempi sekä lihavoitu. MediaMixin saa valita brändimukaiset taustavärit: tummanvihreä, sininen, keltainen, kermanvalkoinen ja pinkki. Riippuen taustaväristä teksti on joko kermanvalkoinen tai tummanvihreä."
             name: "mediaMix"
@@ -113,9 +123,9 @@ collections:
                     required: false
                     widget: "select"
                     options:
-                    - { label: "Teksti", value: "markdown" }
-                    - { label: "Kuva", value: "image" }
-                    - { label: "Video", value: "video" }
+                      - { label: "Teksti", value: "markdown" }
+                      - { label: "Kuva", value: "image" }
+                      - { label: "Video", value: "video" }
                   - {
                       label: "Teksti",
                       name: "body",
@@ -127,13 +137,28 @@ collections:
                     name: "highlightList"
                     widget: list
                     fields:
-                      - { label: "Otsikko", name: "title", widget: "string", required: false}
+                      - {
+                          label: "Otsikko",
+                          name: "title",
+                          widget: "string",
+                          required: false,
+                        }
                   - label: "Toimintakehoitteet"
                     name: "buttons"
                     widget: list
                     fields:
-                      - { label: "Otsikko", name: "title", widget: "string", required: false}
-                      - { label: "Linkki", name: "url", widget: "string", required: false}
+                      - {
+                          label: "Otsikko",
+                          name: "title",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Linkki",
+                          name: "url",
+                          widget: "string",
+                          required: false,
+                        }
                   - {
                       label: "Kuva",
                       name: "image",
@@ -172,7 +197,7 @@ collections:
                   name: "image",
                   widget: "image",
                   required: false,
-                  hint: "Näytetään tekstin yläpuolella"
+                  hint: "Näytetään tekstin yläpuolella",
                 }
               - label: "Toimintakehoite"
                 name: "button"
@@ -181,8 +206,18 @@ collections:
                 required: false
                 widget: list
                 fields:
-                  - { label: "Otsikko", name: "title", widget: "string", required: false}
-                  - { label: "Linkki", name: "url", widget: "string", required: false}
+                  - {
+                      label: "Otsikko",
+                      name: "title",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Linkki",
+                      name: "url",
+                      widget: "string",
+                      required: false,
+                    }
               - label: "Taustaväri"
                 name: "backgroundcolor"
                 required: false
@@ -253,22 +288,234 @@ collections:
             hint: "Metatiedot antavat lisää tietoa kyseisestä sivusta. Esimerkiksi Googlen hakutuloksissa tai SoMe jaoissa. Huom! Kuvaus saa olla maksimissaan 150-160 kirjainta pitkä!"
             widget: object
             fields:
-            - { label: "Sivun otsikko", name: "title", widget: "string", required: false}
-            - { label: "Sivun kuvaus", name: "description", widget: "string", required: false}
-            - { label: "Sivun linkki", name: "url", widget: "string", required: false}
-            - { label: "Sivun kuva", name: "image", widget: "image", required: false}
-              
-      - label: "About"
-        name: "about"
-        file: "content/about.md"
+              - {
+                  label: "Sivun otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun kuvaus",
+                  name: "description",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun linkki",
+                  name: "url",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun kuva",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                }
+
+      - label: "Blogiarkisto"
+        name: "blogArchive"
+        file: "content/blogArchive.json"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Publish Date", name: "date", widget: "datetime" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Hero"
+            hint: "Heroon voi laittaa yhden suuren otsikon, jonka maksimimitta on 50-kirjainta. Pääotsikon alle voidaan liittää vapaamuotoinen kuvaus. Yleisesti Kuva täyttää puolet lohkon koon, mutta halutessasi voit leventää kuvan ottamaan 100% lohkosta. Heron saa asettaa joko vasemmalle tai oikealle puolelle. Voit myös kuvan sijaan liittää .gif liikkuvan-kuvan tai YouTube-videon. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta."
+            name: "hero"
+            collapsed: true
+            widget: object
+            fields:
+              - {
+                  label: "Otsikko",
+                  name: "title",
+                  widget: "string",
+                  max: 50,
+                  required: false,
+                }
+              - {
+                  label: "Kuvaus",
+                  name: "desciption",
+                  widget: "string",
+                  required: false,
+                }
+              - label: "Tekstikentän asetus"
+                name: "align"
+                widget: "select"
+                required: false
+                options:
+                  - { label: "Vasen", value: "left" }
+                  - { label: "Oikea", value: "right" }
+              - label: "Media"
+                name: "media"
+                widget: "select"
+                required: false
+                options:
+                  - { label: "Kuva", value: "image" }
+                  - { label: "Video", value: "video" }
+              - {
+                  label: "Kuva",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                  hint: "Muista valita mediakentästä kuva.",
+                }
+              - {
+                  label: "Täyttääkö kuva koko ruudun?",
+                  name: "mediaWidth",
+                  widget: "boolean",
+                  required: false,
+                  hint: "Kuva kokoruudun levyiseksi?",
+                }
+              - {
+                  label: "Video",
+                  name: "video",
+                  widget: "string",
+                  required: false,
+                  hint: "Muista valita mediakentästä video",
+                }
+              - label: "Toimintakehoitteet"
+                name: "buttons"
+                widget: list
+                max: 2
+                fields:
+                  - {
+                      label: "Otsikko",
+                      name: "title",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Linkki",
+                      name: "url",
+                      widget: "string",
+                      required: false,
+                    }
+          - label: "Sivuston metatiedot"
+            name: "meta"
+            collapsed: false
+            hint: "Metatiedot antavat lisää tietoa kyseisestä sivusta. Esimerkiksi Googlen hakutuloksissa tai SoMe jaoissa. Huom! Kuvaus saa olla maksimissaan 150-160 kirjainta pitkä!"
+            widget: object
+            fields:
+              - {
+                  label: "Sivun otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun kuvaus",
+                  name: "description",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun linkki",
+                  name: "url",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun kuva",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                }
+
+      - label: "Blogi"
+        name: "blog"
+        file: "content/blog.json"
+        fields:
+          - label: "Sivuston metatiedot"
+            name: "meta"
+            collapsed: false
+            hint: "Metatiedot antavat lisää tietoa kyseisestä sivusta. Esimerkiksi Googlen hakutuloksissa tai SoMe jaoissa. Huom! Kuvaus saa olla maksimissaan 150-160 kirjainta pitkä!"
+            widget: object
+            fields:
+              - {
+                  label: "Sivun otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun kuvaus",
+                  name: "description",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun linkki",
+                  name: "url",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun kuva",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                }
+
+      - label: "Yleiset asetukset"
+        name: "siteSettings"
+        file: "content/pages/siteSettings.json"
+        fields:
+          - label: "Nosto"
+            hint: "Nostolohko, johon voit kirjoittaa ytimekkään otsikon sekä mahdollisuuden lisätä rikasta tekstisisältöä, sekä toimintakehotteen. Nostolohkon saa taustaväriltään joko sinisenä tai tummanvihreänä. Teksti on normaalisti kermanvalkoinen, mutta lihavoinnilla saat siihen keltaisen korostuksen. Voit myös laittaa pienen kuvan tekstin yläpuolelle, kuten esimerkiksi logosi."
+            name: "highlight"
+            widget: object
+            collapsed: true
+            fields:
+              - {
+                  label: "Otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Kuvaus",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Kuva",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                  hint: "Näytetään tekstin yläpuolella",
+                }
+              - label: "Toimintakehoite"
+                name: "button"
+                max: 1
+                allow_add: false
+                required: false
+                widget: list
+                fields:
+                  - {
+                      label: "Otsikko",
+                      name: "title",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Linkki",
+                      name: "url",
+                      widget: "string",
+                      required: false,
+                    }
+              - label: "Taustaväri"
+                name: "backgroundcolor"
+                required: false
+                widget: "select"
+                options:
+                  - { label: "Tummanvihreä", value: "green" }
+                  - { label: "Turkoosi", value: "blue" }
+                  - { label: "Kermanvalkoinen", value: "creamyWhite" }
+                  - { label: "Pinkki", value: "pink" }
+                  - { label: "Keltainen", value: "yellow" }
 
   - label: "Palvelut"
     name: "services"
-    folder: "content/serviceItems"
+    folder: "content/services"
     extension: "json"
     format: "json"
     create: true
@@ -339,91 +586,116 @@ collections:
             widget: list
             max: 2
             fields:
-              - { label: "Otsikko", name: "title", widget: "string", required: false}
-              - { label: "Linkki", name: "url", widget: "string", required: false}
-      
+              - {
+                  label: "Otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Linkki",
+                  name: "url",
+                  widget: "string",
+                  required: false,
+                }
+
       - label: "Tekstikenttä"
         hint: "Tekstikentän otsikon lihavointi antaa tekstille brändimukaisen värinsä. Tekstikenttään voit vapaasti kirjoittaa rikasta tekstisisältöä, jossa tekstiä voi lihavoida tai kursivoida. Pystyt lisäämään tekstiin linkkejä, kuin listoja. Lista-elementtien edessä on aina “Tsekki”-ikoni, eikä yleistä palleroa. Vaihtoehtoisesti voit kirjoittaa numeraalisen listan. Tekstiin voit laittaa 5 eri kokoista otsikkoa. Tekstikentän saa taustaväriltään joko kermanvalkoisena tai tummanvihreänä. Tekstinä toimii sitten valinnan vastapuoli. Voit myös lihavoida tekstiä ja antaa sille keltaisen/sinisen korostuksen. (Keltainen tummanvihreällä, sininen kermanvalkoiselle)."
         name: "textarea"
         widget: object
         collapsed: true
         fields:
-        - label: "Tekstikenttä"
-          name: "body"
-          required: false
-          widget: "markdown"
-        - label: "Taustaväri"
-          name: "backgroundcolor"
-          required: false
-          widget: "select"
-          options:
-            - { label: "Tummanvihreä", value: "green" }
-            - { label: "Kermanvalkoinen", value: "creamyWhite" }
+          - label: "Tekstikenttä"
+            name: "body"
+            required: false
+            widget: "markdown"
+          - label: "Taustaväri"
+            name: "backgroundcolor"
+            required: false
+            widget: "select"
+            options:
+              - { label: "Tummanvihreä", value: "green" }
+              - { label: "Kermanvalkoinen", value: "creamyWhite" }
 
-        - label: "MediaMix"
-          hint: "Saat kaksi vierekkäistä saraketta, joihin saat päättää sisältötyypin: Teksti-, kuva tai videosisältöä. Kuvat esitetään aina palloon kehystettynä. Tekstikenttään pystyy kirjoittamaan rikasta tekstisisältöä, kuten mm. Otsikoita, lihavoitua tekstiä, kursivoitua tekstiä, listoja, numerollisia listoja, linkkejä, yms. Tekstikentän päätyyn voit lisätä maksimissaan 2 toimintakehotetta. Lista-elementit näytetään yleisillä * palloikoneilla. Linkin väri on normaalisti sinivihreä ja muuttuu keltaiseksi sekä saa alareunan, kun hiiren laittaa linkin ylle. Tekstikentän alle voit lisätä korostetun listan, jossa sovelletaan tšekkimerkkejä ja tekstin koko on normaalitekstiä suurempi sekä lihavoitu. MediaMixin saa valita brändimukaiset taustavärit: tummanvihreä, sininen, keltainen, kermanvalkoinen ja pinkki. Riippuen taustaväristä teksti on joko kermanvalkoinen tai tummanvihreä."
-          name: "mediaMix"
-          collapsed: true
-          widget: object
-          fields:
-            - label: "Taustaväri"
-              name: "backgroundcolor"
-              required: false
-              widget: "select"
-              options:
-                - { label: "Tummanvihreä", value: "green" }
-                - { label: "Turkoosi", value: "blue" }
-                - { label: "Kermanvalkoinen", value: "creamyWhite" }
-                - { label: "Pinkki", value: "pink" }
-                - { label: "Keltainen", value: "yellow" }
-            - label: "Mediat"
-              name: "items"
-              minimize_collapsed: true
-              allow_add: false
-              min: 2
-              required: false
-              widget: "list"
-              fields:
-                - label: "Tyyppi"
-                  name: "type"
-                  required: false
-                  widget: "select"
-                  options:
-                  - { label: "Teksti", value: "markdown" }
-                  - { label: "Kuva", value: "image" }
-                  - { label: "Video", value: "video" }
-                - {
-                    label: "Vasemman sarakkeen teksti",
-                    name: "body",
-                    widget: "markdown",
-                    required: false,
-                    hint: "Muista valita mediakentästä teksti.",
-                  }
-                - label: "Nostolista"
-                  name: "highlightList"
-                  widget: list
-                  fields:
-                    - { label: "Otsikko", name: "title", widget: "string", required: false}
-                - label: "Toimintakehoitteet"
-                  name: "buttons"
-                  widget: list
-                  fields:
-                    - { label: "Otsikko", name: "title", widget: "string", required: false}
-                    - { label: "Linkki", name: "url", widget: "string", required: false}
-                - {
-                    label: "Kuva",
-                    name: "image",
-                    widget: "image",
-                    required: false,
-                    hint: "Muista valita mediakentästä kuva.",
-                  }
-                - {
-                    label: "Video",
-                    name: "video",
-                    widget: "string",
-                    required: false,
-                    hint: "Muista valita mediakentästä video",
-                  }
+          - label: "MediaMix"
+            hint: "Saat kaksi vierekkäistä saraketta, joihin saat päättää sisältötyypin: Teksti-, kuva tai videosisältöä. Kuvat esitetään aina palloon kehystettynä. Tekstikenttään pystyy kirjoittamaan rikasta tekstisisältöä, kuten mm. Otsikoita, lihavoitua tekstiä, kursivoitua tekstiä, listoja, numerollisia listoja, linkkejä, yms. Tekstikentän päätyyn voit lisätä maksimissaan 2 toimintakehotetta. Lista-elementit näytetään yleisillä * palloikoneilla. Linkin väri on normaalisti sinivihreä ja muuttuu keltaiseksi sekä saa alareunan, kun hiiren laittaa linkin ylle. Tekstikentän alle voit lisätä korostetun listan, jossa sovelletaan tšekkimerkkejä ja tekstin koko on normaalitekstiä suurempi sekä lihavoitu. MediaMixin saa valita brändimukaiset taustavärit: tummanvihreä, sininen, keltainen, kermanvalkoinen ja pinkki. Riippuen taustaväristä teksti on joko kermanvalkoinen tai tummanvihreä."
+            name: "mediaMix"
+            collapsed: true
+            widget: object
+            fields:
+              - label: "Taustaväri"
+                name: "backgroundcolor"
+                required: false
+                widget: "select"
+                options:
+                  - { label: "Tummanvihreä", value: "green" }
+                  - { label: "Turkoosi", value: "blue" }
+                  - { label: "Kermanvalkoinen", value: "creamyWhite" }
+                  - { label: "Pinkki", value: "pink" }
+                  - { label: "Keltainen", value: "yellow" }
+              - label: "Mediat"
+                name: "items"
+                minimize_collapsed: true
+                allow_add: false
+                min: 2
+                required: false
+                widget: "list"
+                fields:
+                  - label: "Tyyppi"
+                    name: "type"
+                    required: false
+                    widget: "select"
+                    options:
+                      - { label: "Teksti", value: "markdown" }
+                      - { label: "Kuva", value: "image" }
+                      - { label: "Video", value: "video" }
+                  - {
+                      label: "Vasemman sarakkeen teksti",
+                      name: "body",
+                      widget: "markdown",
+                      required: false,
+                      hint: "Muista valita mediakentästä teksti.",
+                    }
+                  - label: "Nostolista"
+                    name: "highlightList"
+                    widget: list
+                    fields:
+                      - {
+                          label: "Otsikko",
+                          name: "title",
+                          widget: "string",
+                          required: false,
+                        }
+                  - label: "Toimintakehoitteet"
+                    name: "buttons"
+                    widget: list
+                    fields:
+                      - {
+                          label: "Otsikko",
+                          name: "title",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Linkki",
+                          name: "url",
+                          widget: "string",
+                          required: false,
+                        }
+                  - {
+                      label: "Kuva",
+                      name: "image",
+                      widget: "image",
+                      required: false,
+                      hint: "Muista valita mediakentästä kuva.",
+                    }
+                  - {
+                      label: "Video",
+                      name: "video",
+                      widget: "string",
+                      required: false,
+                      hint: "Muista valita mediakentästä video",
+                    }
       - label: "Kortit"
         name: "cards"
         hint: "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen, joka näkyy korttien yläpuolella. Ideana on, että on hyvä ohjeistaa lukijaa mitä korteilla tarkalleen haluat kertoa. Toisinaan se ei kuitenkaan ole tarpeellista."
@@ -448,9 +720,24 @@ collections:
             widget: list
             max: 6
             fields:
-              - { label: "Kuva", name: "image", widget: "image", required: false} 
-              - { label: "Otsikko", name: "title", widget: "string", required: false}
-              - { label: "Kuvaus", name: "summary", widget: "text", required: false}
+              - {
+                  label: "Kuva",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                }
+              - {
+                  label: "Otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Kuvaus",
+                  name: "summary",
+                  widget: "text",
+                  required: false,
+                }
 
       - label: "Usein Kysytyt Kysymykset"
         hint: "Pystyt laittamaan kysymyksen ja vastauksen. Pöytäkoneversiossa sinulla on myös mahdollisuus asettaa kuva osion kaveriksi. Kuva kehystetään palloon. Mobiilissa kuvaa ei näytetä laisinkaan, koska se vie turhaa tilaa pois eikä se ole oleellinen."
@@ -480,17 +767,17 @@ collections:
         widget: object
         collapsed: true
         fields:
-        - label: "Tekstikenttä"
-          name: "body"
-          widget: "markdown"
-          required: false
-        - label: "Taustaväri"
-          name: "backgroundcolor"
-          required: false
-          widget: "select"
-          options:
-            - { label: "Tummanvihreä", value: "green" }
-            - { label: "Kermanvalkoinen", value: "creamyWhite" }
+          - label: "Tekstikenttä"
+            name: "body"
+            widget: "markdown"
+            required: false
+          - label: "Taustaväri"
+            name: "backgroundcolor"
+            required: false
+            widget: "select"
+            options:
+              - { label: "Tummanvihreä", value: "green" }
+              - { label: "Kermanvalkoinen", value: "creamyWhite" }
 
       - label: "Nosto"
         hint: "Nostolohko, johon voit kirjoittaa ytimekkään otsikon sekä mahdollisuuden lisätä rikasta tekstisisältöä, sekä toimintakehotteen. Nostolohkon saa taustaväriltään joko sinisenä tai tummanvihreänä. Teksti on normaalisti kermanvalkoinen, mutta lihavoinnilla saat siihen keltaisen korostuksen. Voit myös laittaa pienen kuvan tekstin yläpuolelle, kuten esimerkiksi logosi."
@@ -515,7 +802,7 @@ collections:
               name: "image",
               widget: "image",
               required: false,
-              hint: "Näytetään tekstin yläpuolella"
+              hint: "Näytetään tekstin yläpuolella",
             }
           - label: "Toimintakehoite"
             name: "button"
@@ -524,8 +811,18 @@ collections:
             required: false
             widget: list
             fields:
-              - { label: "Otsikko", name: "title", widget: "string", required: false}
-              - { label: "Linkki", name: "url", widget: "string", required: false}
+              - {
+                  label: "Otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Linkki",
+                  name: "url",
+                  widget: "string",
+                  required: false,
+                }
           - label: "Taustaväri"
             name: "backgroundcolor"
             widget: "select"
@@ -542,19 +839,49 @@ collections:
         hint: "Metatiedot antavat lisää tietoa kyseisestä sivusta. Esimerkiksi Googlen hakutuloksissa tai SoMe jaoissa. Huom! Kuvaus saa olla maksimissaan 150-160 kirjainta pitkä!"
         widget: object
         fields:
-        - { label: "Sivun otsikko", name: "title", widget: "string", required: false}
-        - { label: "Sivun kuvaus", name: "description", widget: "string", required: false}
-        - { label: "Sivun linkki", name: "url", widget: "string", required: false}
-        - { label: "Sivun kuva", name: "image", widget: "image", required: false}
+          - {
+              label: "Sivun otsikko",
+              name: "title",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Sivun kuvaus",
+              name: "description",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Sivun linkki",
+              name: "url",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Sivun kuva",
+              name: "image",
+              widget: "image",
+              required: false,
+            }
 
   - label: "Blog"
     name: "blog"
-    folder: "content/blogPosts"
+    folder: "content/posts"
     create: true
     extension: "json"
     format: "json"
     slug: "{{slug}}"
     fields:
+      - label: "Kirjoittaja"
+        name: "items"
+        widget: "relation"
+        multiple: true
+        required: false
+        collection: "authors"
+        search_fields: ["author.title"]
+        value_field: "author.title"
+        display_fields: ["author.title"]
+        default: ["Jasmiini Peuramäki"]
       - { label: "Title", name: "title", widget: "string", required: true }
       - {
           label: "Publish Date",
@@ -578,6 +905,60 @@ collections:
     format: "json"
     slug: "{{slug}}"
     fields:
-      - { label: 'Kysymyksentyyppi', name: "type", widget: "string", required: false}
+      - {
+          label: "Kysymyksentyyppi",
+          name: "type",
+          widget: "string",
+          required: false,
+        }
       - { label: "Kysymys", name: "title", widget: "string", required: true }
       - { label: "Vastaus", name: "body", widget: "text", required: true }
+
+  - label: "Blogikirjoittajat"
+    hint: "Luo blogikirjoittajan profiili, mikä sisältää nimen, nimikkeen, kuvauksen, profiilikuvan sekä toimintakehoitteita yhteydenottoon."
+    name: "authors"
+    folder: "content/authors"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    fields:
+      - label: "Kirjoittaja"
+        name: "author"
+        widget: object
+        fields:
+          - {
+              label: "Otsikko",
+              name: "title",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Nimike",
+              name: "subtitle",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "description",
+              name: "body",
+              widget: "markdown",
+              required: false,
+            }
+          - label: "Toimintakehoitteet"
+            name: "buttons"
+            widget: list
+            max: 2
+            fields:
+              - {
+                  label: "Otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Linkki",
+                  name: "url",
+                  widget: "string",
+                  required: false,
+                }

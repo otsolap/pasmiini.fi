@@ -35,7 +35,7 @@ const Service = ({
 };
 
 export async function getStaticPaths() {
-  const SERVICES_PATH = "./content/serviceItems/";
+  const SERVICES_PATH = "./content/services/";
 
   let paths = await fs.promises.readdir(SERVICES_PATH)
   paths = paths.map((item) => {

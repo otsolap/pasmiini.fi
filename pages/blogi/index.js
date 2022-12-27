@@ -36,7 +36,7 @@ const Blog = ({ meta, hero, blogs, highlight }) => {
 };
 
 export async function getStaticProps(context) {
-  const blog = await import(`../../content/pages/blog.json`)
+  const blog = await import(`../../content/pages/blogArchive.json`)
   const siteSettings = await import(`../../content/pages/siteSettings.json`)
   /* Getting the Blog data */
   let files= await fs.promises.readdir(process.env.BLOG_DIR_PATH);
@@ -50,7 +50,6 @@ export async function getStaticProps(context) {
     );
     data.push(JSON.parse(file));
   }
-
 
   return {
     props: { 
