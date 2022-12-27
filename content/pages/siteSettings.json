@@ -1,0 +1,15 @@
+{
+"highlight": {
+    "image": "/images/puppy-and-adult-dog.jpg",
+    "title": "hello",
+    "body": "world",
+    "button":  [
+        {
+        "title": "Haluan elämäntapamuutoksen",
+        "url": "/palvelut"
+        }
+    ]
+    ,
+    "backgroundColor": "blue"
+    }
+}

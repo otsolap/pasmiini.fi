@@ -38,7 +38,7 @@ const Index = ({ meta, hero, mediaMix, highlight}) => {
 export default Index
 
 export async function getStaticProps() {
-  const home = await import(`../content/home.json`)
+  const home = await import(`../content/pages/home.json`)
 
   return {
     props: {
