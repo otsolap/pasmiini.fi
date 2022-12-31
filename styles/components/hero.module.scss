@@ -2,9 +2,6 @@
 @import "../partials/variables";
 @import "../partials/breakpoints";
 
-$hero-max-width: 2000px;
-$hero-max-height-ratio: 35; // Min-width related to viewport width
-
 .hero {
 	position: relative;
 	margin: auto;
@@ -77,13 +74,7 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 @media (width >=  $container-desktop) {
 
 	.hero {
-		max-width: $hero-max-width;
 		@include flex-direction(row);
-		min-height: $hero-max-height-ratio * 1vw;
-	
-		@media (min-width: $hero-max-width) {
-			min-height: calc(($hero-max-width / 100) * $hero-max-height-ratio);
-		}
 	}
 	
 	.mediaContainer,
@@ -115,7 +106,6 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 
 
 	.content {
-
 		h1 {
 			padding-bottom: $double;
 			font-size: 3.5rem;

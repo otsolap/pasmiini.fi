@@ -1,0 +1,66 @@
+@import "../partials/mixins";
+@import "../partials/variables";
+@import "../partials/breakpoints";
+
+/* Archive */
+
+.header {
+  gap: $single;
+  padding-bottom: $double;
+}
+
+.archive {
+  @include display-flex();
+  @include flex-direction(column);
+  padding: $single;
+  background-color: $creamyWhite;
+  gap: $single;
+}
+
+/* Blog Section */
+
+/* Blog Card */
+
+.blog {
+  @include display-flex();
+  @include flex-direction(column);
+  @include border-radius($single);
+  padding: $single;
+  background-color: $green;
+  width: 100%;
+  align-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  margin-top: $single;
+  margin-bottom: $double;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  @include border-radius($single);
+}
+
+.title {
+  color: $creamyWhite;
+  padding-bottom: $single;
+}
+
+/* DESKTOP STYLES */
+@media (width >= $container-desktop) {
+
+  .header {
+    max-width: calc($container-desktop / 2);
+  }
+
+  .archive {
+    @include flex-direction(row);
+    gap: $double;
+  }
+
+  .blog {
+    max-width: calc(100% / 3);
+  }
+}

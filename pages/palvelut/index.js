@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styles from '../../styles/blog.module.scss'
 import Link from 'next/link';
 import fs from 'fs'
-// Step 1: Collect all the files from blogdata directory
-// Step 2: Iterate through the and Display them
 
 const Services = (props) => {
     const [blogs, setBlogs] = useState(props.files);

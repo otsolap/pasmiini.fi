@@ -898,7 +898,7 @@ collections:
         }
       - {
           label: "Featured Image",
-          name: "thumbnail",
+          name: "image",
           widget: "image",
           required: false,
         }

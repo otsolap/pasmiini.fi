@@ -14,6 +14,10 @@
       }
     ]
   },
+  "archive": {
+    "title": "Otsikko",
+    "summary": ""
+  },
   "meta": {
     "title": "Pasmiini",
     "description": "Work for yourself on yourself",
