@@ -1,11 +1,10 @@
 import React from "react";
-import styles from '../../styles/pages/blog.module.scss'
+import styles from "../../styles/pages/blog.module.scss";
 import fs from "fs";
 
 // Step 1: Find the file corresponding to the slug
 // Step 2: Populate them inside the page
 const Slug = ({ blog }) => {
-
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -38,17 +37,17 @@ export async function getStaticProps(context) {
     "utf-8"
   );
 
-  let data = JSON.parse(blog)
+  let data = JSON.parse(blog);
 
   return {
-    props: { 
-        blog: {
-            title: data['title'],
-            date: data['date'],
-            image: data['image'],
-            body: data['body'],
-        }
-     }, 
+    props: {
+      blog: {
+        title: data["title"],
+        date: data["date"],
+        image: data["image"],
+        body: data["body"],
+      },
+    },
   };
 }
 export default Slug;

@@ -6,7 +6,6 @@ import BlogList from "@components/BlogList";
 import Highlight from "@components/Highlight";
 
 const Blog = ({ meta, hero, blogs, highlight }) => {
-
   return (
     <>
       <Meta meta={meta} />
@@ -57,10 +56,10 @@ export async function getStaticProps() {
         title: blog.archive.title,
         summary: blog.archive.summary,
       },
-      blogs: { 
+      blogs: {
         title: blog.archive.title,
         summary: blog.archive.summary,
-        items: data 
+        items: data,
       },
       highlight: {
         image: site.highlight.image,
