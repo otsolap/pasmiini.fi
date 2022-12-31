@@ -748,7 +748,7 @@ collections:
 
       - label: "Usein Kysytyt Kysymykset"
         hint: "Pystyt laittamaan kysymyksen ja vastauksen. Pöytäkoneversiossa sinulla on myös mahdollisuus asettaa kuva osion kaveriksi. Kuva kehystetään palloon. Mobiilissa kuvaa ei näytetä laisinkaan, koska se vie turhaa tilaa pois eikä se ole oleellinen."
-        name: "accordionSection"
+        name: "accordion"
         widget: object
         collapsed: true
         fields:

@@ -88,9 +88,9 @@ export async function getStaticProps(context) {
           summary: data['cards']['summary'],
           items: data['cards']['items'],
         },
-        accordionSection: {
-          image: data['accordionSection']['image'],
-          items: data['accordionSection']['items'],
+        accordion: {
+          image: data['accordion']['image'],
+          items: data['accordion']['items'],
         },
         textarea_2: {
           body: data['textarea_2']['body'],

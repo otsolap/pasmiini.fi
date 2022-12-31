@@ -91,11 +91,13 @@
       }
     ]
   },
-  "accordion": {
-    "image": "/images/puppy-and-adult-dog.jpg",
-    "items": [
+  "blog": {
+    "title": "Otsikko",
+    "summary": "",
+    "link": [
       {
-        
+        "title": "Lue Lisää blogikirjoituksia",
+        "url": "/blogi"
       }
     ]
   },

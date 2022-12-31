@@ -12,7 +12,7 @@ const Blog = ({ meta, hero, archive, blogs, highlight }) => {
       <Meta meta={meta} />
       <section id="blog-archive">
         <Hero hero={hero} />
-        <BlogList archive={archive} blogs={blogs} />
+        <BlogList details={archive} blogs={blogs} />
         <Highlight highlight={highlight} />
       </section>
     </>
