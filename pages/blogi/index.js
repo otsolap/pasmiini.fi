@@ -5,21 +5,21 @@ import Hero from "@components/Hero";
 import BlogList from "@components/BlogList";
 import Highlight from "@components/Highlight";
 
-const Blog = ({ meta, hero, archive, blogs, highlight }) => {
+const Blog = ({ meta, hero, blogs, highlight }) => {
 
   return (
     <>
       <Meta meta={meta} />
       <section id="blog-archive">
         <Hero hero={hero} />
-        <BlogList details={archive} blogs={blogs} />
+        <BlogList blogs={blogs} />
         <Highlight highlight={highlight} />
       </section>
     </>
   );
 };
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const blog = await import(`../../content/pages/blogArchive.json`);
   const site = await import(`../../content/site.json`);
   /* Getting the Blog data */
@@ -57,7 +57,11 @@ export async function getStaticProps(context) {
         title: blog.archive.title,
         summary: blog.archive.summary,
       },
-      blogs: { data },
+      blogs: { 
+        title: blog.archive.title,
+        summary: blog.archive.summary,
+        items: data 
+      },
       highlight: {
         image: site.highlight.image,
         title: site.highlight.title,

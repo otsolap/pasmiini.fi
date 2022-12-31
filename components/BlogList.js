@@ -1,18 +1,19 @@
 import styles from "../styles/components/blog.module.scss";
 import BlogItem from "@partials/BlogItem";
+import Link from "next/link";
 
-const BlogList = ({ details, blogs }) => {
+const BlogList = ({ blogs }) => {
   return (
-    <section className={styles.archive}>
-      {details.title && (
+    <section className={styles.blogs}>
+      {blogs.title && (
         <header className={styles.header}>
-          {details.title && <h2>{details.title}</h2>}
-          {details.summary && <p>{details.summary}</p>}
+          {blogs.title && <h2>{blogs.title}</h2>}
+          {blogs.summary && <p>{blogs.summary}</p>}
         </header>
       )}
-      {blogs && (
+      {blogs.items && (
         <div className={styles.wrapper}>
-          {blogs.data.map((item, i) => {
+          {blogs.items.map((item, i) => {
             return (
               <BlogItem
                 key={i}
@@ -24,9 +25,9 @@ const BlogList = ({ details, blogs }) => {
           })}
         </div>
       )}
-      {details.link && (
+      {blogs.link && (
         <footer className={`buttonWrapper ${styles.footer}`}>
-          {details.link.map((anchor, i) => (
+          {blogs.link.map((anchor, i) => (
             <Link key={i} href={anchor.url}>
               {anchor.title}
             </Link>

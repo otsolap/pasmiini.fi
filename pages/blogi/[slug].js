@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import styles from "../../styles/blog.module.scss";
+import React from "react";
+import styles from '../../styles/pages/blog.module.scss'
 import fs from "fs";
-import path from "path";
 
 // Step 1: Find the file corresponding to the slug
 // Step 2: Populate them inside the page
@@ -47,9 +45,8 @@ export async function getStaticProps(context) {
         blog: {
             title: data['title'],
             date: data['date'],
-            thumbnail: data['thumbnail'],
+            image: data['image'],
             body: data['body'],
-            slug: data['slug'],
         }
      }, 
   };

@@ -5,11 +5,11 @@ h4,
 h5,
 h6 {
   font-family: "Bitter", serif;
-  margin-bottom:  $single;
+  margin-bottom: $single;
 }
 
 p {
-  margin-bottom:  $single;
+  margin-bottom: $single;
 }
 
 a,
@@ -23,7 +23,7 @@ small {
 }
 
 a {
-    color: inherit;
-    text-decoration-line: none;
-  }
-  
+  color: inherit;
+  text-decoration-line: none;
+  font-weight: 700;
+}
