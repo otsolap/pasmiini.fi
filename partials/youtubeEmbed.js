@@ -1,6 +1,6 @@
 import React from "react";
 
-const YoutubeEmbed = ({ src }) => {
+const YoutubeEmbed = ({ src, className }) => {
   
   const YouTubeGetID = (url) => {
     url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
@@ -9,7 +9,7 @@ const YoutubeEmbed = ({ src }) => {
 
   return (
       <iframe
-        className="youtube"
+        className={`youtube ${className}`}
         src={`https://www.youtube.com/embed/${YouTubeGetID(src)}`}
         playsInline
         controls="0"

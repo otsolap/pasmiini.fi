@@ -14,14 +14,17 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 
 .mediaContainer {
 	width: 100%;
-	height: auto;
-	max-height: 270px;
+	max-height: 400px;
 	overflow: hidden;
 }
 
 .image {
     object-fit: cover;
     object-position: center;
+}
+
+.video {
+	height: 400px;
 }
 
 .textWrapper {
@@ -82,12 +85,17 @@ $hero-max-height-ratio: 35; // Min-width related to viewport width
 			min-height: calc(($hero-max-width / 100) * $hero-max-height-ratio);
 		}
 	}
-
+	
 	.mediaContainer,
 	.contentContainer {
 		max-height: 625px;
 		max-width: calc($container-desktop / 2);
 	}
+	
+	.video {
+		height: 625px;
+	}
+
 
 	.fullVideo {
 		position: absolute;

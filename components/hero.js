@@ -41,7 +41,7 @@ const Hero = ({ hero }) => {
         )}
         {hero.media == "video" && hero.video && (
           <>
-            <YoutubeEmbed src={hero.video} />
+            <YoutubeEmbed className={styles.video} src={hero.video} />
           </>
         )}
       </div>
