@@ -455,9 +455,16 @@ collections:
                 }
 
       - label: "Yleiset asetukset"
-        name: "siteSettings"
-        file: "content/pages/siteSettings.json"
+        name: "site"
+        file: "content/pages/site.json"
         fields:
+          - label: "Brändi"
+            name: "brand"
+            widget: object
+            fields: 
+              - { label: "Logo", name: "logo", widget: "image", required: false}
+              - { label: "Logon kuvaus", name: "title", widget: "string", required: false}
+              - { label: "Iskulause", name: "slogan", widget: "string", required: false}
           - label: "Nosto"
             hint: "Nostolohko, johon voit kirjoittaa ytimekkään otsikon sekä mahdollisuuden lisätä rikasta tekstisisältöä, sekä toimintakehotteen. Nostolohkon saa taustaväriltään joko sinisenä tai tummanvihreänä. Teksti on normaalisti kermanvalkoinen, mutta lihavoinnilla saat siihen keltaisen korostuksen. Voit myös laittaa pienen kuvan tekstin yläpuolelle, kuten esimerkiksi logosi."
             name: "highlight"

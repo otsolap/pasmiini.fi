@@ -37,7 +37,7 @@ const Blog = ({ meta, hero, blogs, highlight }) => {
 
 export async function getStaticProps(context) {
   const blog = await import(`../../content/pages/blogArchive.json`)
-  const siteSettings = await import(`../../content/pages/siteSettings.json`)
+  const site= await import(`../../content/pages/site.json`)
   /* Getting the Blog data */
   let files= await fs.promises.readdir(process.env.BLOG_DIR_PATH);
   let file;
@@ -71,11 +71,11 @@ export async function getStaticProps(context) {
           },
         blogs: { data },
         highlight: {
-            image: siteSettings.highlight.image,
-            title: siteSettings.highlight.title,
-            body: siteSettings.highlight.body,
-            button: siteSettings.highlight.button,
-            backgroundColor: siteSettings.highlight.backgroundColor
+            image: site.highlight.image,
+            title: site.highlight.title,
+            body: site.highlight.body,
+            button: site.highlight.button,
+            backgroundColor: site.highlight.backgroundColor
           },
      },
   };
