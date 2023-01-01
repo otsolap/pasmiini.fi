@@ -64,10 +64,13 @@ main {
     }
 
     img {
+      object-fit: contain;
+      object-position: 50% 50%;
       height: fit-content;
-      width: fit-content;
+      width: 100%;
       max-width: 350px;
       max-height: 350px;
+      @include border-radius($single);
     }
   }
 }
@@ -160,8 +163,8 @@ main {
   .markdown {
     article {
       img {
-        max-width: 720px;
-        max-height: auto;
+        max-width: $width-max-article;
+        max-height: 720px;
       }
     }
   }

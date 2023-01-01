@@ -3,10 +3,20 @@
 @import "../partials/breakpoints";
 
 .container,
-.imageContainer {
+.imageContainer,
+.content {
   margin-left: auto;
   margin-right: auto;
+}
 
+.container,
+.imageContainer,
+.image {
+  @include border-radius($half);
+}
+
+.container {
+  background-color: $creamyWhite;
 }
 
 .imageContainer {
@@ -19,14 +29,15 @@
   object-position: 50% 50%;
 }
 
-.content {
-  background-color: $creamyWhite;
-}
 
 /* DESKTOP STYLES */
 @media (width >= $container-desktop) {
 
   .container {
+    max-width: $width-max-article-layout;
+  }
+
+  .content {
     max-width: $width-max-article;
   }
 
