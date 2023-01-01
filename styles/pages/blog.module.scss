@@ -2,85 +2,37 @@
 @import "../partials/variables";
 @import "../partials/breakpoints";
 
-/* Archive */
+.container,
+.imageContainer {
+  margin-left: auto;
+  margin-right: auto;
 
-.blogs {
-  padding: $single;
-  background-color: $creamyWhite;
-}
-
-.header {
-  padding-bottom: $double;
-}
-
-.header,
-.wrapper {
-  @include display-flex();
-  @include flex-direction(column);
-  gap: $single;
-}
-
-.wrapper {
-  flex-wrap: wrap;
-}
-
-/* Blog Section */
-
-
-/* Blog Card */
-
-.blog {
-  @include display-flex();
-  @include flex-direction(column);
-  @include border-radius($single);
-  padding: $single;
-  background-color: $green;
-  width: 100%;
-  align-items: center;
 }
 
 .imageContainer {
+  height: 256px;
   position: relative;
-  margin-top: $single;
-  margin-bottom: $double;
 }
 
 .image {
-  object-fit: cover;
-  object-position: center;
-  @include border-radius($single);
+  object-fit: contain;
+  object-position: 50% 50%;
 }
 
-.title {
-  color: $creamyWhite;
-  padding-bottom: $single;
+.content {
+  background-color: $creamyWhite;
 }
 
 /* DESKTOP STYLES */
 @media (width >= $container-desktop) {
 
-  .blogs {
-    padding: $double;
+  .container {
+    max-width: $width-max-article;
   }
 
-  .header {
-    max-width: calc($container-desktop / 2);
-    flex: 0 0 50%;
+  .imageContainer {
+    height: 512px;
+    width: 720px;
   }
 
-  .wrapper {
-    @include flex-direction(row);
-    gap: $triple;
-  }
-
-  .footer {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .blog {
-    max-width: calc(100% / 3);
-    flex: 0 0 33.33%
-  }
 }
