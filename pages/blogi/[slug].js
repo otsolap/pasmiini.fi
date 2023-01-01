@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles/pages/blog.module.scss";
 import fs from "fs";
+import MarkdownBlock from "@partials/MarkdownBlock";
 
 const Slug = ({ blog }) => {
 
@@ -8,8 +9,7 @@ const Slug = ({ blog }) => {
     <div className={styles.container}>
       <main className={styles.main}>
         <h1>{blog && blog.title}</h1>
-        <hr />
-        <div>{blog && blog.body}</div>
+        {blog.body && <MarkdownBlock markdown={blog.body} />}
       </main>
     </div>
   );
