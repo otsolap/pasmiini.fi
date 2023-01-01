@@ -1,0 +1,129 @@
+{
+  "cards": {
+    "title": "Kortit-osion tekstisisältö",
+    "summary": "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen.",
+    "items": [
+      {
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "title": "Card-title",
+        "summary": "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen."
+      },
+      {
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "title": "Card-title",
+        "summary": "Kerrot asiakkaalle mitä ohjeet sisältää, kenelle ohjeet ovat ja mitä ohjeet eivät sisällä. "
+      },
+      {
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "title": "Card-title",
+        "summary": "Tuot esille haasteita, joita ratkoit ja niiden ratkaisujen muodosta löysit yritystoimintosi sekä tarinasi. "
+      },
+      {
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "title": "Card-title",
+        "summary": "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen."
+      },
+      {
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "title": "Card-title",
+        "summary": "Kerrot asiakkaalle mitä ohjeet sisältää, kenelle ohjeet ovat ja mitä ohjeet eivät sisällä. "
+      },
+      {
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "title": "Card-title",
+        "summary": "Tuot esille haasteita, joita ratkoit ja niiden ratkaisujen muodosta löysit yritystoimintosi sekä tarinasi. "
+      }
+    ]
+  },
+  "meta": {
+    "title": "Pasmiini",
+    "description": "Work for yourself on yourself",
+    "url": "pasmiini.fi",
+    "image": "/images/Vuosaaren_liike.jpeg"
+  },
+  "textarea_2": {
+    "body": "",
+    "backgroundColor": "green"
+  },
+  "highlight": {
+    "image": "/images/puppy-and-adult-dog.jpg",
+    "title": "hello",
+    "body": "world",
+    "button": [
+      {
+        "title": "Haluan elämäntapamuutoksen",
+        "url": "/palvelut"
+      }
+    ],
+    "backgroundColor": "blue"
+  },
+  "title": "Mallituote",
+  "mediaMix": {
+    "backgroundColor": "creamyWhite",
+    "items": [
+      {
+        "type": "markdown",
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "video": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
+        "body": "Mikäli sinulla ei ole talven varalle sopivaa tai luotettavaa tilaa säilyttää polkupyörää, tarjoamme oheispalveluna talvisäilytystä kuivassa ja lämpimässä tilassa. \n\nPolkupyörän talvisäilytys ja perushuolto 100 €. Nouto myymälöidemme lähialueilta 10 €",
+        "highlightList": [
+          {
+            "title": "Uudet nettisivut"
+          }
+        ],
+        "buttons": [
+          {
+            "title": "Uudet nettisivut 2",
+            "url": "/linkki"
+          }
+        ]
+      },
+      {
+        "type": "markdown",
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "video": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
+        "body": "Mikäli sinulla ei ole talven varalle sopivaa tai luotettavaa tilaa säilyttää polkupyörää, tarjoamme oheispalveluna talvisäilytystä kuivassa ja lämpimässä tilassa. \n\nPolkupyörän talvisäilytys ja perushuolto 100 €. Nouto myymälöidemme lähialueilta 10 €",
+        "highlightList": [
+          {
+            "title": "Uudet nettisivut"
+          }
+        ],
+        "buttons": [
+          {
+            "title": "Uudet nettisivut 2",
+            "url": "/linkki"
+          }
+        ]
+      }
+    ],
+    "backgroundcolor": "blue"
+  },
+  "textarea": {
+    "body": "",
+    "backgroundColor": "green"
+  },
+  "hero": {
+    "title": "Hero-Otsikko max 50 kirjainta pitkä.",
+    "summary": "Tämä on Heron alaotsikko. Herolohko antaa sinulle vaihtoehdon täyttää koko lohkon kuvalla, tai jakaa kuvan 50% tekstikentän kanssa. Kuvan sijainninkin voit muuttaa. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta. Kuvan sijaan myös mahdollista liittää video youtube-linkin muodossa.",
+    "align": "left",
+    "media": "video",
+    "image": "/images/puppy-and-adult-dog.jpg",
+    "mediaWidth": false,
+    "video": "https://www.youtube.com/watch?v=sF2w8DCQ7B0",
+    "buttons": [
+      {
+        "title": "Tutustu ohjelmiin",
+        "url": "/palvelut"
+      }
+    ]
+  },
+  "accordion": {
+    "image": "/images/puppy-and-adult-dog.jpg",
+    "items": [
+      "100_rahat_takaisin_-tyytyvaisyystakuu",
+      "koen_salin_epamukavaksi-_mita_avuksi",
+      "maksutavat_kayko_kulttuurisetelit",
+      "wadwdada"
+    ]
+  }
+}

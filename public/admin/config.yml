@@ -541,11 +541,17 @@ collections:
     extension: "json"
     format: "json"
     create: true
-    slug: "{{slug}}"
+    slug: "{{field.slug}}"
     fields:
       - {
           label: "Palvelun nimi",
           name: "title",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Osoite",
+          name: "slug",
           widget: "string",
           required: false,
         }
@@ -892,19 +898,20 @@ collections:
     create: true
     extension: "json"
     format: "json"
-    slug: "{{year}}-{{day}}-{{month}}-{{slug}}"
+    slug: "{{fields.slug}}"
     fields:
       - label: "Kirjoittaja"
-        name: "articleDetails"
+        name: "author"
         widget: "relation"
         multiple: true
         required: false
         collection: "authors"
-        search_fields: ["author.title"]
-        value_field: "author.title"
-        display_fields: ["author.title"]
+        search_fields: ["title"]
+        value_field: "title"
+        display_fields: ["title"]
         default: ["Jasmiini Peuramäki"]
       - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Osoite", name: "slug", widget: "string" }
       - {
           label: "Publish Date",
           name: "date",
@@ -918,7 +925,6 @@ collections:
           required: false,
         }
       - { label: "Body", name: "body", widget: "markdown", required: true }
-      - { label: "Osoite", name: "slug", widget: "string" }
 
   - label: "UKK"
     name: "accordion"
@@ -946,9 +952,19 @@ collections:
     format: "json"
     slug: "{{slug}}"
     fields:
-      - label: "Kirjoittaja"
-        name: "author"
-        widget: object
+      - { label: "Otsikko", name: "image", widget: "image", required: false }
+      - { label: "Otsikko", name: "title", widget: "string", required: false }
+      - { label: "Nimike", name: "subtitle", widget: "string", required: false }
+      - {
+          label: "description",
+          name: "body",
+          widget: "markdown",
+          required: false,
+        }
+      - label: "Toimintakehoitteet"
+        name: "buttons"
+        widget: list
+        max: 2
         fields:
           - {
               label: "Otsikko",
@@ -956,32 +972,4 @@ collections:
               widget: "string",
               required: false,
             }
-          - {
-              label: "Nimike",
-              name: "subtitle",
-              widget: "string",
-              required: false,
-            }
-          - {
-              label: "description",
-              name: "body",
-              widget: "markdown",
-              required: false,
-            }
-          - label: "Toimintakehoitteet"
-            name: "buttons"
-            widget: list
-            max: 2
-            fields:
-              - {
-                  label: "Otsikko",
-                  name: "title",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Linkki",
-                  name: "url",
-                  widget: "string",
-                  required: false,
-                }
+          - { label: "Linkki", name: "url", widget: "string", required: false }

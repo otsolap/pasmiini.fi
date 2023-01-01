@@ -55,6 +55,7 @@
 
   .header {
     max-width: calc($container-desktop / 2);
+    flex: 0 0 50%;
   }
 
   .cards {
@@ -68,6 +69,7 @@
   }
 
   .card {
-    max-width: calc(100% / 3.5);
+    max-width: calc(100% / 3);
+    flex: 0 0 33.33%;
   }
 }

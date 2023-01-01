@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import fs from "fs";
-import path from "path";
 import Meta from "@components/Meta";
 import Hero from "@components/Hero";
 import MediaMix from "@components/MediaMix";
@@ -43,7 +42,7 @@ export async function getStaticPaths() {
   })
   return {
       paths: paths,
-      fallback: true // false or 'blocking'
+      fallback: false,
   };
 }
 

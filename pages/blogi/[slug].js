@@ -2,9 +2,8 @@ import React from "react";
 import styles from "../../styles/pages/blog.module.scss";
 import fs from "fs";
 
-// Step 1: Find the file corresponding to the slug
-// Step 2: Populate them inside the page
 const Slug = ({ blog }) => {
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -18,15 +17,17 @@ const Slug = ({ blog }) => {
 
 export async function getStaticPaths() {
   const BLOG_PATH = "./content/posts/";
-
+  
   let paths = await fs.promises.readdir(BLOG_PATH);
   paths = paths.map((item) => {
+    console.log(item)
     return { params: { slug: item.split(".")[0] } };
   });
   return {
     paths: paths,
-    fallback: true, // false or 'blocking'
+    fallback: false,
   };
+
 }
 
 export async function getStaticProps(context) {
@@ -38,6 +39,7 @@ export async function getStaticProps(context) {
   );
 
   let data = JSON.parse(blog);
+  
 
   return {
     props: {

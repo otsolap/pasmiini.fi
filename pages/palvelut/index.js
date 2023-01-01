@@ -23,7 +23,7 @@ const Services = (props) => {
 };
 
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
     let files= await fs.promises.readdir(process.env.SERVICE_DIR_PATH);
     let file;
     let data = [];
