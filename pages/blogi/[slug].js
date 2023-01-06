@@ -5,8 +5,10 @@ import styles from "../../styles/pages/blog.module.scss";
 import Meta from "@components/Meta";
 import MarkdownBlock from "@partials/MarkdownBlock";
 import MediaMix from "@components/MediaMix";
+import Cards from "@components/Cards";
+import Highlight from "@components/Highlight";
 
-const Slug = ({ meta, blog, mediaMix }) => {
+const Slug = ({ meta, blog, mediaMix, cards, highlight }) => {
   return (
     <>
       <Meta meta={meta} />
@@ -25,11 +27,13 @@ const Slug = ({ meta, blog, mediaMix }) => {
           )}
           {blog.title && <h1>{blog.title}</h1>}
           {blog.author && <h2>Kirjoittanut: {blog.author}</h2>}
-          {blog.body && <MarkdownBlock markdown={blog.body} />}
+          {blog.body && <MarkdownBlock className={styles.markdown} markdown={blog.body} />}
           <footer>Social Media Sharing here.</footer>
         </div>
       </section>
       <MediaMix mediaMix={mediaMix} />
+      <Cards cards={cards} />
+      <Highlight highlight={highlight} />
     </>
   );
 };
@@ -48,6 +52,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
+  // site data
+  const site = await import(`../../content/site.json`)
+
   // getting the blog data
   const { slug } = context.params;
 
@@ -104,6 +111,18 @@ export async function getStaticProps(context) {
           },
         ],
       },
+      cards: {
+        title: site.cards.title,
+        summary: site.cards.summary,
+        items: site.cards.items,
+      },
+      highlight: {
+        image: site.highlight.image,
+        title: site.highlight.title,
+        body: site.highlight.body,
+        button: site.highlight.button,
+        backgroundColor: site.highlight.backgroundColor
+      }
     },
   };
 }

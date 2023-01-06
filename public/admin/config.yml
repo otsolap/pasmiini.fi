@@ -455,6 +455,59 @@ collections:
                   required: false,
                 }
 
+      - label: "Jasmiini"
+        name: "about"
+        file: "content/pages/about.json"
+        fields:
+          - label: "Tekstikenttä"
+            hint: "Tekstikentän otsikon lihavointi antaa tekstille brändimukaisen värinsä. Tekstikenttään voit vapaasti kirjoittaa rikasta tekstisisältöä, jossa tekstiä voi lihavoida tai kursivoida. Pystyt lisäämään tekstiin linkkejä, kuin listoja. Lista-elementtien edessä on aina “Tsekki”-ikoni, eikä yleistä palleroa. Vaihtoehtoisesti voit kirjoittaa numeraalisen listan. Tekstiin voit laittaa 5 eri kokoista otsikkoa. Tekstikentän saa taustaväriltään joko kermanvalkoisena tai tummanvihreänä. Tekstinä toimii sitten valinnan vastapuoli. Voit myös lihavoida tekstiä ja antaa sille keltaisen/sinisen korostuksen. (Keltainen tummanvihreällä, sininen kermanvalkoiselle)."
+            name: "textarea"
+            widget: object
+            collapsed: true
+            fields:
+              - label: "Tekstikenttä"
+                name: "body"
+                required: false
+                widget: "markdown"
+              - label: "Taustaväri"
+                name: "backgroundcolor"
+                required: false
+                widget: "select"
+                options:
+                  - { label: "Tummanvihreä", value: "green" }
+                  - { label: "Kermanvalkoinen", value: "creamyWhite" }
+
+          - label: "Sivuston metatiedot"
+            name: "meta"
+            collapsed: false
+            hint: "Metatiedot antavat lisää tietoa kyseisestä sivusta. Esimerkiksi Googlen hakutuloksissa tai SoMe jaoissa. Huom! Kuvaus saa olla maksimissaan 150-160 kirjainta pitkä!"
+            widget: object
+            fields:
+              - {
+                  label: "Sivun otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun kuvaus",
+                  name: "description",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun linkki",
+                  name: "url",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun kuva",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                }
+
       - label: "Yleiset asetukset"
         name: "site"
         file: "content/pages/site.json"
@@ -535,6 +588,49 @@ collections:
                   - { label: "Kermanvalkoinen", value: "creamyWhite" }
                   - { label: "Pinkki", value: "pink" }
                   - { label: "Keltainen", value: "yellow" }
+
+          - label: "Kortit"
+            name: "cards"
+            hint: "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen, joka näkyy korttien yläpuolella. Ideana on, että on hyvä ohjeistaa lukijaa mitä korteilla tarkalleen haluat kertoa. Toisinaan se ei kuitenkaan ole tarpeellista. Nämä kyseiset kortit näkyvät 'Minusta'- ja 'Blogi'-sivuissa."
+            collapsed: true
+            widget: object
+            fields:
+              - {
+                  label: "Otsikko",
+                  name: "title",
+                  widget: "string",
+                  max: 50,
+                  required: false,
+                }
+              - {
+                  label: "Kuvaus",
+                  name: "summary",
+                  widget: "text",
+                  required: false,
+                }
+              - label: "Kortit"
+                name: "items"
+                widget: list
+                max: 6
+                fields:
+                  - {
+                      label: "Kuva",
+                      name: "image",
+                      widget: "image",
+                      required: false,
+                    }
+                  - {
+                      label: "Otsikko",
+                      name: "title",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Kuvaus",
+                      name: "summary",
+                      widget: "text",
+                      required: false,
+                    }
 
   - label: "Palvelut"
     name: "services"
@@ -862,6 +958,7 @@ collections:
               - { label: "Kermanvalkoinen", value: "creamyWhite" }
               - { label: "Pinkki", value: "pink" }
               - { label: "Keltainen", value: "yellow" }
+
       - label: "Sivuston metatiedot"
         name: "meta"
         collapsed: false

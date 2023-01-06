@@ -30,6 +30,14 @@
   object-position: 50% 50%;
 }
 
+// Markdown is wrapped in Article.
+// These styles are for Markdown content.
+.markdown {
+  article {
+    padding: 0;
+  }
+}
+
 
 /* DESKTOP STYLES */
 @media (width >= $container-desktop) {

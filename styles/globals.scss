@@ -34,6 +34,10 @@ main {
   width: 100%;
 }
 
+section {
+  border-radius: $single;
+}
+
 // Markdown is wrapped in Article.
 // These styles are for Markdown content.
 .markdown {
