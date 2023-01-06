@@ -313,6 +313,59 @@ collections:
                   widget: "image",
                   required: false,
                 }
+                
+      - label: "Jasmiini"
+        name: "about"
+        file: "content/pages/about.json"
+        fields:
+          - label: "Tekstikenttä"
+            hint: "Tekstikentän otsikon lihavointi antaa tekstille brändimukaisen värinsä. Tekstikenttään voit vapaasti kirjoittaa rikasta tekstisisältöä, jossa tekstiä voi lihavoida tai kursivoida. Pystyt lisäämään tekstiin linkkejä, kuin listoja. Lista-elementtien edessä on aina “Tsekki”-ikoni, eikä yleistä palleroa. Vaihtoehtoisesti voit kirjoittaa numeraalisen listan. Tekstiin voit laittaa 5 eri kokoista otsikkoa. Tekstikentän saa taustaväriltään joko kermanvalkoisena tai tummanvihreänä. Tekstinä toimii sitten valinnan vastapuoli. Voit myös lihavoida tekstiä ja antaa sille keltaisen/sinisen korostuksen. (Keltainen tummanvihreällä, sininen kermanvalkoiselle)."
+            name: "textarea"
+            widget: object
+            collapsed: true
+            fields:
+              - label: "Tekstikenttä"
+                name: "body"
+                required: false
+                widget: "markdown"
+              - label: "Taustaväri"
+                name: "backgroundcolor"
+                required: false
+                widget: "select"
+                options:
+                  - { label: "Tummanvihreä", value: "green" }
+                  - { label: "Kermanvalkoinen", value: "creamyWhite" }
+
+          - label: "Sivuston metatiedot"
+            name: "meta"
+            collapsed: false
+            hint: "Metatiedot antavat lisää tietoa kyseisestä sivusta. Esimerkiksi Googlen hakutuloksissa tai SoMe jaoissa. Huom! Kuvaus saa olla maksimissaan 150-160 kirjainta pitkä!"
+            widget: object
+            fields:
+              - {
+                  label: "Sivun otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun kuvaus",
+                  name: "description",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun linkki",
+                  name: "url",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Sivun kuva",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                }
 
       - label: "Blogiarkisto"
         name: "blogArchive"
@@ -455,58 +508,6 @@ collections:
                   required: false,
                 }
 
-      - label: "Jasmiini"
-        name: "about"
-        file: "content/pages/about.json"
-        fields:
-          - label: "Tekstikenttä"
-            hint: "Tekstikentän otsikon lihavointi antaa tekstille brändimukaisen värinsä. Tekstikenttään voit vapaasti kirjoittaa rikasta tekstisisältöä, jossa tekstiä voi lihavoida tai kursivoida. Pystyt lisäämään tekstiin linkkejä, kuin listoja. Lista-elementtien edessä on aina “Tsekki”-ikoni, eikä yleistä palleroa. Vaihtoehtoisesti voit kirjoittaa numeraalisen listan. Tekstiin voit laittaa 5 eri kokoista otsikkoa. Tekstikentän saa taustaväriltään joko kermanvalkoisena tai tummanvihreänä. Tekstinä toimii sitten valinnan vastapuoli. Voit myös lihavoida tekstiä ja antaa sille keltaisen/sinisen korostuksen. (Keltainen tummanvihreällä, sininen kermanvalkoiselle)."
-            name: "textarea"
-            widget: object
-            collapsed: true
-            fields:
-              - label: "Tekstikenttä"
-                name: "body"
-                required: false
-                widget: "markdown"
-              - label: "Taustaväri"
-                name: "backgroundcolor"
-                required: false
-                widget: "select"
-                options:
-                  - { label: "Tummanvihreä", value: "green" }
-                  - { label: "Kermanvalkoinen", value: "creamyWhite" }
-
-          - label: "Sivuston metatiedot"
-            name: "meta"
-            collapsed: false
-            hint: "Metatiedot antavat lisää tietoa kyseisestä sivusta. Esimerkiksi Googlen hakutuloksissa tai SoMe jaoissa. Huom! Kuvaus saa olla maksimissaan 150-160 kirjainta pitkä!"
-            widget: object
-            fields:
-              - {
-                  label: "Sivun otsikko",
-                  name: "title",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Sivun kuvaus",
-                  name: "description",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Sivun linkki",
-                  name: "url",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Sivun kuva",
-                  name: "image",
-                  widget: "image",
-                  required: false,
-                }
 
       - label: "Yleiset asetukset"
         name: "site"
