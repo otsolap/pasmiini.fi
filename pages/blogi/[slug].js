@@ -3,28 +3,32 @@ import fs from "fs";
 import Image from "next/image";
 import styles from "../../styles/pages/blog.module.scss";
 import MarkdownBlock from "@partials/MarkdownBlock";
+import Meta from "@components/Meta";
 
 const Slug = ({ blog }) => {
   return (
-    <div className={styles.container}>
-      <section className={styles.content}>
-        {blog.image && (
-          <header className={styles.imageContainer}>
-            <Image
-              className={styles.image}
-              src={blog.image}
-              alt={blog.title}
-              fill
-              quality={100}
-            />
-          </header>
-        )}
-        {blog.title && <h1>{blog.title}</h1>}
-        {blog.author && <h2>Kirjoittanut: {blog.author}</h2>}
-        {blog.body && <MarkdownBlock markdown={blog.body} />}
-        <footer>Social Media Sharing here.</footer>
-      </section>
-    </div>
+    <>
+      <Meta meta={meta} />
+      <div className={styles.container}>
+        <section className={styles.content}>
+          {blog.image && (
+            <header className={styles.imageContainer}>
+              <Image
+                className={styles.image}
+                src={blog.image}
+                alt={blog.title}
+                fill
+                quality={100}
+              />
+            </header>
+          )}
+          {blog.title && <h1>{blog.title}</h1>}
+          {blog.author && <h2>Kirjoittanut: {blog.author}</h2>}
+          {blog.body && <MarkdownBlock markdown={blog.body} />}
+          <footer>Social Media Sharing here.</footer>
+        </section>
+      </div>
+    </>
   );
 };
 
@@ -60,6 +64,12 @@ export async function getStaticProps(context) {
         image: data["image"],
         body: data["body"],
       },
+      meta: {
+        title: data['title'],
+        description: data['body'],
+        image: data['image'],
+        url: data['slug'],
+      }
     },
   };
 }
