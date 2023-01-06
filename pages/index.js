@@ -56,6 +56,9 @@ export async function getStaticProps() {
     data.push(JSON.parse(file));
   }
 
+  let selectedBlogs = home.blogs.filter
+  
+
   return {
     props: {
       meta: {
