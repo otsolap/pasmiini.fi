@@ -1,12 +1,11 @@
 {
-  "title": "Jasmiini Peuramäki",
-  "subtitle": "PT-taustainen lyhytterapeutti",
-  "body": "lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium",
+  "body": "## J﻿asmiini Peuramäki\n\n### PT-taustainen lyhytterapeutti\n\nlorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium lorem lipsum lorem lipsum lorem lipsium",
   "buttons": [
     {
       "title": "Seuraa minua IG:ssä",
       "url": "www.instagram.com/pasmiini"
     }
   ],
-  "image": "/images/victor-freitas-71t4vsuphqi-unsplash.png"
+  "image": "/images/victor-freitas-71t4vsuphqi-unsplash.png",
+  "title": "Jasmiini Peuramäki"
 }

@@ -952,9 +952,8 @@ collections:
     format: "json"
     slug: "{{slug}}"
     fields:
-      - { label: "Otsikko", name: "image", widget: "image", required: false }
-      - { label: "Otsikko", name: "title", widget: "string", required: false }
-      - { label: "Nimike", name: "subtitle", widget: "string", required: false }
+      - { label: "Nimi", name: "title", widget: "string", required: false, hint: 'Kenttä on vain hallintaa varten. Kirjoita kirjoittajan nimi myös tekstikenttään!' }
+      - { label: "Profiilikuva", name: "image", widget: "image", required: false }
       - {
           label: "description",
           name: "body",
