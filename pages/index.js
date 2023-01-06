@@ -56,8 +56,6 @@ export async function getStaticProps() {
     data.push(JSON.parse(file));
   }
 
-
-
   return {
     props: {
       meta: {

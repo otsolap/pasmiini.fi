@@ -81,6 +81,6 @@
 
   .blog {
     max-width: calc(100% / 3);
-    flex: 0 0 33.33%;
+    flex: 0 0 calc(33.333% - $double);
   }
 }
