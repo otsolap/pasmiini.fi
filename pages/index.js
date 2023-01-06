@@ -44,20 +44,29 @@ export async function getStaticProps() {
   const site = await import(`../content/site.json`)
 
   /* Getting the Blog data */
-  let files = await fs.promises.readdir(process.env.BLOG_DIR_PATH);
-  let file;
-  let data = [];
+  let files = await fs.promises.readdir(process.env.BLOG_DIR_PATH)
+  let file
+  let data = []
+
   for (let index = 0; index < files.length; index++) {
-    const item = files[index];
+    const item = files[index]
     file = await fs.promises.readFile(
       process.env.BLOG_DIR_PATH + item,
       "utf-8"
-    );
-    data.push(JSON.parse(file));
+    )
+    data.push(JSON.parse(file))
   }
 
-  let selectedBlogs = home.blogs.filter
-  
+  let BLOG_SOURCE = home.blogs.filter
+
+  if(BLOG_SOURCE === 'custom') {
+    let selected = home.blogs.blog
+    console.log(selected)
+    let blogFiltered = data.filter(blog => {
+      return selected.includes(blog.slug)
+    })
+    data = blogFiltered
+  }
 
   return {
     props: {

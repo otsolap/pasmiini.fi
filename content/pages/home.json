@@ -54,7 +54,6 @@
     ],
     "backgroundcolor": "blue"
   },
-
   "cards": {
     "title": "Kortit-osion tekstisisältö",
     "summary": "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen.",
@@ -100,7 +99,11 @@
         "url": "/blogi"
       }
     ],
-    "filter": "custom"
+    "filter": "custom",
+    "blog": [
+      "istumatyolainen-vasyttaako",
+      "syomishairio"
+    ]
   },
   "meta": {
     "title": "Pasmiini",

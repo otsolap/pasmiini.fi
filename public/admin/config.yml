@@ -230,7 +230,7 @@ collections:
                   - { label: "Keltainen", value: "yellow" }
           - label: "Blogilohko"
             hint: "Blogi-lohkossa esitetään blogin kuva, otsikko sekä toimintakehote lukemaan kyseinen artikkeli. Jos sattumoisin sinulle ei ole kuvaa blogia varten. Ladataan sen tilalle logosi. Tätä en kuitenkaan missään tapauksessa suosittele. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen, joka näkyy blogien yläpuolella. Ideana on, että on hyvä ohjeistaa lukijaa mitä korteilla tarkalleen haluat kertoa. Toisinaan se ei kuitenkaan ole tarpeellista. Lohkossa esitetään joko 3 tuoreinta tai 3 sinun valitsemaasi blogia."
-            name: "blogSection"
+            name: "blogs"
             widget: object
             collapsed: true
             fields:
@@ -251,10 +251,11 @@ collections:
                 name: "filter"
                 widget: "select"
                 required: false
+                default: ["latest"]
                 options:
                   - { label: "Tuoreimmat", value: "latest" }
                   - { label: "Omavalinta", value: "custom" }
-              - label: "Nostoblogit"
+              - label: "Valitut blogit"
                 name: "blog"
                 widget: "relation"
                 hint: "Muista valita Omavalinta suodattimesta."
