@@ -54,7 +54,13 @@
 
   .imageContainer,
   .videoContainer {
-    height: 650px;
-    width: 650px;
+    height: 500px;
+    width: 500px;
   }
+
+  .imageContainer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }

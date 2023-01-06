@@ -61,7 +61,6 @@ export async function getStaticProps() {
 
   if(BLOG_SOURCE === 'custom') {
     let selected = home.blogs.blog
-    console.log(selected)
     let blogFiltered = data.filter(blog => {
       return selected.includes(blog.slug)
     })

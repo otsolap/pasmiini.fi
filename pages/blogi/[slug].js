@@ -6,13 +6,12 @@ import Meta from "@components/Meta";
 import MarkdownBlock from "@partials/MarkdownBlock";
 import MediaMix from "@components/MediaMix";
 
-
 const Slug = ({ meta, blog, mediaMix }) => {
   return (
     <>
       <Meta meta={meta} />
-      <div className={styles.container}>
-        <section className={styles.content}>
+      <section className={styles.articleContainer}>
+        <div className={styles.content}>
           {blog.image && (
             <header className={styles.imageContainer}>
               <Image
@@ -28,11 +27,9 @@ const Slug = ({ meta, blog, mediaMix }) => {
           {blog.author && <h2>Kirjoittanut: {blog.author}</h2>}
           {blog.body && <MarkdownBlock markdown={blog.body} />}
           <footer>Social Media Sharing here.</footer>
-        </section>
-        <section className={styles.author}>
-          <MediaMix mediaMix={mediaMix} />
-          </section>
-      </div>
+        </div>
+      </section>
+      <MediaMix mediaMix={mediaMix} />
     </>
   );
 };
@@ -52,14 +49,14 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   // getting the blog data
-  const { slug } = context.params
+  const { slug } = context.params;
 
   let blog = await fs.promises.readFile(
     `${process.env.BLOG_DIR_PATH + slug}.json`,
     "utf-8"
-  )
+  );
 
-  let data = JSON.parse(blog)
+  let data = JSON.parse(blog);
 
   // filtering author
   const AUTHOR_PATH = "./content/authors/";
@@ -68,18 +65,15 @@ export async function getStaticProps(context) {
   let authors = [];
   for (let index = 0; index < files.length; index++) {
     const item = files[index];
-    file = await fs.promises.readFile(
-      AUTHOR_PATH + item,
-      "utf-8"
-    );
+    file = await fs.promises.readFile(AUTHOR_PATH + item, "utf-8");
     authors.push(JSON.parse(file));
   }
 
-  let selected = data['author']
+  let selected = data["author"];
 
-  let authorsFiltered = authors.filter(author => {
-    return selected.includes(author.title)
-  })
+  let authorsFiltered = authors.filter((author) => {
+    return selected.includes(author.title);
+  });
 
   return {
     props: {
@@ -91,25 +85,25 @@ export async function getStaticProps(context) {
         body: data["body"],
       },
       meta: {
-        title: data['title'],
-        description: data['body'],
-        image: data['image'],
-        url: data['slug'],
+        title: data["title"],
+        description: data["body"],
+        image: data["image"],
+        url: data["slug"],
       },
       mediaMix: {
-        backgroundColor: 'creamyWhite',
+        backgroundColor: "creamyWhite",
         items: [
           {
-            type: 'image',
+            type: "image",
             image: authorsFiltered[0].image,
           },
           {
-            type: 'markdown',
+            type: "markdown",
             body: authorsFiltered[0].body,
-            buttons: authorsFiltered[0].buttons
-          }
-        ]
-      }
+            buttons: authorsFiltered[0].buttons,
+          },
+        ],
+      },
     },
   };
 }
