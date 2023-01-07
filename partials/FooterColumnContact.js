@@ -27,7 +27,7 @@ const FooterColumnContact = ({  open, title, list }) => {
                             <h4 className={styles.heading}>
                                 {title}
                             </h4>
-                            <FontAwesomeIcon className={styles.Icon} aria-label="Alatunnisteen lisätieto" icon={active ? faAngleUp : faAngleDown} />
+                            <FontAwesomeIcon className={styles.icon} aria-label="Alatunnisteen lisätieto" icon={active ? faAngleUp : faAngleDown} />
                         </div>
                     </div>
                     <div ref={contentRef} className={active ? `${styles.content} ${styles.contentDivider}` : `${styles.content}`} >
