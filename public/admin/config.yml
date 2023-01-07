@@ -1088,22 +1088,36 @@ collections:
             widget: object
             fields:
               - {
-                  label: "Otsikko",
-                  name: "titleLogo",
-                  widget: "string",
-                  required: false,
-                }
-              - {
                   label: "Logo",
                   name: "imageLogo",
                   widget: "image",
                   required: false,
                 }
+          - label: "Yritys"
+            name: "company"
+            widget: object
+            allow_add: false
+            summary: ""
+            fields:
               - {
-                  label: "Logon täsmennys",
-                  name: "imageAlt",
+                  label: "Auki",
+                  name: "open",
+                  widget: "boolean",
+                  required: false,
+                  hint: "Halutaanko alapalkin kenttä automaattisesti auki mobiiliruudussa vai suljettuna",
+                }
+              - {
+                  label: "Otsikko",
+                  name: "title",
                   widget: "string",
                   required: false,
+                }
+              - {
+                  label: "Teksti",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                  hint: "Muista valita mediakentästä teksti.",
                 }
           - label: "Yhteystiedot"
             name: "contact"
