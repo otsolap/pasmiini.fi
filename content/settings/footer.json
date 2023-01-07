@@ -1,7 +1,6 @@
 {
   "logo": {
-    "image": "/images/placeholder.png",
-    "imageLogo": "/images/placeholder.png"
+    "image": "/images/placeholder.png"
   },
   "company": {
     "open": false,
@@ -11,7 +10,7 @@
   "contact": {
     "open": false,
     "title": "Tavoitat minut",
-    "contactList": [
+    "list": [
       {
         "title": "+358 40416 8695",
         "url": "+358404168695",

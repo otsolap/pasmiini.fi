@@ -1139,7 +1139,7 @@ collections:
                   required: false,
                 }
               - label: "Yhteystieto"
-                name: "contactList"
+                name: "list"
                 widget: list
                 fields:
                   - {

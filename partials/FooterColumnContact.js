@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react'
-import styles from '../../styles/Footer.module.scss'
+import styles from "../styles/components/footer.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import useToggle from '@hooks/useToggleState';
 import ContactDetails from '@partials/ContactDetails'
 
-const FooterColumnCompany = ({ title, description, contactList, open }) => {
+const FooterColumnCompany = ({  open, title, list }) => {
     const contentRef = useRef(null)
     const [active, setActive] = useToggle(open);
     useEffect(() => {
@@ -31,8 +31,7 @@ const FooterColumnCompany = ({ title, description, contactList, open }) => {
                         </div>
                     </div>
                     <div ref={contentRef} className={active ? `${styles.colContent} ${styles.colContentDivider}` : `${styles.colContent}`} >
-                        {description && (<p className={styles.colText}>{description}</p>)}
-                        <ContactDetails contactList={contactList} />
+                        <ContactDetails list={list} />
                     </div>
                 </div>
             </button>

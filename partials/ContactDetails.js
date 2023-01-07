@@ -1,74 +1,110 @@
-import styles from "../styles/footer.module.scss";
+import styles from "../styles/components/footer.module.scss";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faWhatsapp,
+  faLinkedin,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
-const ContactDetails = ({ contactList }) => {
-  const contactInfo = contactList.map((contacts, i) => {
+const ContactDetails = ({ list }) => {
+  const contactInfo = list.map((contacts, i) => {
     return (
       <p className={styles.contactText} key={i}>
         {contacts.type === "phone" ? (
-          <a
+          <Link
             className={styles.contactLink}
             href={`tel:${contacts.url}`}
             target="_blank"
             rel="noopener noreferrer"
           >
+            <FontAwesomeIcon
+              className={styles.icon}
+              aria-label="Phone"
+              icon={faPhone}
+            />
             {contacts.title}
-          </a>
+          </Link>
         ) : null}
         {contacts.type === "whatsapp" ? (
-          <a
+          <Link
             className={styles.contactLink}
             href={`tel:${contacts.url}`}
             target="_blank"
             rel="noopener noreferrer"
           >
+            <FontAwesomeIcon
+              className={styles.icon}
+              aria-label="Whatsapp"
+              icon={faWhatsapp}
+            />
             {contacts.title}
-          </a>
+          </Link>
         ) : null}
         {contacts.type === "email" ? (
-          <a
+          <Link
             className={styles.contactLink}
             href={`mailto:${contacts.url}`}
             target="_blank"
             rel="noopener noreferrer"
           >
+            <FontAwesomeIcon
+              className={styles.icon}
+              aria-label="Sähköposti"
+              icon={faEnvelope}
+            />
             {contacts.title}
-          </a>
+          </Link>
         ) : null}
         {contacts.type === "instagram" ? (
-          <a
+          <Link
             className={styles.contactLink}
             href={contacts.url}
             target="_blank"
             rel="noopener noreferrer"
           >
             {contacts.title}
-          </a>
+          </Link>
         ) : null}
         {contacts.type === "linkedIn" ? (
-          <a
+          <Link
             className={styles.contactLink}
             href={contacts.url}
             target="_blank"
             rel="noopener noreferrer"
           >
+            {" "}
+            <FontAwesomeIcon
+              className={styles.icon}
+              aria-label="LinkedIn"
+              icon={faLinkedin}
+            />
             {contacts.title}
-          </a>
+          </Link>
         ) : null}
         {contacts.type === "facebook" ? (
-          <a
+          <Link
             className={styles.contactLink}
             href={contacts.url}
             target="_blank"
             rel="noopener noreferrer"
           >
+            <FontAwesomeIcon
+              className={styles.icon}
+              aria-label="Facebook"
+              icon={faFacebook}
+            />
             {contacts.title}
-          </a>
+          </Link>
         ) : null}
       </p>
     );
   });
 
-  return <>{contactInfo}</>;
+  return <>
+  {contactInfo}
+  </>;
 };
 
 export default ContactDetails;
