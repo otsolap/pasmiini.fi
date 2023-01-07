@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "../../styles/pages/blog.module.scss";
 import Meta from "@components/Meta";
 import MarkdownBlock from "@partials/MarkdownBlock";
+import ShareButtons from "@components/ShareButtons";
 import MediaMix from "@components/MediaMix";
 import Cards from "@components/Cards";
 import Highlight from "@components/Highlight";
@@ -28,7 +29,7 @@ const Slug = ({ meta, blog, mediaMix, cards, highlight }) => {
           {blog.title && <h1>{blog.title}</h1>}
           {blog.author && <h2>Kirjoittanut: {blog.author}</h2>}
           {blog.body && <MarkdownBlock className={styles.markdown} markdown={blog.body} />}
-          <footer>Social Media Sharing here.</footer>
+          <ShareButtons description={blog.title} />
         </div>
       </section>
       <MediaMix mediaMix={mediaMix} />
