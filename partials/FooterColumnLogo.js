@@ -2,7 +2,6 @@ import Image from 'next/image'
 import styles from "../styles/components/footer.module.scss";
 
 const FooterColumnLogo = ({ image }) => {
-  
   return (
     <div className={styles.column}>
       {image && (
