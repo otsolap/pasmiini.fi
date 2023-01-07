@@ -1,0 +1,84 @@
+{
+    "brand": {
+        "logo:": "/images/puppy-and-adult-dog.jpg",
+        "title": "Pasmiini",
+        "slogan": "Work for yourself, on yourself"
+    },
+    "navigation": {
+        "pages": [
+            {
+                "title": "Valmennusohjelma",
+                "path": "/palvelut",
+                "icon": "warehouse"
+            },
+            {
+                "title": "Jasmiini",
+                "path": "/minusta",
+                "icon": "bicycle"
+            },
+            {
+                "title": "Blogi",
+                "path": "/blogi",
+                "icon": "fixer"
+            }
+        ],
+        "modal": [
+            {
+                "openModal": "Lisää",
+                "closeModal": "Vähemmän"
+            }
+        ]
+    },
+    "calender": {
+        "title": "Aloita yhteistyö kanssani",
+        "url": "/treenit"
+    },
+    "highlight": {
+        "image": "/images/puppy-and-adult-dog.jpg",
+        "title": "Haluatko oppia tuntemaan kehosi, parantamaan elämän laatua sekä saamaan enemmän itsevarmuutta 12 viikon sisällä?",
+        "body": "",
+        "button": [
+            {
+                "title": "Haluan elämäntapamuutoksen",
+                "url": "/palvelut"
+            }
+        ],
+        "backgroundColor": "blue"
+    },
+    "cards": {
+        "title": "Kortit-osion tekstisisältö",
+        "summary": "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen.",
+        "items": [
+            {
+                "image": "/images/puppy-and-adult-dog.jpg",
+                "title": "Card-title",
+                "summary": "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen."
+            },
+            {
+                "image": "/images/puppy-and-adult-dog.jpg",
+                "title": "Card-title",
+                "summary": "Kerrot asiakkaalle mitä ohjeet sisältää, kenelle ohjeet ovat ja mitä ohjeet eivät sisällä. "
+            },
+            {
+                "image": "/images/puppy-and-adult-dog.jpg",
+                "title": "Card-title",
+                "summary": "Tuot esille haasteita, joita ratkoit ja niiden ratkaisujen muodosta löysit yritystoimintosi sekä tarinasi. "
+            },
+            {
+                "image": "/images/puppy-and-adult-dog.jpg",
+                "title": "Card-title",
+                "summary": "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen."
+            },
+            {
+                "image": "/images/puppy-and-adult-dog.jpg",
+                "title": "Card-title",
+                "summary": "Kerrot asiakkaalle mitä ohjeet sisältää, kenelle ohjeet ovat ja mitä ohjeet eivät sisällä. "
+            },
+            {
+                "image": "/images/puppy-and-adult-dog.jpg",
+                "title": "Card-title",
+                "summary": "Tuot esille haasteita, joita ratkoit ja niiden ratkaisujen muodosta löysit yritystoimintosi sekä tarinasi. "
+            }
+        ]
+    }
+}

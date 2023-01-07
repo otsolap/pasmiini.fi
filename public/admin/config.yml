@@ -509,130 +509,7 @@ collections:
                 }
 
 
-      - label: "Yleiset asetukset"
-        name: "site"
-        file: "content/pages/site.json"
-        fields:
-          - label: "Brändi"
-            name: "brand"
-            widget: object
-            fields:
-              - {
-                  label: "Logo",
-                  name: "logo",
-                  widget: "image",
-                  required: false,
-                }
-              - {
-                  label: "Logon kuvaus",
-                  name: "title",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Iskulause",
-                  name: "slogan",
-                  widget: "string",
-                  required: false,
-                }
-          - label: "Nosto"
-            hint: "Nostolohko, johon voit kirjoittaa ytimekkään otsikon sekä mahdollisuuden lisätä rikasta tekstisisältöä, sekä toimintakehotteen. Nostolohkon saa taustaväriltään joko sinisenä tai tummanvihreänä. Teksti on normaalisti kermanvalkoinen, mutta lihavoinnilla saat siihen keltaisen korostuksen. Voit myös laittaa pienen kuvan tekstin yläpuolelle, kuten esimerkiksi logosi."
-            name: "highlight"
-            widget: object
-            collapsed: true
-            fields:
-              - {
-                  label: "Otsikko",
-                  name: "title",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Kuvaus",
-                  name: "body",
-                  widget: "markdown",
-                  required: false,
-                }
-              - {
-                  label: "Kuva",
-                  name: "image",
-                  widget: "image",
-                  required: false,
-                  hint: "Näytetään tekstin yläpuolella",
-                }
-              - label: "Toimintakehoite"
-                name: "button"
-                max: 1
-                allow_add: false
-                required: false
-                widget: list
-                fields:
-                  - {
-                      label: "Otsikko",
-                      name: "title",
-                      widget: "string",
-                      required: false,
-                    }
-                  - {
-                      label: "Linkki",
-                      name: "url",
-                      widget: "string",
-                      required: false,
-                    }
-              - label: "Taustaväri"
-                name: "backgroundcolor"
-                required: false
-                widget: "select"
-                options:
-                  - { label: "Tummanvihreä", value: "green" }
-                  - { label: "Turkoosi", value: "blue" }
-                  - { label: "Kermanvalkoinen", value: "creamyWhite" }
-                  - { label: "Pinkki", value: "pink" }
-                  - { label: "Keltainen", value: "yellow" }
-
-          - label: "Kortit"
-            name: "cards"
-            hint: "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen, joka näkyy korttien yläpuolella. Ideana on, että on hyvä ohjeistaa lukijaa mitä korteilla tarkalleen haluat kertoa. Toisinaan se ei kuitenkaan ole tarpeellista. Nämä kyseiset kortit näkyvät 'Minusta'- ja 'Blogi'-sivuissa."
-            collapsed: true
-            widget: object
-            fields:
-              - {
-                  label: "Otsikko",
-                  name: "title",
-                  widget: "string",
-                  max: 50,
-                  required: false,
-                }
-              - {
-                  label: "Kuvaus",
-                  name: "summary",
-                  widget: "text",
-                  required: false,
-                }
-              - label: "Kortit"
-                name: "items"
-                widget: list
-                max: 6
-                fields:
-                  - {
-                      label: "Kuva",
-                      name: "image",
-                      widget: "image",
-                      required: false,
-                    }
-                  - {
-                      label: "Otsikko",
-                      name: "title",
-                      widget: "string",
-                      required: false,
-                    }
-                  - {
-                      label: "Kuvaus",
-                      name: "summary",
-                      widget: "text",
-                      required: false,
-                    }
-
+  
   - label: "Palvelut"
     name: "services"
     folder: "content/services"
@@ -1071,3 +948,130 @@ collections:
               required: false,
             }
           - { label: "Linkki", name: "url", widget: "string", required: false }
+
+  - label: "Sivuston yleiset asetukset"
+    name: "site"
+    files:
+      - label: "Jotain"
+        name: "site"
+        file: "content/settings/site.json"
+        fields:
+          - label: "Brändi"
+            name: "brand"
+            widget: object
+            fields:
+              - {
+                  label: "Logo",
+                  name: "logo",
+                  widget: "image",
+                  required: false,
+                }
+              - {
+                  label: "Logon kuvaus",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Iskulause",
+                  name: "slogan",
+                  widget: "string",
+                  required: false,
+                }
+          - label: "Nosto"
+            hint: "Nostolohko, johon voit kirjoittaa ytimekkään otsikon sekä mahdollisuuden lisätä rikasta tekstisisältöä, sekä toimintakehotteen. Nostolohkon saa taustaväriltään joko sinisenä tai tummanvihreänä. Teksti on normaalisti kermanvalkoinen, mutta lihavoinnilla saat siihen keltaisen korostuksen. Voit myös laittaa pienen kuvan tekstin yläpuolelle, kuten esimerkiksi logosi."
+            name: "highlight"
+            widget: object
+            collapsed: true
+            fields:
+              - {
+                  label: "Otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Kuvaus",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Kuva",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                  hint: "Näytetään tekstin yläpuolella",
+                }
+              - label: "Toimintakehoite"
+                name: "button"
+                max: 1
+                allow_add: false
+                required: false
+                widget: list
+                fields:
+                  - {
+                      label: "Otsikko",
+                      name: "title",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Linkki",
+                      name: "url",
+                      widget: "string",
+                      required: false,
+                    }
+              - label: "Taustaväri"
+                name: "backgroundcolor"
+                required: false
+                widget: "select"
+                options:
+                  - { label: "Tummanvihreä", value: "green" }
+                  - { label: "Turkoosi", value: "blue" }
+                  - { label: "Kermanvalkoinen", value: "creamyWhite" }
+                  - { label: "Pinkki", value: "pink" }
+                  - { label: "Keltainen", value: "yellow" }
+
+          - label: "Kortit"
+            name: "cards"
+            hint: "Yksittäiseen korttiin voit lisätä kuvan, logon tai ikonin. Kortteja saa olla maksimissaan 6 kappaletta. Teksti ja kuva eivät ole pakollisia. Voit halutessasi myös lisätä osioon otsikon sekä kuvauksen, joka näkyy korttien yläpuolella. Ideana on, että on hyvä ohjeistaa lukijaa mitä korteilla tarkalleen haluat kertoa. Toisinaan se ei kuitenkaan ole tarpeellista. Nämä kyseiset kortit näkyvät 'Minusta'- ja 'Blogi'-sivuissa."
+            collapsed: true
+            widget: object
+            fields:
+              - {
+                  label: "Otsikko",
+                  name: "title",
+                  widget: "string",
+                  max: 50,
+                  required: false,
+                }
+              - {
+                  label: "Kuvaus",
+                  name: "summary",
+                  widget: "text",
+                  required: false,
+                }
+              - label: "Kortit"
+                name: "items"
+                widget: list
+                max: 6
+                fields:
+                  - {
+                      label: "Kuva",
+                      name: "image",
+                      widget: "image",
+                      required: false,
+                    }
+                  - {
+                      label: "Otsikko",
+                      name: "title",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Kuvaus",
+                      name: "summary",
+                      widget: "text",
+                      required: false,
+                    }
