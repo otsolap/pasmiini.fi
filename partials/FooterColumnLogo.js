@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from "../styles/components/footer.module.scss";
 
-const FooterColumnCompany = ({ image }) => {
+const FooterColumnLogo = ({ image }) => {
   
   return (
     <div className={styles.footerColumn}>
@@ -19,4 +19,4 @@ const FooterColumnCompany = ({ image }) => {
   );
 };
 
-export default FooterColumnCompany;
+export default FooterColumnLogo;

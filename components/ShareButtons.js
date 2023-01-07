@@ -21,8 +21,6 @@ const ShareButtons = ({ description }) => {
     setUrl(`${baseUrl}${router.asPath}`);
   }, [router.asPath]);
 
-  console.log(url);
-
   return (
     <>
       <footer className={styles.shareButtons}>

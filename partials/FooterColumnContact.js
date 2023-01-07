@@ -5,7 +5,8 @@ import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import useToggle from '@hooks/useToggleState';
 import ContactDetails from '@partials/ContactDetails'
 
-const FooterColumnCompany = ({  open, title, list }) => {
+const FooterColumnContact = ({  open, title, list }) => {
+    console.log(`footer column contact: ${list}`)
     const contentRef = useRef(null)
     const [active, setActive] = useToggle(open);
     useEffect(() => {
@@ -39,4 +40,4 @@ const FooterColumnCompany = ({  open, title, list }) => {
     )
 }
 
-export default FooterColumnCompany
+export default FooterColumnContact

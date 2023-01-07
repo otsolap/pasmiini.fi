@@ -9,6 +9,7 @@ import {
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const ContactDetails = ({ list }) => {
+  console.log(list)
   const contactInfo = list.map((contacts, i) => {
     return (
       <p className={styles.contactText} key={i}>
