@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import styles from '../../styles/blog.module.scss'
+import styles from '../../styles/pages/blog.module.scss'
 import Link from 'next/link';
 import fs from 'fs'
 
 const Services = (props) => {
-    const [blogs, setBlogs] = useState(props.files);
+    const [services, setServices] = useState(props.files);
     // useEffect(() => {
 
     // }, [])
     return <div className={styles.container}>
         <main className={styles.main}>
-            {blogs.map((blogitem) => {
+            {services.map((blogitem) => {
                 return (
                     <div key={blogitem.slug}>
                         <Link href={`/palvelut/${blogitem.slug}`}>
@@ -30,7 +30,7 @@ export async function getStaticProps() {
     for (let index = 0; index < files.length; index++) {
       const item = files[index];
       file = await fs.promises.readFile(
-        process.env.BLOG_DIR_PATH + item,
+        process.env.SERVICE_DIR_PATH + item,
         "utf-8"
       );
       data.push(JSON.parse(file));

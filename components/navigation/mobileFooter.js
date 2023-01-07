@@ -1,7 +1,7 @@
 const MobileFooter = () => {
     return (
         <footer className="mobile-only">
-           MobileFooter.
+            MobileFooter.
         </footer>
     )
 }
