@@ -1,11 +1,14 @@
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import useToggle from "@hooks/useToggleState";
 import styles from "../styles/components/footer.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import MarkdownBlock from "@partials/MarkdownBlock";
+import site from "@content/settings/site.json";
 
 const FooterColumnCompany = ({ open, title, body }) => {
+  const { calender } = site
   const contentRef = useRef(null);
   const [active, setActive] = useToggle(open);
 
@@ -42,6 +45,9 @@ const FooterColumnCompany = ({ open, title, body }) => {
             }
           >
             {body && <MarkdownBlock markdown={body} />}
+            {calender && (
+              <Link className={styles.active} href={calender.url}>{calender.title}</Link>
+            )}
           </div>
         </div>
       </button>

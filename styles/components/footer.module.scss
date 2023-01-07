@@ -73,7 +73,6 @@
 .heading {
   font-weight: 700;
   padding-top: $single;
-  padding-bottom: $single;
 }
 
 .icon {
@@ -137,11 +136,8 @@
   @include flex-direction(row);
   flex-wrap: wrap;
   justify-content: center;
-
-  .active {
-    color: $yellow;
-  }
-
+  
+  
   a,
   button {
     color: $creamyWhite;
@@ -154,12 +150,16 @@
     flex: 0 0 calc(100% / 3);
     max-width: calc(100% / 3);
   }
-
+  
   button {
     border: none;
     outline: none;
     background: none;
   }
+}
+
+.active {
+  color: $yellow;
 }
 
 .mobileIcon {
