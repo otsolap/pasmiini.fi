@@ -313,7 +313,7 @@ collections:
                   widget: "image",
                   required: false,
                 }
-                
+
       - label: "Jasmiini"
         name: "about"
         file: "content/pages/about.json"
@@ -508,8 +508,6 @@ collections:
                   required: false,
                 }
 
-
-  
   - label: "Palvelut"
     name: "services"
     folder: "content/services"
@@ -524,12 +522,7 @@ collections:
           widget: "string",
           required: false,
         }
-      - {
-          label: "Osoite",
-          name: "slug",
-          widget: "string",
-          required: false,
-        }
+      - { label: "Osoite", name: "slug", widget: "string", required: false }
       - label: "Hero"
         hint: "Heroon voi laittaa yhden suuren otsikon, jonka maksimimitta on 50-kirjainta. Pääotsikon alle voidaan liittää vapaamuotoinen kuvaus. Yleisesti Kuva täyttää puolet lohkon koon, mutta halutessasi voit leventää kuvan ottamaan 100% lohkosta. Heron saa asettaa joko vasemmalle tai oikealle puolelle. Voit myös kuvan sijaan liittää .gif liikkuvan-kuvan tai YouTube-videon. Lohkon päätyyn pystyt lisäämään maksimissaan 2 toimintakehotetta."
         name: "hero"
@@ -928,8 +921,19 @@ collections:
     format: "json"
     slug: "{{slug}}"
     fields:
-      - { label: "Nimi", name: "title", widget: "string", required: false, hint: 'Kenttä on vain hallintaa varten. Kirjoita kirjoittajan nimi myös tekstikenttään!' }
-      - { label: "Profiilikuva", name: "image", widget: "image", required: false }
+      - {
+          label: "Nimi",
+          name: "title",
+          widget: "string",
+          required: false,
+          hint: "Kenttä on vain hallintaa varten. Kirjoita kirjoittajan nimi myös tekstikenttään!",
+        }
+      - {
+          label: "Profiilikuva",
+          name: "image",
+          widget: "image",
+          required: false,
+        }
       - {
           label: "description",
           name: "body",
@@ -949,10 +953,10 @@ collections:
             }
           - { label: "Linkki", name: "url", widget: "string", required: false }
 
-  - label: "Sivuston yleiset asetukset"
+  - label: "Yleiset asetukset"
     name: "site"
     files:
-      - label: "Jotain"
+      - label: "Staattinen sisältö"
         name: "site"
         file: "content/settings/site.json"
         fields:
@@ -1075,3 +1079,75 @@ collections:
                       widget: "text",
                       required: false,
                     }
+      - label: "Alatunniste"
+        name: "footer"
+        file: "content/settings/footer.json"
+        fields:
+          - label: "Logo"
+            name: "logo"
+            widget: object
+            fields:
+              - {
+                  label: "Otsikko",
+                  name: "titleLogo",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Logo",
+                  name: "imageLogo",
+                  widget: "image",
+                  required: false,
+                }
+              - {
+                  label: "Logon täsmennys",
+                  name: "imageAlt",
+                  widget: "string",
+                  required: false,
+                }
+          - label: "Yhteystiedot"
+            name: "contact"
+            widget: object
+            allow_add: false
+            summary: ""
+            fields:
+              - {
+                  label: "Auki",
+                  name: "open",
+                  widget: "boolean",
+                  required: false,
+                  hint: "Halutaanko alapalkin kenttä automaattisesti auki mobiiliruudussa vai suljettuna",
+                }
+              - {
+                  label: "Otsikko",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
+              - label: "Yhteystieto"
+                name: "contactList"
+                widget: list
+                fields:
+                  - {
+                      label: "Otsikko",
+                      name: "title",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Osoite",
+                      name: "url",
+                      widget: "string",
+                      required: false,
+                    }
+                  - label: "Tyyppi"
+                    name: "type"
+                    widget: "select"
+                    required: true
+                    options:
+                      - { label: "Puhelin", value: "phone" }
+                      - { label: "Whatsapp", value: "whatsapp" }
+                      - { label: "Sähköposti", value: "email" }
+                      - { label: "Instagram", value: "instagram" }
+                      - { label: "LinkedIn", value: "linkedin" }
+                      - { label: "Facebook", value: "facebook" }

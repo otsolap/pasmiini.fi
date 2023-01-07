@@ -54,7 +54,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   // site data
-  const site = await import(`../../content/site.json`)
+  const site = await import(`../../content/settings/site.json`)
 
   // getting the blog data
   const { slug } = context.params;

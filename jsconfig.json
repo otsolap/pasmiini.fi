@@ -1,12 +1,12 @@
 {
-    "compilerOptions": {
-      "baseUrl": "./",
-      "paths": {
-        "@components/*": ["components/*"],
-        "@content/*": ["content/*"],
-        "@utils/*": ["utils/*"],
-        "@hooks/*": ["hooks/*"],
-        "@partials/*": ["partials/*"]
-      }
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@content/*": ["content/*"],
+      "@utils/*": ["utils/*"],
+      "@hooks/*": ["hooks/*"],
+      "@partials/*": ["partials/*"]
     }
   }
+}

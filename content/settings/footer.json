@@ -1,0 +1,46 @@
+{
+    "logo": {
+        "image": "/images/placeholder.png"
+    },
+    "company": {
+        "open": false,
+        "title": "Jasmiini Peuramäki",
+        "body": ""
+    },
+    "contact": {
+        "open": false,
+        "title": "Tavoitat minut",
+        "contactList": [
+            {
+                "title": "+358 40416 8695",
+                "url": "+358404168695",
+                "type": "phone"
+            },
+            {
+                "title": "+358 40416 8695",
+                "url": "+358404168695",
+                "type": "whatsapp"
+            },
+            {
+              "title": "Jasmiini@Pasmiini.fi",
+              "url": "jasmiini@pasmiini.fi",
+              "type": "email"
+            },
+            {
+                "title": "/Pasmiini",
+                "url": "https://www.instagram.com/pasmiini/",
+                "type": "instagram"
+              },
+              {
+                "title": "/Jasmiini-peuramaki",
+                "url": "https://www.linkedin.com/in/pasmiini/",
+                "type": "linkedin"
+              },
+              {
+                "title": "/Pasmiini",
+                "url": "https://www.facebook.com/Pasmiini",
+                "type": "facebook"
+              }
+        ]
+    }
+}

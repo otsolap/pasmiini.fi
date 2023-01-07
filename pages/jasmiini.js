@@ -18,7 +18,7 @@ const About = ({ meta, mediaMix, textarea, cards, highlight }) => {
 
 export async function getStaticProps() {
   const about = await import(`../content/pages/about.json`)
-  const site = await import(`../content/site.json`)
+  const site = await import(`../content/settings/site.json`)
   const jasmiini = await import(`../content/authors/jasmiini_peuramaki.json`)
 
   return {

@@ -41,7 +41,7 @@ export default Index
 
 export async function getStaticProps() {
   const home = await import(`../content/pages/home.json`)
-  const site = await import(`../content/site.json`)
+  const site = await import(`../content/settings/site.json`)
 
   /* Getting the Blog data */
   let files = await fs.promises.readdir(process.env.BLOG_DIR_PATH)

@@ -1,0 +1,32 @@
+{
+    "brand": {
+        "logo:": "/images/puppy-and-adult-dog.jpg",
+        "title": "Pasmiini",
+        "slogan": "Work for yourself, on yourself"
+    },
+    "navigation": {
+        "pages": [
+            {
+                "title": "Valmennusohjelma",
+                "path": "/palvelut",
+                "icon": "warehouse"
+            },
+            {
+                "title": "Jasmiini",
+                "path": "/minusta",
+                "icon": "bicycle"
+            },
+            {
+                "title": "Blogi",
+                "path": "/blogi",
+                "icon": "fixer"
+            }
+        ],
+        "modal": [
+            {
+                "openModal": "Lisää",
+                "closeModal": "Vähemmän"
+            }
+        ]
+    }
+}
