@@ -5,23 +5,22 @@ import {
   faWhatsapp,
   faLinkedin,
   faFacebook,
+  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const ContactDetails = ({ list }) => {
-  console.log(list)
   const contactInfo = list.map((contacts, i) => {
     return (
       <p className={styles.contactText} key={i}>
         {contacts.type === "phone" ? (
           <Link
-            className={styles.contactLink}
+            className={styles.link}
             href={`tel:${contacts.url}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              className={styles.icon}
               aria-label="Phone"
               icon={faPhone}
             />
@@ -30,13 +29,12 @@ const ContactDetails = ({ list }) => {
         ) : null}
         {contacts.type === "whatsapp" ? (
           <Link
-            className={styles.contactLink}
-            href={`tel:${contacts.url}`}
+            className={styles.link}
+            href={`https://wa.me/${contacts.url}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              className={styles.icon}
               aria-label="Whatsapp"
               icon={faWhatsapp}
             />
@@ -45,13 +43,12 @@ const ContactDetails = ({ list }) => {
         ) : null}
         {contacts.type === "email" ? (
           <Link
-            className={styles.contactLink}
+            className={styles.link}
             href={`mailto:${contacts.url}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              className={styles.icon}
               aria-label="Sähköposti"
               icon={faEnvelope}
             />
@@ -60,24 +57,26 @@ const ContactDetails = ({ list }) => {
         ) : null}
         {contacts.type === "instagram" ? (
           <Link
-            className={styles.contactLink}
+            className={styles.link}
             href={contacts.url}
             target="_blank"
             rel="noopener noreferrer"
           >
+            <FontAwesomeIcon
+              aria-label="Instagram"
+              icon={faInstagram}
+            />
             {contacts.title}
           </Link>
         ) : null}
         {contacts.type === "linkedIn" ? (
           <Link
-            className={styles.contactLink}
+            className={styles.link}
             href={contacts.url}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {" "}
             <FontAwesomeIcon
-              className={styles.icon}
               aria-label="LinkedIn"
               icon={faLinkedin}
             />
@@ -86,13 +85,12 @@ const ContactDetails = ({ list }) => {
         ) : null}
         {contacts.type === "facebook" ? (
           <Link
-            className={styles.contactLink}
+            className={styles.link}
             href={contacts.url}
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              className={styles.icon}
               aria-label="Facebook"
               icon={faFacebook}
             />
@@ -103,9 +101,7 @@ const ContactDetails = ({ list }) => {
     );
   });
 
-  return <>
-  {contactInfo}
-  </>;
+  return <>{contactInfo}</>;
 };
 
 export default ContactDetails;

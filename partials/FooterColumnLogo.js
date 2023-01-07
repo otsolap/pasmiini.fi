@@ -4,9 +4,9 @@ import styles from "../styles/components/footer.module.scss";
 const FooterColumnLogo = ({ image }) => {
   
   return (
-    <div className={styles.footerColumn}>
+    <div className={styles.column}>
       {image && (
-        <div className={styles.footerLogoContainer}>
+        <div className={styles.logoContainer}>
           <Image
             src={image}
             alt=""

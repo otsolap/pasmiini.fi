@@ -6,7 +6,6 @@ import useToggle from '@hooks/useToggleState';
 import ContactDetails from '@partials/ContactDetails'
 
 const FooterColumnContact = ({  open, title, list }) => {
-    console.log(`footer column contact: ${list}`)
     const contentRef = useRef(null)
     const [active, setActive] = useToggle(open);
     useEffect(() => {
@@ -20,18 +19,18 @@ const FooterColumnContact = ({  open, title, list }) => {
     };
 
     return (
-        <div className={styles.footerColumn}>
-            <button className={styles.footerColButton} onClick={toggleAccordion}>
-                <div className={styles.footerColContent}>
-                    <div className={active ? `${styles.colOpen}` : `${styles.colClosed}`}>
-                        <div className={styles.colFlexBox}>
-                            <h4 className={styles.colHeading}>
+        <div className={styles.column}>
+            <button className={styles.button} onClick={toggleAccordion}>
+                <div className={styles.content}>
+                    <div className={active ? `${styles.open}` : `${styles.closed}`}>
+                        <div className={styles.flexBox}>
+                            <h4 className={styles.heading}>
                                 {title}
                             </h4>
-                            <FontAwesomeIcon className={styles.colIcon} aria-label="Alatunnisteen lisätieto" icon={active ? faAngleUp : faAngleDown} />
+                            <FontAwesomeIcon className={styles.Icon} aria-label="Alatunnisteen lisätieto" icon={active ? faAngleUp : faAngleDown} />
                         </div>
                     </div>
-                    <div ref={contentRef} className={active ? `${styles.colContent} ${styles.colContentDivider}` : `${styles.colContent}`} >
+                    <div ref={contentRef} className={active ? `${styles.content} ${styles.contentDivider}` : `${styles.content}`} >
                         <ContactDetails list={list} />
                     </div>
                 </div>

@@ -20,14 +20,14 @@ const FooterColumnCompany = ({ open, title, body }) => {
   };
 
   return (
-    <div className={styles.footerColumn}>
-      <button className={styles.footerColButton} onClick={toggleAccordion}>
-        <div className={styles.footerColContent}>
-          <div className={active ? `${styles.colOpen}` : `${styles.colClosed}`}>
-            <div className={styles.colFlexBox}>
-              <h4 className={styles.colHeading}>{title}</h4>
+    <div className={styles.column}>
+      <button className={styles.button} onClick={toggleAccordion}>
+        <div className={styles.content}>
+          <div className={active ? `${styles.open}` : `${styles.closed}`}>
+            <div className={styles.flexBox}>
+              <h4 className={styles.heading}>{title}</h4>
               <FontAwesomeIcon
-                className={styles.colIcon}
+                className={styles.icon}
                 aria-label="Alatunnisteen lisätieto"
                 icon={active ? faAngleUp : faAngleDown}
               />
@@ -37,8 +37,8 @@ const FooterColumnCompany = ({ open, title, body }) => {
             ref={contentRef}
             className={
               active
-                ? `${styles.colContent} ${styles.colContentDivider}`
-                : `${styles.colContent}`
+                ? `${styles.content} ${styles.contentDivider}`
+                : `${styles.content}`
             }
           >
             {body && <MarkdownBlock markdown={body} />}
