@@ -1,10 +1,8 @@
 import Nav from "@content/settings/nav.json";
-import useToggle from "@hooks/useToggleState";
 import Link from "next/link";
 import {
-  faHouse,
-  faWarehouse,
-  faBicycle,
+  faPen,
+  faClipboardList
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
@@ -16,9 +14,8 @@ const MobileFooter = () => {
   const PRIMARY_PAGES = 3;
 
   const icons = {
-    house: faHouse,
-    warehouse: faWarehouse,
-    bicycle: faBicycle,
+    clipboard: faClipboardList,
+    pen: faPen,
   };
 
   const mobileNav = navigation.slice(0, PRIMARY_PAGES).map((page, i) => {
@@ -26,7 +23,7 @@ const MobileFooter = () => {
 
     return (
       <Link
-        className={router.pathname == page.path ? styles.active : ""}
+        className={router.pathname == page.path ? 'active' : ""}
         href={page.path}
         key={i}
       >

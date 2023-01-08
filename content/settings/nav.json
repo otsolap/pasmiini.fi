@@ -1,6 +1,6 @@
 {
     "brand": {
-        "logo": "/images/Pasmiini-Green.png",
+        "logo": "/images/Pasmiini-Green.svg",
         "slogan": "Work for yourself, on yourself"
     },
     "navigation": {
@@ -8,17 +8,17 @@
             {
                 "title": "Valmennusohjelma",
                 "path": "/palvelut",
-                "icon": "warehouse"
+                "icon": "clipboard"
             },
             {
                 "title": "Blogi",
                 "path": "/blogi",
-                "icon": "fixer"
+                "icon": "pen"
             },
             {
                 "title": "Jasmiini",
                 "path": "/jasmiini",
-                "icon": "bicycle"
+                "icon": "brand"
             }
         ],
         "modal": [

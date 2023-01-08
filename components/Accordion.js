@@ -7,7 +7,7 @@ const Accordion = ({ accordion }) => {
     <section id={styles.accordion}>
       <div className={styles.container}>
         <div className={styles.content}>
-            {accordion ?? <h2>Hello World</h2>}
+          {accordion && <h2>Hello World</h2>}
         </div>
       </div>
     </section>
