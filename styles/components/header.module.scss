@@ -10,16 +10,27 @@
   position: sticky;
   top: 0;
   z-index: 200;
+  margin-bottom: $single;
 }
 
 .topMenu {
   background-color: $creamyWhite;
+  padding: $single;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid;
+  border-color: $creamyWhite
 }
 
 .logo {
   position: relative;
   width: 130px;
   height: 50px;
+}
+
+.calender {
+  margin-left: auto;
 }
 
 /* DESKTOP STYLES */
@@ -32,11 +43,9 @@
   }
 
   .topMenu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     gap: 100px;
     padding: $single;
+    border-color: transparent;
   }
 
   .logo {
@@ -53,6 +62,8 @@
     justify-content: flex-start;
     align-items: center;
     gap: $double;
+    border-bottom: 1px solid;
+    border-color: $creamyWhite
   }
 
   .linkWrapper {
@@ -77,8 +88,5 @@
     }
   }
 
-  .calender {
-    margin-left: auto;
-  }
 
 }

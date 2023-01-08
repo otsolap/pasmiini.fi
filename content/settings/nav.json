@@ -11,14 +11,14 @@
                 "icon": "warehouse"
             },
             {
-                "title": "Jasmiini",
-                "path": "/jasmiini",
-                "icon": "bicycle"
-            },
-            {
                 "title": "Blogi",
                 "path": "/blogi",
                 "icon": "fixer"
+            },
+            {
+                "title": "Jasmiini",
+                "path": "/jasmiini",
+                "icon": "bicycle"
             }
         ],
         "modal": [

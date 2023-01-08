@@ -39,7 +39,7 @@ const Header = () => {
             )}
             <h3 className={`desktop-only ${styles.slogan}`}>{brand.slogan}</h3>
             {calender && (
-              <Link className="active mobile-only" href={calender.url}>
+              <Link className={`active mobile-only ${styles.calender}`}  href={calender.url}>
                 {calender.title}
               </Link>
             )}

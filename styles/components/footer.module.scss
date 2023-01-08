@@ -101,7 +101,8 @@
   transition: max-height 0.6s ease;
   max-height: 0;
   overflow: hidden;
-  padding-right: 0.5rem;
+  padding-top: $half;
+  padding-right: $half;
 }
 
 .text,
@@ -110,7 +111,7 @@
 }
 
 .text {
-  padding: 0.5rem 0;
+  padding: $half 0;
 }
 
 .textNOPadding {
@@ -174,6 +175,7 @@
 
 /* DESKTOP STYLES */
 @media (min-width: $container-desktop) {
+  
   .footer {
     padding-bottom: 0;
     border-bottom-left-radius: 1.25rem;
