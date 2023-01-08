@@ -1,6 +1,6 @@
 {
-  "logo": {
-    "image": "/images/Logo-Mark-CreamyWhite.png"
+  "brand": {
+    "logo": "/images/Logo-Mark-CreamyWhite.png"
   },
   "company": {
     "open": false,

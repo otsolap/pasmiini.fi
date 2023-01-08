@@ -46,7 +46,7 @@ const FooterColumnCompany = ({ open, title, body }) => {
           >
             {body && <MarkdownBlock markdown={body} />}
             {calender && (
-              <Link className={styles.active} href={calender.url}>{calender.title}</Link>
+              <Link className="active" href={calender.url}>{calender.title}</Link>
             )}
           </div>
         </div>

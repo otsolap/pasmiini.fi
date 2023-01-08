@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import styles from "../styles/components/footer.module.scss";
 
-const FooterColumnLogo = ({ image }) => {
+const FooterColumnLogo = ({ logo }) => {
   return (
     <div className={styles.column}>
-      {image && (
+      {logo && (
         <div className={styles.logoContainer}>
           <Image
-            src={image}
+            src={logo}
             alt=""
             quality={100} 
             fill

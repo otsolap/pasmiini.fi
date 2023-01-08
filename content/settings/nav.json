@@ -1,6 +1,6 @@
 {
     "brand": {
-        "logo:": "/images/puppy-and-adult-dog.jpg",
+        "logo": "/images/Pasmiini-Green.png",
         "slogan": "Work for yourself, on yourself"
     },
     "navigation": {
@@ -12,7 +12,7 @@
             },
             {
                 "title": "Jasmiini",
-                "path": "/minusta",
+                "path": "/jasmiini",
                 "icon": "bicycle"
             },
             {

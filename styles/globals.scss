@@ -120,6 +120,10 @@ section {
   display: none;
 }
 
+.active {
+  color: $yellow;
+}
+
 .bg-green {
   background-color: $green;
   color: $creamyWhite;

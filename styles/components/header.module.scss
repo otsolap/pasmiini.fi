@@ -1,0 +1,84 @@
+@import "../partials/mixins";
+@import "../partials/variables";
+@import "../partials/breakpoints";
+
+.header {
+  @include display-flex;
+  min-height: 80px;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.topMenu {
+  background-color: $creamyWhite;
+}
+
+.logo {
+  position: relative;
+  width: 130px;
+  height: 50px;
+}
+
+/* DESKTOP STYLES */
+@media (min-width: $container-desktop) {
+  .header {
+    position: relative;
+    max-height: 999px;
+    padding-bottom: $single;
+    justify-content: space-evenly;
+  }
+
+  .topMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    padding: $single;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  .slogan {
+    margin-bottom: initial;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: $double;
+  }
+
+  .linkWrapper {
+    list-style-type: none;
+    padding-top: $single;
+    padding-bottom: $single;
+  }
+
+  .link {
+    color: $creamyWhite;
+    font-size: $double;
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      color: $yellow;
+      transition-property: color, background-color, border-color,
+        text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+        filter, backdrop-filter;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+  }
+
+  .calender {
+    margin-left: auto;
+  }
+
+}

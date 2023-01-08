@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.columnContainer}>
-                <FooterColumnLogo {...footer.logo} />
+                <FooterColumnLogo {...footer.brand} />
                 <FooterColumnCompany {...footer.company} />
                 <FooterColumnContact {...footer.contact} />
             </div>
