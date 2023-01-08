@@ -17,7 +17,6 @@ const Service = ({
   accordion,
   highlight,
 }) => {
-
   return (
     <>
       <Meta meta={meta} />
@@ -36,13 +35,13 @@ const Service = ({
 export async function getStaticPaths() {
   const SERVICES_PATH = "./content/services/";
 
-  let paths = await fs.promises.readdir(SERVICES_PATH)
+  let paths = await fs.promises.readdir(SERVICES_PATH);
   paths = paths.map((item) => {
-      return { params: { slug: item.split(".")[0] } }
-  })
+    return { params: { slug: item.split(".")[0] } };
+  });
   return {
-      paths: paths,
-      fallback: false,
+    paths: paths,
+    fallback: false,
   };
 }
 
@@ -54,54 +53,77 @@ export async function getStaticProps(context) {
     "utf-8"
   );
 
-  let data = JSON.parse(service)
-    
+  let data = JSON.parse(service);
+
+  // getting the accordion data
+  let files = await fs.promises.readdir(
+    process.env.ACCORDION_DIR_PATH
+  );
+  let file;
+  let accordionData = [];
+
+  for (let index = 0; index < files.length; index++) {
+    const item = files[index];
+    file = await fs.promises.readFile(
+      process.env.ACCORDION_DIR_PATH + item,
+      "utf-8"
+    );
+    accordionData.push(JSON.parse(file));
+  }
+  console.log(accordionData)
+
+  let selected = data["accordion"]["items"];
+  console.log(selected)
+  let filtered = accordionData.filter((accordion) => {
+    return selected.includes(accordion.slug);
+  });
+
   return {
     props: {
-        meta: {
-          title: data['meta']['title'],
-          description: data['meta']['description'],
-          url: data['meta']['url'],
-          image: data['meta']['image'],
-        },
-        hero: {
-          title: data['hero']['title'],
-          summary: data['hero']['summary'],
-          align: data['hero']['align'],
-          media: data['hero']['media'],
-          image: data['hero']['image'],
-          mediaWidth: data['hero']['mediaWidth'],
-          video: data['hero']['video'],
-          buttons: data['hero']['buttons'],
-        },
-        textarea: {
-          body: data['textarea']['body'],
-          backgroundColor: data['textarea']['backgroundColor'],
-        },
-        mediaMix: {
-          backgroundColor: data['mediaMix']['backgroundColor'],
-          items: data['mediaMix']['items'],
-        },
-        cards: {
-          title: data['cards']['title'],
-          summary: data['cards']['summary'],
-          items: data['cards']['items'],
-        },
-        accordion: {
-          image: data['accordion']['image'],
-          items: data['accordion']['items'],
-        },
-        textarea_2: {
-          body: data['textarea_2']['body'],
-          backgroundColor: data['textarea_2']['backgroundColor'],
-        },
-        highlight: {
-          image: data['highlight']['image'],
-          title: data['highlight']['title'],
-          body: data['highlight']['body'],
-          button: data['highlight']['button'],
-          backgroundColor: data['highlight']['backgroundColor'],
-        },
+      meta: {
+        title: data["meta"]["title"],
+        description: data["meta"]["description"],
+        url: data["meta"]["url"],
+        image: data["meta"]["image"],
+      },
+      hero: {
+        title: data["hero"]["title"],
+        summary: data["hero"]["summary"],
+        align: data["hero"]["align"],
+        media: data["hero"]["media"],
+        image: data["hero"]["image"],
+        mediaWidth: data["hero"]["mediaWidth"],
+        video: data["hero"]["video"],
+        buttons: data["hero"]["buttons"],
+      },
+      textarea: {
+        body: data["textarea"]["body"],
+        backgroundColor: data["textarea"]["backgroundColor"],
+      },
+      mediaMix: {
+        backgroundColor: data["mediaMix"]["backgroundColor"],
+        items: data["mediaMix"]["items"],
+      },
+      cards: {
+        title: data["cards"]["title"],
+        summary: data["cards"]["summary"],
+        items: data["cards"]["items"],
+      },
+      accordion: {
+        image: data["accordion"]["image"],
+        items: accordionData,
+      },
+      textarea_2: {
+        body: data["textarea_2"]["body"],
+        backgroundColor: data["textarea_2"]["backgroundColor"],
+      },
+      highlight: {
+        image: data["highlight"]["image"],
+        title: data["highlight"]["title"],
+        body: data["highlight"]["body"],
+        button: data["highlight"]["button"],
+        backgroundColor: data["highlight"]["backgroundColor"],
+      },
     },
   };
 }
