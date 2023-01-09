@@ -41,6 +41,13 @@
     "url": "pasmiini.fi",
     "image": "/images/Vuosaaren_liike.jpeg"
   },
+  "accordion": {
+    "image": "/images/Logo.svg",
+    "items": [
+      "b2c-rahanpalautus",
+      "b2c-epamukavuus-salilla"
+    ]
+  },
   "textarea_2": {
     "body": "",
     "backgroundColor": "green"
@@ -115,15 +122,6 @@
         "title": "Tutustu ohjelmiin",
         "url": "/palvelut"
       }
-    ]
-  },
-  "accordion": {
-    "image": "/images/Logo.svg",
-    "items": [
-      "100_rahat_takaisin_-tyytyvaisyystakuu",
-      "koen_salin_epamukavaksi-_mita_avuksi",
-      "maksutavat_kayko_kulttuurisetelit",
-      "wadwdada"
     ]
   }
 }

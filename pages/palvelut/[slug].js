@@ -70,13 +70,13 @@ export async function getStaticProps(context) {
     );
     accordionData.push(JSON.parse(file));
   }
-  console.log(accordionData)
 
   let selected = data["accordion"]["items"];
-  console.log(selected)
   let filtered = accordionData.filter((accordion) => {
-    return selected.includes(accordion.slug);
+    return selected.includes(accordion.id);
   });
+
+  accordionData = filtered;
 
   return {
     props: {

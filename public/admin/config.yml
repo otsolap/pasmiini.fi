@@ -753,9 +753,9 @@ collections:
             multiple: true
             required: false
             collection: "accordion"
-            search_fields: ["type", "title"]
-            value_field: "{{slug}}"
-            display_fields: ["type", "title"]
+            search_fields: ["title", "id"]
+            value_field: "id"
+            display_fields: ["title", "id"]
 
       - label: "Tekstikenttä"
         hint: "Tekstikentän otsikon lihavointi antaa tekstille brändimukaisen värinsä. Tekstikenttään voit vapaasti kirjoittaa rikasta tekstisisältöä, jossa tekstiä voi lihavoida tai kursivoida. Pystyt lisäämään tekstiin linkkejä, kuin listoja. Lista-elementtien edessä on aina “Tsekki”-ikoni, eikä yleistä palleroa. Vaihtoehtoisesti voit kirjoittaa numeraalisen listan. Tekstiin voit laittaa 5 eri kokoista otsikkoa. Tekstikentän saa taustaväriltään joko kermanvalkoisena tai tummanvihreänä. Tekstinä toimii sitten valinnan vastapuoli. Voit myös lihavoida tekstiä ja antaa sille keltaisen/sinisen korostuksen. (Keltainen tummanvihreällä, sininen kermanvalkoiselle)."
@@ -895,7 +895,7 @@ collections:
         }
       - { label: "Body", name: "body", widget: "markdown", required: true }
 
-  - label: "UKK"
+  - label: "Usein kysytyt kysymykset"
     name: "accordion"
     folder: "content/accordionItems"
     create: true
@@ -904,10 +904,11 @@ collections:
     slug: "{{slug}}"
     fields:
       - {
-          label: "Kysymyksentyyppi",
-          name: "type",
+          label: "Kysymyksen ID",
+          name: "id",
           widget: "string",
-          required: false,
+          required: true,
+          hint: 'Määrittele uniikki ID kysymykselle. Esim: b2b-rahanpalautus'
         }
       - { label: "Kysymys", name: "title", widget: "string", required: true }
       - { label: "Vastaus", name: "body", widget: "text", required: true }
