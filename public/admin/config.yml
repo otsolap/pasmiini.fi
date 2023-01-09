@@ -912,6 +912,7 @@ collections:
         }
       - { label: "Kysymys", name: "title", widget: "string", required: true }
       - { label: "Vastaus", name: "body", widget: "text", required: true }
+      - { label: "Vastaus auki?", name: "open", default: false, widget: "boolean", required: false }
 
   - label: "Blogikirjoittajat"
     hint: "Luo blogikirjoittajan profiili, mikä sisältää nimen, nimikkeen, kuvauksen, profiilikuvan sekä toimintakehoitteita yhteydenottoon."
