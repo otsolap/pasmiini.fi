@@ -32,8 +32,8 @@ const Header = () => {
           <div className={styles.topMenu}>
             {brand.logo && (
               <div className={styles.logo}>
-                <Link href={"/"}>
-                  <Image src={brand.logo} alt="" quality={100} fill />
+                <Link className={styles.brandLink} href={"/"}>
+                  <Image src={brand.logo} alt="" quality={100} height={50} width={130} />
                 </Link>
               </div>
             )}
