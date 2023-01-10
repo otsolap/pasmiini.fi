@@ -8,7 +8,7 @@ const Accordion = ({ accordion }) => {
       <div className={styles.container}>
         {accordion.image && (
           <div className={styles.imgContainer}>
-            <Image src={accordion.image} alt="" quality={100} fill />
+            <Image src={accordion.image} alt="" quality={100} width={500} height={500} />
           </div>
         )}
         {accordion.items && (

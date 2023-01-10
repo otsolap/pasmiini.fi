@@ -3,7 +3,7 @@ import CardItem from "@partials/CardItem";
 
 const Cards = ({ cards }) => {
   return (
-    <section className={`${styles.cards} bg-${cards.backgroundColor} `}>
+    <section className={`${styles.cards}`}>
       {cards.title && (
         <header className={styles.header}>
           {cards.title && <h2>{cards.title}</h2>}
