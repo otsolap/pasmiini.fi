@@ -1,7 +1,7 @@
 import Nav from "@content/settings/nav.json";
 import Link from "next/link";
 import { faPen, faClipboardList } from "@fortawesome/free-solid-svg-icons";
-import { Logo } from "../../public/icons/Logo.svg";
+import { faPasmiini } from '../../public/icons/Pasmiini'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import styles from "../../styles/components/footer.module.scss";
@@ -14,7 +14,7 @@ const MobileFooter = () => {
   const icons = {
     clipboard: faClipboardList,
     pen: faPen,
-    logo: Logo,
+    logo: faPasmiini,
   };
 
   const mobileNav = navigation.slice(0, PRIMARY_PAGES).map((page, i) => {

@@ -2,94 +2,81 @@
 @import "../partials/variables";
 @import "../partials/breakpoints";
 
-/* Archive */
-
-.blogs {
+.carousel {
   padding: $single;
   background-color: $creamyWhite;
-}
-
-.header {
-  padding-bottom: $double;
 }
 
 .header,
 .wrapper {
   @include display-flex();
   @include flex-direction(column);
+}
+
+.header {
   gap: $single;
+  padding-bottom: $double;
 }
 
 .wrapper {
+  gap: $single;
   flex-wrap: wrap;
 }
 
-/* Blog Section */
-
-
-/* Blog Card */
-
-.blog {
+.item {
   @include display-flex();
   @include flex-direction(column);
   @include border-radius($single);
   padding: $single;
-  background-color: $green;
+  background-color: $creamyWhite;
   width: 100%;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .imageContainer {
   position: relative;
+  height: 160px;
+  width: 160px;
   margin-top: $single;
   margin-bottom: $double;
-  height: 200px;
-  width: 320px;
-
 }
 
 .image {
-  object-fit: cover;
-  object-position: 50% 50%;
-  @include border-radius($single);
+  @include border-radius(100%);
 }
 
 .title {
-  color: $creamyWhite;
   padding-bottom: $single;
 }
 
+.buttonWrapper {
+    margin: 0 auto;
+}
+
+
 /* DESKTOP STYLES */
 @media (width >= $container-desktop) {
-
-  .blogs {
-    padding: $double;
-  }
 
   .header {
     max-width: calc($container-desktop / 2);
     flex: 0 0 50%;
   }
 
+  .cards {
+    padding-top: $double;
+    padding-bottom: $double;
+  }
+
   .wrapper {
     @include flex-direction(row);
-    gap: $triple;
-  }
-
-  .footer {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .blog {
-    max-width: calc(100% / 3);
-    flex: 0 0 calc(33.333% - $double);
+    gap: $double;
   }
 
   .imageContainer {
-    height: 200px;
-    width: 370px;
+    height: 490px;
+    width: 490px;
   }
 
 }

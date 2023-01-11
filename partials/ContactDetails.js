@@ -23,6 +23,7 @@ const ContactDetails = ({ list }) => {
             <FontAwesomeIcon
               aria-label="Phone"
               icon={faPhone}
+              className={styles.socialIcon}
             />
             {contacts.title}
           </Link>
@@ -37,6 +38,7 @@ const ContactDetails = ({ list }) => {
             <FontAwesomeIcon
               aria-label="Whatsapp"
               icon={faWhatsapp}
+              className={styles.socialIcon}
             />
             {contacts.title}
           </Link>
@@ -51,6 +53,7 @@ const ContactDetails = ({ list }) => {
             <FontAwesomeIcon
               aria-label="Sähköposti"
               icon={faEnvelope}
+              className={styles.socialIcon}
             />
             {contacts.title}
           </Link>
@@ -65,6 +68,7 @@ const ContactDetails = ({ list }) => {
             <FontAwesomeIcon
               aria-label="Instagram"
               icon={faInstagram}
+              className={styles.socialIcon}
             />
             {contacts.title}
           </Link>
@@ -79,6 +83,7 @@ const ContactDetails = ({ list }) => {
             <FontAwesomeIcon
               aria-label="LinkedIn"
               icon={faLinkedin}
+              className={styles.socialIcon}
             />
             {contacts.title}
           </Link>
@@ -93,6 +98,7 @@ const ContactDetails = ({ list }) => {
             <FontAwesomeIcon
               aria-label="Facebook"
               icon={faFacebook}
+              className={styles.socialIcon}
             />
             {contacts.title}
           </Link>

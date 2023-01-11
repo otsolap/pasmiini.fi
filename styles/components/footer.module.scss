@@ -34,10 +34,15 @@
   margin-bottom: $single;
 }
 
+.socialIcon {
+  font-size: $single;
+}
+
 .link {
   @include display-flex;
   @include flex-direction(row);
   gap: $single;
+  font-size: $single;
 
   &:focus,
   &:hover {

@@ -23,13 +23,13 @@ const Highlight = ({ highlight }) => {
         {highlight.body && <MarkdownBlock markdown={highlight.body} />}
       </div>
       {highlight.button && (
-        <div className={`buttonWrapper ${styles.buttonWrapper}`}>
+        <footer className={`buttonWrapper ${styles.buttonWrapper}`}>
           {highlight.button.map((btn, i) => (
             <Link key={i} href={btn.url} className={`btn`}>
               {btn.title}
             </Link>
           ))}
-        </div>
+        </footer>
       )}
     </section>
   );

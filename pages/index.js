@@ -5,10 +5,11 @@ import Script from 'next/script'
 import Meta from '@components/Meta'
 import Hero from '@components/Hero'
 import MediaMix from '@components/MediaMix'
+import Carousel from '@components/Carousel';
 import Highlight from '@components/Highlight'
 import BlogList from '@components/BlogList'
 
-const Index = ({ meta, hero, mediaMix, blogs, highlight}) => {
+const Index = ({ meta, hero, mediaMix, services, blogs, highlight}) => {
   const router = useRouter()
 
   useEffect(() => {
@@ -30,6 +31,7 @@ const Index = ({ meta, hero, mediaMix, blogs, highlight}) => {
       <section id="home">
         <Hero hero={hero} />
         <MediaMix mediaMix={mediaMix} />
+        <Carousel content={services} />
         <Highlight highlight={highlight} />
         <BlogList blogs={blogs} />
       </section>
@@ -88,6 +90,11 @@ export async function getStaticProps() {
       mediaMix: {
         backgroundColor: home.mediaMix.backgroundColor,
         items: home.mediaMix.items,
+      },
+      services: {
+        title: home.services.title,
+        summary: home.services.summary,
+        items: home.services.items,
       },
       blogs: {
         title: home.blogs.title,
