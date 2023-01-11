@@ -25,6 +25,8 @@ const Carousel = ({ content }) => {
         <Swiper
           className={`mySwiper ${styles.wrapper}`}
           spaceBetween={30}
+          slidesPerView={3} 
+          slidesPerColumn={1}
           centeredSlides={true}
           autoplay={{
             delay: 2500,
