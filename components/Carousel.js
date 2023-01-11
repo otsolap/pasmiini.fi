@@ -7,8 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation, EffectCoverflow } from "swiper";
 
 import styles from "../styles/components/carousel.module.scss";
 
@@ -24,20 +25,27 @@ const Carousel = ({ content }) => {
       {content && (
         <Swiper
           className={`mySwiper ${styles.wrapper}`}
-          spaceBetween={30}
+          effect={"coverflow"}
+          spaceBetween={60}
           slidesPerView={3} 
           slidesPerColumn={1}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
           centeredSlides={true}
           autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
+            delay: 7500,
+            disableOnInteraction: true,
           }}
-          loop={true}
+          rewind={true}
           pagination={{
             clickable: true,
           }}
           navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
+          modules={[Autoplay, Pagination, EffectCoverflow, Navigation]}
         >
           {content.items.map((item, i) => {
             return (
