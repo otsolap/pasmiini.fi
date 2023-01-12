@@ -4,10 +4,11 @@ import Link from "next/link";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/effect-coverflow";
+import "swiper/scss";
+import "swiper/scss/autoplay";
+import "swiper/scss/pagination";
+import "swiper/scss/navigation";
+import "swiper/scss/effect-coverflow";
 // import required modules
 import { Autoplay, Pagination, Navigation, EffectCoverflow } from "swiper";
 
@@ -24,16 +25,27 @@ const Carousel = ({ content }) => {
       )}
       {content && (
         <Swiper
-          className={`mySwiper ${styles.wrapper}`}
+          className={styles.wrapper}
           effect={"coverflow"}
-          spaceBetween={60}
-          slidesPerView={3} 
-          slidesPerColumn={1}
+          spaceBetween={16}
+          slidesPerView={1}
+          breakpoints={{
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 16,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 96,
+            },
+          }}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 100,
+            depth: 175,
+            scale: 1,
             modifier: 2.5,
+            slideShadows: false,
           }}
           centeredSlides={true}
           autoplay={{

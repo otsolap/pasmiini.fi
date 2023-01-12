@@ -146,6 +146,11 @@ main {
   background-color: $white;
 }
 
+
+.swiper-slide-active {
+  background-color: red;
+}
+
 /* DESKTOP STYLES */
 @media (width >= $container-desktop) {
   .container {
